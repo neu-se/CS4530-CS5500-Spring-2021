@@ -44,7 +44,8 @@ All implementation will take place in the TypeScript programming language, using
 This class and its contents were inspired by Software Engineering courses at various institutions, including:
 * Columbia's Software Engineering Course, COMS W4156
 * CMU's Software Engineering Course, [17-313](https://cmu-313.github.io/)
-* NCSU's Software Engineering Course, [CSC 326](https://sites.google.com/a/ncsu.edu/csc326-software-engineering/) and its [iTrust term project](https://dl.acm.org/doi/10.1145/3183377.3183393)
+* GMU's Web App Development Course, [SWE 432](https://cs.gmu.edu/~tlatoza/teaching/swe432f19/home.html)
+* NCSU's Software Engineering Course, [CSC 326](https://sites.google.com/a/ncsu.edu/csc326-software-engineering/) and its [iTrust term project](https://dl.acm.org/doi/10.1145/3183377.3183393), also Chris Parnin's [DevOps](https://github.com/CSC-DevOps/Course) course.
 * Past iterations of CS5500 at Northeastern, as prepared by [Mike Weintraub](https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2020-spring-mw/index.html), [Mike Shah](http://www.mshah.io/comp/Fall20/FSE/public/index.php), and [Frank Tip](https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2019-Fall-Section1/index.html).
 
-
+This website is built using [Kevin Lin's Just the Class](https://kevinl.info/just-the-class/) Jekyll template.
