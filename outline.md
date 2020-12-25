@@ -111,7 +111,7 @@ This outline is a perhaps overly-ambitious attempt to condense a survey of softw
 	* What do we do when we find a defect? Process side: issue trackers, deciding who to assign a bug to
 	* Capturing enough details to reproduce bug (e.g. steps to reproduce, stack trace, core dump, more invasive logging)
 	* Fault localization & root cause analysis. Delta debugging. 
-	* Debugging with printlns vs debuggers
+	* Debugging with printlns vs debuggers. Cover several of the techniques in [Effective Debugging: 66 Specific Ways to Debug Software and Systems](https://learning.oreilly.com/library/view/effective-debugging-66/9780134394909/)
 	* Debugging as hypothesis testing [Using Hypotheses as a Debugging Aid](https://arxiv.org/abs/2005.13652)
 	* Synchronous lesson plan:
 		* Lesson review

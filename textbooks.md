@@ -16,8 +16,6 @@ This class is a survey of many sub-areas of software engineering, and an unfortu
 An overview of software architectural patterns and their role in successful software projects.
 -   ["Refactoring: Improving the Design of Existing Code" By Martin Fowler](https://learning.oreilly.com/library/view/refactoring-improving-the/9780134757681/)<br />
 The definitive list of "code smells" that should be avoiding in programming, matched up with "refactoring" techniques to improve that code
--   ["Site Reliability Engineering" By Betsy Beyer, Chris Jones, Niall Richard Murphy, Jennifer Petoff](https://learning.oreilly.com/library/view/site-reliability-engineering/9781491929117/)<br />
-    Site Reliability Engineering is a topic very related to software engineering: while software engineers might focus primarily on the design and development of software systems, SRE's are engineers who focus on the deployment, monitoring and maintenance of that software. This book documents the SRE practices at Google.
 -   ["Learn React with TypeScript 3" by Carl Rippon](https://learning.oreilly.com/library/view/learn-react-with/9781789610253/)<br />A solid reference for React, describing how to get started, plus more advanced features like React's Router and testing using Jest
 -   ["Programming TypeScript" by Boris Cherny](https://learning.oreilly.com/library/view/programming-typescript/9781492037644/)<br />A useful introduction to TypeScript, written assuming familiarity with programming in languages like Java, C# or python.
 
