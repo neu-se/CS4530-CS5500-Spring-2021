@@ -14,8 +14,6 @@ This class is a survey of many sub-areas of software engineering, and an unfortu
     An early-release text that links studies in human cognition to software engineering tasks like reading and writing code.
 -   ["Fundamentals of Software Architecture" By Mark Richards and Neal Ford](https://learning.oreilly.com/library/view/fundamentals-of-software/9781492043447/)<br />
 An overview of software architectural patterns and their role in successful software projects.
--   ["Design Patterns Explained: A New Perspective on Object-Oriented Design" by Alan Shalloway and James Trott](https://learning.oreilly.com/library/view/design-patterns-explained/0201715945/)<br />
-In-depth coverage of design patterns, considering why they are important in software development, how to apply them, and descriptions of some common patterns.
 -   ["Refactoring: Improving the Design of Existing Code" By Martin Fowler](https://learning.oreilly.com/library/view/refactoring-improving-the/9780134757681/)<br />
 The definitive list of "code smells" that should be avoiding in programming, matched up with "refactoring" techniques to improve that code
 -   ["Site Reliability Engineering" By Betsy Beyer, Chris Jones, Niall Richard Murphy, Jennifer Petoff](https://learning.oreilly.com/library/view/site-reliability-engineering/9781491929117/)<br />
