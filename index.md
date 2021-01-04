@@ -40,6 +40,10 @@ Covey.Town provides a virtual meeting space where different groups of people can
 Covey.Town is inspired by existing products like [Gather.Town](https://gather.town), [Sococo](https://www.sococo.com), and [Gatherly.IO](https://www.gatherly.io) --- but it is an open source effort, and the features will be proposed and implemented by you!
 All implementation will take place in the TypeScript programming language, using React for the user interface.
 
+At the end of the semester, the instructors and TAs will evaluate all of the student projects, and select the best (in terms of usability, code quality, test suite quality, and overall design) to merge into 
+the [open source Covey.Town codebase on GitHub](https://github.com/neu-se/covey.town) repository.
+No additional course credit will be awarded to these teams, but these students will have the opportunity to receive public recognition for their project (in the form of a pull request merged into our repository and acknowledgements in the project's contributors list).
+
 ### Acknowledgements
 This class and its contents were inspired by Software Engineering courses at various institutions, including:
 * Columbia's Software Engineering Course, COMS W4156
