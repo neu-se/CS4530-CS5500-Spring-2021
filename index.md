@@ -28,9 +28,10 @@ This class will serve as an introduction to the field of software engineering, c
 
 ## Course Outcomes
 
--   Students will gain an understanding of all phases of the software engineering lifecycle (requirements, design, implementation, testing, deployment, maintenance).
--   Students will prepare for co-op interviews by gaining an understanding of current technologies and vocabulary.
--   Students will have experience applying software engineering methods to address the requirements, design and implementation phases of a non-toy software project in a small-team environment
+- Students will be able to define and describe the phases of the software engineering lifecycle (requirements, design, implementation, testing, deployment, maintenance)
+- Students will be able to explain the role of key processes and technologies in modern software development.
+- Students will be able to productively apply instances of major tools used in elementary SE tasks.
+- Students will design and implement a portfolio-worthy software engineering project in a small team environment that can be publicly showcased to recruiters.
 
 ## Course Project
 The assignments and project for this class are designed to mirror the experiences of a software engineer joining a new development team:
@@ -43,6 +44,21 @@ All implementation will take place in the TypeScript programming language, using
 At the end of the semester, the instructors and TAs will evaluate all of the student projects, and select the best (in terms of usability, code quality, test suite quality, and overall design) to merge into 
 the [open source Covey.Town codebase on GitHub](https://github.com/neu-se/covey.town) repository.
 No additional course credit will be awarded to these teams, but these students will have the opportunity to receive public recognition for their project (in the form of a pull request merged into our repository and acknowledgements in the project's contributors list).
+
+The project will provide hands-on experience to complement the skills taught in this class, requiring students to be able to:
+ - Work effectively in a small team 
+ - Enumerate and prioritize development tasks
+ - Propose, design, implement and test a new feature in an existing non-toy software application
+ - Write code that their team members can read and review
+ - Review teammates' code
+ - Analyze a proposed software architecture
+ - Use relevant software tools, such as:
+     - TypeScript
+     - Visual Studio Code (or similar IDE)
+     - Git
+     - Mocha and Jest
+     - Twilio's Programmable Video API
+     - Postman
 
 ### Acknowledgements
 This class and its contents were inspired by Software Engineering courses at various institutions, including:
