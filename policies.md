@@ -5,15 +5,17 @@ permalink: /policies/
 nav_order: 4
 ---
 
-### Homework policy XXYx
+### Homework policy 
 
 Students must work individually on all homework assignments. We encourage you to have high-level discussions with other students in the class about the assignments, however, we require that when you turn in an assignment, it is only your work. That is, copying any part of another student's assignment is strictly prohibited. You are free to reuse small snippets of example code found on the Internet (e.g. via StackOverflow) provided that it is attributed. If you are concerned that by reusing and attributing that copied code it may appear that you didn't complete the assignment yourself, then please raise a discussion with the instructor.
 
-Your work is late if it is not turned in by the deadline.  10% will be deducted for late assignments turned in within 24 hours after the due date.  Assignments submitted more than 24 hours late will receive a zero.
+Your work is late if it is not turned in by the deadline.
+* 10% will be deducted for late assignments turned in within 24 hours after the due date.
+* Assignments submitted more than 24 hours late will receive a zero.
 
 If you're worried about being busy around the time of a HW submission, please plan ahead and get started early. **Homework that does not compile or run will receive at most 50% credit**.  [**may want to revisit this.**]
 
-**For fairness to all, there are no exceptions to the above rules.**XXX
+**For fairness to all, there are no exceptions to the above rules.**
 
 ### In Class Activities:
 
