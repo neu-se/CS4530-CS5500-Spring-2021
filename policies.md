@@ -5,15 +5,17 @@ permalink: /policies/
 nav_order: 4
 ---
 
-### Homework policy XX
+### Homework policy 
 
 Students must work individually on all homework assignments. We encourage you to have high-level discussions with other students in the class about the assignments, however, we require that when you turn in an assignment, it is only your work. That is, copying any part of another student's assignment is strictly prohibited. You are free to reuse small snippets of example code found on the Internet (e.g. via StackOverflow) provided that it is attributed. If you are concerned that by reusing and attributing that copied code it may appear that you didn't complete the assignment yourself, then please raise a discussion with the instructor.
 
-Your work is late if it is not turned in by the deadline.  10% will be deducted for late assignments turned in within 24 hours after the due date.  Assignments submitted more than 24 hours late will receive a zero.
+Your work is late if it is not turned in by the deadline.
+* 10% will be deducted for late assignments turned in within 24 hours after the due date.
+* Assignments submitted more than 24 hours late will receive a zero.
 
-If you're worried about being busy around the time of a HW submission, please plan ahead and get started early. **Homework that does not compile or run will receive at most 50% credit**.  [**may want to revisit this.**]
+If you're worried about being busy around the time of a HW submission, please plan ahead and get started early. **Homework that does not compile or run will receive at most 50% credit**.  
 
-**For fairness to all, there are no exceptions to the above rules.**XXX
+**For fairness to all, there are no exceptions to the above rules.**
 
 ### In Class Activities:
 
@@ -25,7 +27,7 @@ If you join class in person, you are strongly encouraged to bring your laptop or
 There will be three programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
 * 36% Programming Assignments
 * 29% Final Project
-* 10% Quizes and in-class activities
+* 10% Quizzes and in-class activities
 * 25% Final Exam
 
 **Grading grievances:** If you have concerns regarding the grading of your work, please let us know *right away* by opening a regrade request in GradeScope. Do not post on Piazza or your TA or instructor: GradeScope provides an interface that allows us to review all regrade requests in one place.  All regrade requests must be submitted within 14 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours.`

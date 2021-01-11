@@ -8,7 +8,22 @@ these materials in your class (and suggest you peruse the [detailed course outli
 
 ### Local development environment
 This site is built using [Kevin Lin's the Just the Class template](https://kevinl.info/just-the-class/).
-Just the Class is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler.
+Just the Class is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. 
+
+Windows requires an [additional step](https://jekyllrb.com/docs/installation/windows/#autoregeneration) in the Jekyll install. To do this, say
+
+    gem install wdm
+
+in the shell, and insert the following line
+
+    gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
+
+in the file called `Gemfile` in the root directory of this document.
+
+
+Other than that, Just the Docs requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler.
+
+
 
 1. Follow the GitHub documentation for [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll).
 1. Start your local Jekyll server.
