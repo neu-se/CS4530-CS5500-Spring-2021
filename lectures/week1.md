@@ -2,22 +2,7 @@
 layout: lecture
 title: Week 1 - Overview and Design Principles
 permalink: /schedule/week1-overview-design-principles
-week_number: 1
-dates: January 19-22
 parent: Schedule
-learning_objectives:
-    - Figure
-    - Out
-    - Jekyll
-announcements:
-    - 
-lecture_videos:
-    - 1.2 General Program Design Principles:
-        Video: https://youtube.com
-        Slides_pdf: /Slides/Lesson 1.2 General Program Design Principles.pptx
-        Slides_ppt: /Slides/Lesson 1.2 General Program Design Principles.pptx
-    - b
-    - c
 ---
 ### Learning Objectives:
 * Figure out how to make this useful
