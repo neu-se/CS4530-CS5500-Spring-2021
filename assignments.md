@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Assignments
-permalink: /assignments/
+permalink: /schedule/assignments/
 parent: Schedule
 has_children: true
 nav_order: 1
