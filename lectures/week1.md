@@ -5,9 +5,21 @@ permalink: /schedule/week1-overview-design-principles
 parent: Schedule
 ---
 ### Learning Objectives:
-* Figure out how to make this useful
-* Decide how this should be written
-* Experience putting more in the template, maybe?
+
+In this first week of the course, you will learn
+* a little about the scope of Software Engineering and how it differs
+from programming
+* how this course will be organized, and what will be expected from
+you each week.
+* some general principles of good program design that are important in
+almost any programming context
+* some additional principles that are specific to object-oriented
+programming.
+
+
+
+
+
 
 ### Important Dates:
 * Tutorial: [Getting Started with TypeScript](#), Date TBD
