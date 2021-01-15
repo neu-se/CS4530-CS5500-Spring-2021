@@ -1,7 +1,7 @@
 ---
 name: Yuting Gan
 role: Teaching Assistant
-photo: staff/yuting.jpg
+photo: staff/yuting.JPG
 office-hours: TBD
 ---
 
