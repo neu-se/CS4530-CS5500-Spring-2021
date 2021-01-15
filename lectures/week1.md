@@ -26,8 +26,8 @@ programming.
 * [HW1](/assignments/hw1) now released **Due Feb 5 by 10pm**{: .label .label-red }
 
 ### Lessons:
-* 1.1: Course Overview
-* 1.2: General Program Design Principles [Video](#), Slides ([PDF](#), [PPT](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx))
+* 1.1: Course Overview  [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913)
+* 1.2: General Program Design Principles [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913), Slides ([PDF](#), [PPT](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx))
 
 ### Additional Readings:
 * [Class Syllabus](https://neu-se.github.io/CS4530-CS5500-Spring-2021/)
