@@ -5,7 +5,7 @@ permalink: /policies/
 nav_order: 4
 ---
 
-### Homework policy 
+## Homework policy 
 
 Students must work individually on all homework assignments. We encourage you to have high-level discussions with other students in the class about the assignments, however, we require that when you turn in an assignment, it is only your work. That is, copying any part of another student's assignment is strictly prohibited. You are free to reuse small snippets of example code found on the Internet (e.g. via StackOverflow) provided that it is attributed. If you are concerned that by reusing and attributing that copied code it may appear that you didn't complete the assignment yourself, then please raise a discussion with the instructor.
 
@@ -17,20 +17,20 @@ If you're worried about being busy around the time of a HW submission, please pl
 
 **For fairness to all, there are no exceptions to the above rules.**
 
-### In Class Activities:
+## In Class Activities:
 
 Most lectures will feature interactive activities and/or polls that support the material being presented. These polls and activities are meant primarily to help us understand how well you (and the class as a whole) are understanding the material that day. These polls will be graded on a "did it" or "didn't" basis: you either take the polls, and you get the marks, or you did not take the polls, and do not get the marks (that is, as long as you answer the questions, you get full credit, regardless of what the answers are). You must be present in class to take the poll (participating in an online quiz while not attending the synchronous session will be considered academic dishonesty and will be treated harshly). You can miss up to three activities/polls with no penalty.
 
 If you join class in person, you are strongly encouraged to bring your laptop or phone to class so that you can participate in the activities.
 
-### Grading
+## Grading
 There will be three programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
-* 36% Programming Assignments
-* 29% Final Project
-* 10% Quizzes and in-class activities
-* 25% Final Exam
+* 36% Individual homework assignments
+* 29% Team final project
+* 10% Participation in synchronous, in-class activities
+* 25% Final exam
 
-**Grading grievances:** If you have concerns regarding the grading of your work, please let us know *right away* by opening a regrade request in GradeScope. Do not post on Piazza or your TA or instructor: GradeScope provides an interface that allows us to review all regrade requests in one place.  All regrade requests must be submitted within 14 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours.`
+**Grading grievances:** If you have concerns regarding the grading of your work, please let us know *right away* by opening a regrade request in GradeScope. Do not post on Piazza or your TA or instructor: GradeScope provides an interface that allows us to review all regrade requests in one place.  All regrade requests must be submitted within 14 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours.
 
 ## Classroom Environment
 

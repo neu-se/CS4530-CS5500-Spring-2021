@@ -33,6 +33,30 @@ This class will serve as an introduction to the field of software engineering, c
 - Students will be able to productively apply instances of major tools used in elementary SE tasks.
 - Students will design and implement a portfolio-worthy software engineering project in a small team environment that can be publicly showcased to recruiters.
 
+## Course Delivery
+The course will be delivered in a hybrid style.
+This means that there will be a combination of asynchronous (online) materials that you will be expected to study on your own,
+and synchronous (in-class) activities, in which students are expected to participate at scheduled times.
+The asynchronous component will be the primary means by which the course materials are delivered, and the synchronous activities
+will be used for holding discussions, answering questions, and providing hands-on enrichment materials.
+
+Profs Bell and Boyland will deliver their synchronous sections in person, using the [Hybrid NUFlex system](https://news.northeastern.edu/coronavirus/reopening/what-is-nuflex/),
+which allows you to choose to attend in person, or join remotely via Zoom. Prof Wand will deliver his synchronous section remotely using Zoom. 
+
+### Your Responsibilities
+Each week, you will be expected to:
+
+* Review the week's learning objectives.
+* Complete all assigned readings and asynchronous materials
+* Attend the synchronous sessions and participate in discussions. You may be asked to conduct reviews of other students' designs, documents, or code. Your participation and contributions are important.
+* Complete and submit all assignments by the due dates. There will be a combination of individual assignments and assignments given to teams.
+
+It is also your responsibility to be familiar with our [academic integrity and other course policies](/policies).
+
+PLEASE DO NOT COME TO CLASS IF YOU ARE ILL. While we want you to share your knowledge and experiences, there are some things you shouldn't share. In the Fall 2020 semester, students will have the option of participating in all tests, mid-terms, and presentation on-line (details forthcoming).
+
+
+
 ## Course Project
 The assignments and project for this class are designed to mirror the experiences of a software engineer joining a new development team:
 you will be "onboarded" to our codebase, make several individual contributions, and then form a team to propose, develop and implement a new feature.
