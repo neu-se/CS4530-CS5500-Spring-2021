@@ -32,6 +32,15 @@ programming.
     * [Slides](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx)
     * [PDF](#)
 
+* 1.3: Object-Oriented Design Principles
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5424622)
+    * [Slides](/Slides/Lesson%201.3%20Object-Oriented%20Principles.pptx)
+    * [PDF](#) 
+
+### Resources
+* [Income Tax Example](/Examples/incomeTax.ts)
+* [Shapes Example](/Examples/shapes.zip)
+
 
 
 ### Additional Readings:
