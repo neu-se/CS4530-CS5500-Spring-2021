@@ -48,8 +48,8 @@ Review Avery's code to understand the role of the following types, and create a 
 * `roomSubscriptionHandler` (in `requestHandlers/CoveyRoomRequestHandlers.ts`)
 * `IVideoClient` (in `lib/IVideoClient.ts`)
 
-Note that in TypeScript (unlike purely object-oriented languages) functions are first-class entities that can be passed around as objects, 
-and hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider two functions as classes.
+Note that unlike purely object-oriented languages, TypeScript functions are first-class entities that can be passed around as objects.
+Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider two functions as classes.
 In a language like Java, `roomJoinHandler` would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
