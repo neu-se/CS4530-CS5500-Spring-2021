@@ -17,17 +17,22 @@ almost any programming context
 programming.
 
 
-
-
-
-
 ### Important Dates:
 * Tutorial: [Getting Started with TypeScript](#), Date TBD
-* [HW1](/assignments/hw1) now released **Due Feb 5 by 10pm**{: .label .label-red }
+* [HW1](/assignments/hw1) not yet released ~~now released~~ **Due Feb 5 by 10pm**{: .label .label-red }
 
 ### Lessons:
-* 1.1: Course Overview  [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913)
-* 1.2: General Program Design Principles [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913), Slides ([PDF](#), [PPT](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx))
+* 1.1: Course Overview
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913)
+    * [Slides](/Slides/Lesson%201.1%20Course%20Introduction.pptx)
+    * [PDF](/Pdfs/Lesson1.1.pdf)
+
+* 1.2: General Program Design Principles 
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5413197)
+    * [Slides](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx)
+    * [PDF](#)
+
+
 
 ### Additional Readings:
 * [Class Syllabus](https://neu-se.github.io/CS4530-CS5500-Spring-2021/)
