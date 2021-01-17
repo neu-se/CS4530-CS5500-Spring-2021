@@ -36,7 +36,7 @@ to format the CRC cards as tables); Part 3 is a coding task, and you should impl
 ### Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
 "Not Satisfactory" by upper management and was rejected. Avery spent the whole weekend trying to rewrite it following
-the design principles covered in Lesson 1.X. Avery's done an OK job at this, and the code is much better, but it's still missing
+the design principles covered in Lessons 1.2-1.3. Avery's done an OK job at this, and the code is much better, but it's still missing
 design documents. Your first task is to review Avery's code and document the design.
 
 Review Avery's code to understand the role of the following types, and create a CRC card for each:
@@ -48,7 +48,7 @@ Review Avery's code to understand the role of the following types, and create a 
 * `roomSubscriptionHandler` (in `requestHandlers/CoveyRoomRequestHandlers.ts`)
 * `IVideoClient` (in `lib/IVideoClient.ts`)
 
-Note that unlike in purely object oriented languages, functions are first-class entities that can be passed around as objects, 
+Note that in TypeScript (unlike purely object-oriented languages) functions are first-class entities that can be passed around as objects, 
 and hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider two functions as classes.
 In a language like Java, `roomJoinHandler` would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
