@@ -54,15 +54,28 @@ In a language like Java, `roomJoinHandler` would likely end up being a class wit
 have that single function stand on its own without being part of a class.
 
 It is up to you to define the responsibilities and collaborators for each of these 6 types.
-You should be sure to include the following responsibilities in your cards in order to receive (at least) a "Meets Minimum Expectations" for this task:
-* (TBD, Create master CRC cards and extract some of the responsibilities)
 
-#### Rubric for Part 1
-TBD
+#### Rubric Specification for Part 1
+
+To receive a mark of "Satisfactory", your submission for Part 1 must satisfy this specification:
+* Include a CRC card for each of the 7 types listed above
+* Each card must include a short phrase or two describing the business
+ responsibilities of and state
+ stored by each type
+* Each card must include all relevant collaborators
+* Each card must have 2-3 sentences explaining the relationship of the class to the overall project, adding additional context beyond the content of the card otherwise
+
+To receive a mark of "Meets minimum expectations", your submission for Part 1 must satisfy this specification:
+* Include a CRC card for each of the 7 types listed above
+* Each card includes a short phrase or two describing the business responsibilities of and state stored by each type. Some of these may be incorrect, or irrelevant.
+* Most cards include their relevant collaborators, but some may be incorrect
+* Each card must have 2-3 sentences explaining the relationship of the class to the overall project, but these explanations might simply restate the words displayed in the card without adding additional context
+
+Submissions that do not meet the above criteria will receive no credit for part 1.
 
 ### Part 2: Evaluating the design
 Using the design principles covered in Lesson 1.X, please review the following aspects of Avery's design,
-and provide a 1-2 sentence response to each of the following questions:
+and provide a 2-4 sentence response to each of the following questions:
 
 1. Does `CoveyRoomController` follow the principle of *encapsulation*? Explain how it does or does not follow this principle.
 1. Avery is currently using a video service called [Twilio Programmable Video](https://www.twilio.com/video) for Covey.Town.
@@ -72,7 +85,7 @@ server code. Describe the role of this pattern in the overall behavior of this s
 1. Avery received a warning for adherence to our project's naming conventions. Thankfully, we think that the 
 names of each type are OK, and similarly, that the names for each property are OK.
 However, we were concerned with some of the names of local variables within 
-Avery's code. Using the rules outlined in our [style guide](#TODO), find three naming violations in local variables in Avery's code and
+Avery's code. Using the rules outlined in our [style guide](/policies/style), find three naming violations in local variables in Avery's code and
 suggest a better name for each.
 
 The following *optional* question does not count towards your grade, but will be used to help Avery improve their design in the future (which 
@@ -80,8 +93,19 @@ might mean that you have an easier time understanding Avery's code!):
 
 What do you think overall of Avery's design? Are there parts that you think could be improved? 
 
-#### Rubric for Part 2
-TBD
+#### Rubric Specification for Part 2
+
+Each of the four questions will be weighted above and will be graded to the following specification:
+
+To receive a mark of "Satisfactory" on a question:
+* The answer is factually correct, making use of the design principles and patterns described in class
+* The provided explanation is 2-4 sentences, and relates the abstract design concept to the code provided
+
+To receive a mark of "Meets minimum expectations" on a question:
+* The answer is factually correct
+* The provided explanation is 2-4 sentences and describes the design concept or the code, but does not directly link them together
+
+Answers that do not meet the above criteria will receive no credit for that question.
 
 ### Part 3: Extending the design
 [Avery's prototype](https://app.covey.town/) *almost* implements the *Minimum Viable Product* (the first deliverable that
@@ -111,8 +135,21 @@ for each room, and those instances will be created by your `CoveyRoomsStore`. Ad
 1. Change the `roomSubscriptionHandler` and `roomJoinHandler` to retrieve the correct `CoveyRoomController` from your
 `CoveyRoomsStore`, based on the `coveyRoomID` requested.
 
-#### Rubric for Part 3
-TBD
+You do not need to correct any design flaws that you've identified in Avery's code already (for instance, the naming violations) - when we review your code, we'll know that this was Avery's fault, and have them improve their work for next time!
+ 
+#### Rubric Specification for Part 3
+To receive a mark of "Satisfactory" for Part 3, your code submission must:
+* Pass all included automated tests as reported by `npm test`
+* Follow the design specification outlined above
+* Conform to our [style guide](/policies/style) *and* have no style warnings or errors as reported by `npm run-script lint`
+* Have no `@ts-ignore` or `eslint-disable` annotations
+
+To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
+* Pass all included automated tests as reported by `npm test`
+* Have no style warnings or errors as reported by `npm run-script lint`
+* Have no `@ts-ignore` or `eslint-disable` annotations
+
+Submissions that do not meet the above criteria will receive no credit for Part 3.
 
 ## Submission Instructions
 TBD
