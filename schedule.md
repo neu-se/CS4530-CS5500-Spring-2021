@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Schedule
-permalink: /schedule/
+title: Calendar
+permalink: /calendar/
 nav_order: 1
 ---
 | Week              | Topics                                                                      | Readings | HW |
