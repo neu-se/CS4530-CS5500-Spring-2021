@@ -29,10 +29,10 @@ The objectives for this first assignment, are to:
 * Evaluate naming and other style concerns of an existing codebase
 * Write new code in TypeScript 
 
-Parts 1 and 2 of this assignment should be completed in a text editor (you might find it easiest to use a word processor
-to format the CRC cards as tables); Part 3 is a coding task, and you should implement it using [the handout code](#todo).
+Parts 1 and 2 of this assignment should be completed in a text editor or word processor, and submitted as a PDF.
+Part 3 is a coding task, and you should implement it using [the handout code](#todo).
 
-### Part 1: Documenting the design 
+## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
 "Not Satisfactory" by upper management and was rejected. Avery spent the whole weekend trying to rewrite it following
 the design principles covered in Lessons 1.2-1.3. Avery's done an OK job at this, and the code is much better, but it's still missing
@@ -56,9 +56,37 @@ have that single function stand on its own without being part of a class.
 
 It is up to you to define the responsibilities and collaborators for each of these 7 types.
 
-#### Rubric Specification for Part 1
+**Notes about `Promise` and `async/await` in Avery's code**: You'll notice that Avery's code makes use of some types and
+keywords that may not be clear to you right now, for instance the `addPlayer` method in `CoveyRoomController`:
+```typescript
+  async addPlayer(newPlayer: Player): Promise<PlayerSession> {
+    const theSession = new PlayerSession(newPlayer);
 
-To receive a mark of "Satisfactory", your submission for Part 1 must satisfy this specification:
+    this.sessions.push(theSession);
+    this.players.push(newPlayer);
+
+    // Create a video token for this user to join this room
+    theSession.videoToken = await this.videoClient.getTokenForRoom('demoRoom', newPlayer.id);
+
+    // Notify other players that this player has joined
+    this.listeners.forEach((listener) => listener.onPlayerJoined(newPlayer));
+
+    return theSession;
+  }
+```
+We will cover these keywords and their implications in detail [in week 4]({{ site.baseurl }}{% link schedule.md %}). 
+For now, it's easiest if you simply ignore these keywords - and when you see a return type of `Promise<Foo>`, 
+look past the `Promise` part, and instead simply consider the return type to be `Foo` (in the case of `addPlayer` above, 
+consider the return type to simply be a `PlayerSession`).
+
+
+
+
+### Rubric Specification for Part 1
+
+Part 1 will account for 1/3 of your overall grade on this assignment.
+
+To receive a mark of "Satisfactory" for Part 1, your submission must satisfy this specification:
 * Include a CRC card for each of the 7 types listed above
 * Each card must include a short phrase or two describing the business
  responsibilities of and state
@@ -74,7 +102,7 @@ To receive a mark of "Meets minimum expectations", your submission for Part 1 mu
 
 Submissions that do not meet the above criteria will receive no credit for part 1.
 
-### Part 2: Evaluating the design
+## Part 2: Evaluating the design
 Using the design principles covered in Lessons 1.2-1.3, please review the following aspects of Avery's design,
 and provide a 2-4 sentence response to each of the following questions:
 
@@ -94,9 +122,11 @@ might mean that you have an easier time understanding Avery's code!):
 
 What do you think overall of Avery's design? Are there parts that you think could be improved? 
 
-#### Rubric Specification for Part 2
+### Rubric Specification for Part 2
 
-Each of the four questions will be weighted above and will be graded to the following specification:
+Each of the four questions in Part 2 will account for 1/12 of your overall grade for this assignment (that is, Part 2 will account for 1/3 of the overall grade,
+with each question weighted evenly).
+Each of the four questions will be graded to the following specification:
 
 To receive a mark of "Satisfactory" on a question:
 * The answer is factually correct, making use of the design principles and patterns described in class
@@ -108,7 +138,7 @@ To receive a mark of "Meets minimum expectations" on a question:
 
 Answers that do not meet the above criteria will receive no credit for that question.
 
-### Part 3: Extending the design
+## Part 3: Extending the design
 [Avery's prototype](https://app.covey.town/) *almost* implements the *Minimum Viable Product* (the first deliverable that
 satisfies our client's *must have* requirements) for Covey.Town, but lacks one crucial feature: support for multiple rooms.
 The Covey.Town prototype currently consists of a single room: all users that connect to Covey.Town are placed on the same map.
@@ -138,7 +168,9 @@ for each room, and those instances will be created by your `CoveyRoomsStore`. Ad
 
 You do not need to correct any design flaws that you've identified in Avery's code already (for instance, the naming violations) - when we review your code, we'll know that this was Avery's fault, and have them improve their work for next time!
  
-#### Rubric Specification for Part 3
+### Rubric Specification for Part 3
+Part 3 will account for 1/3 of your overall grade on this assignment.
+
 To receive a mark of "Satisfactory" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Follow the design specification outlined above
@@ -150,8 +182,10 @@ To receive a mark of "Meets minimum expectations" for Part 3, your code submissi
 * Have no style warnings or errors as reported by `npm run-script lint`
 * Have no `@ts-ignore` or `eslint-disable` annotations
 
-Submissions that do not meet the above criteria will receive no credit for Part 3.
 
+**Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 3.
+Please note that your code *must* pass all the automated tests that included with the handout, and *must* have no warnings
+or errors reported by the style checker that is included with the handout. **Do not wait to test or style check your code until the last minute.**
 ## Submission Instructions
 TBD
 
