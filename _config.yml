@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Northeastern University CS 4530 "Fundamentals of Software Engineering" and CS 5500 "Foundations of Software Engineering,"
   Spring 2021. Professors Jonathan Bell, John Boyland and Mitch Wand.
 tagline: Fundamentals/Foundations of Software Engineering
-baseurl: '/' # the subpath of your site, e.g. /blog
+baseurl: '/Spring2021' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled"]
 
