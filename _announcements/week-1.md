@@ -12,5 +12,8 @@ date: 2019-04-08
 ## Announcment for CS 5500 -- Sec 01
 
 Welcome to CompSci 5500, Section 01 (Boyland)!  Our first meeting is tomorrow, Tuesday, January 19 at 1:35pm.
-Please join in-person or online using the Zoom link on the Canvas page.
-This course used a 'flipped-classroom' model.  *INPROGRESS*
+Please join in-person (Shillman Hall 210) or online (using the Zoom link on the Canvas page).  If you come in person, make sure to bring your computer because we will probably have some on-line activities during class.
+This course used a 'flipped-classroom' model, which means *you* need to view the slides for the class *before* class.  I will not be repeating the material in our synchronous sessions.
+Take a look at the [Week #1 page]({{ site.baseurl }}{% link lectures/week1.md %}) and please review both the 1.1 and the 1.2 slides before we meet tomorrow.
+
+You can view the video with Prof. Wand's voiceover (via Canvas), or look at the slides directly in PDF or PPTx.  The audio has a few extra tidbits as a reward for the patient.
