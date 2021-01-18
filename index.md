@@ -53,7 +53,7 @@ Each week, you will be expected to:
 
 It is also your responsibility to be familiar with our [academic integrity and other course policies](/policies).
 
-PLEASE DO NOT COME TO CLASS IF YOU ARE ILL. While we want you to share your knowledge and experiences, there are some things you shouldn't share. In the Fall 2020 semester, students will have the option of participating in all tests, mid-terms, and presentation on-line (details forthcoming).
+PLEASE DO NOT COME TO CLASS IF YOU ARE ILL. While we want you to share your knowledge and experiences, there are some things you shouldn't share.
 
 
 

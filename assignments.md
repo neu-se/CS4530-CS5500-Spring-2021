@@ -1,10 +1,9 @@
 ---
 layout: page
 title: Assignments
-permalink: /schedule/assignments/
-parent: Schedule
+permalink: /assignments/
 has_children: true
-nav_order: 1
+nav_order: 3
 ---
 
 {:toc}

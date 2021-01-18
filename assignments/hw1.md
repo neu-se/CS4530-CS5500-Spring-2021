@@ -3,7 +3,6 @@ layout: page
 title: Assignment 1
 permalink: /assignments/hw1
 parent: Assignments
-grand_parent: Schedule
 ---
 
 # Assignment 1: Onboarding

@@ -2,6 +2,6 @@
 name: Joseph Burns
 role: Teaching Assistant
 photo: staff/joseph.jpg
-office-hours: TBD
+office-hours: Wednesday 12-2pm
 ---
 
