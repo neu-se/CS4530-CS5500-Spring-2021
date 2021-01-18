@@ -74,7 +74,7 @@ To receive a mark of "Meets minimum expectations", your submission for Part 1 mu
 Submissions that do not meet the above criteria will receive no credit for part 1.
 
 ### Part 2: Evaluating the design
-Using the design principles covered in Lesson 1.X, please review the following aspects of Avery's design,
+Using the design principles covered in Lessons 1.2-1.3, please review the following aspects of Avery's design,
 and provide a 2-4 sentence response to each of the following questions:
 
 1. Does `CoveyRoomController` follow the principle of *encapsulation*? Explain how it does or does not follow this principle.
