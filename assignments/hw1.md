@@ -53,7 +53,7 @@ Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this d
 In a language like Java, `roomJoinHandler` would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
-It is up to you to define the responsibilities and collaborators for each of these 6 types.
+It is up to you to define the responsibilities and collaborators for each of these 7 types.
 
 #### Rubric Specification for Part 1
 
