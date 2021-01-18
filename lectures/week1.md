@@ -18,28 +18,28 @@ programming.
 
 
 ### Important Dates:
-* Tutorial: [Getting Started with TypeScript](#), Date TBD
-* [HW1](/assignments/hw1) not yet released ~~now released~~ **Due Feb 5 by 10pm**{: .label .label-red }
+* Tutorial: Getting Started with TypeScript, Date TBD
+* [HW1]({{ site.baseurl }}{% link assignments/hw1.md %}) Released Jan 22, **Due Feb 5 by 10pm**{: .label .label-red }
 
 ### Lessons:
 * 1.1: Course Overview
     * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5396913)
-    * [Slides](/Slides/Lesson%201.1%20Course%20Introduction.pptx)
-    * [PDF](/Pdfs/Lesson1.1.pdf)
+    * [Slides]({{ site.baseurl }}{% link Slides/Lesson 1.1 Course Introduction.pptx %}) 
+    * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson1.1.pdf %})
 
 * 1.2: General Program Design Principles 
     * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5413197)
-    * [Slides](/Slides/Lesson%201.2%20General%20Program%20Design%20Principles.pptx)
-    * [PDF](/Pdfs/Lesson1.2.pdf)
+    * [Slides]({{ site.baseurl }}{% link Slides/Lesson 1.2 General Program Design Principles.pptx %})
+    * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson1.2.pdf %})
 
 * 1.3: Object-Oriented Design Principles
     * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5424622)
-    * [Slides](/Slides/Lesson%201.3%20Object-Oriented%20Principles.pptx)
-    * [PDF](/Pdfs/Lesson1.3.pdf) 
+    * [Slides]({{ site.baseurl }}{% link Slides/Lesson 1.3 Object-Oriented Principles.pptx %}) 
+    * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson1.3.pdf %})
 
 ### Resources
-* [Income Tax Example](/Examples/incomeTax.ts)
-* [Shapes Example](/Examples/shapes.zip)
+* [Income Tax Example]({{ site.baseurl }}{% link /Examples/incomeTax.ts %})
+* [Shapes Example]({{ site.baseurl }}{% link /Examples/shapes.zip %})
 
 
 

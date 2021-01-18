@@ -6,7 +6,7 @@ nav_order: 1
 ---
 | Week              | Topics                                                                      | Readings | HW |
 |-------------------|-----------------------------------------------------------------------------|----------|----|
-| [#1: Jan 19-22](/schedule/week1-overview-design-principles)     | Course Overview<br />Design Principles					                  |          | HW1 Out   |
+| [#1: Jan 19-22]({{ site.baseurl }}{% link lectures/week1.md %})     | Course Overview<br />Design Principles					                  |          | HW1 Out   |
 | #2: Jan 25-29     | Knowledge sharing, documenting designs<br />Design Patterns                 |          | Project Spec Out    |
 | #3: Feb 1-5       | Software Architecture<br />REST                           			      |          | **HW1 Due**<br />HW2 Out, Team Formation Out    |
 | #4: Feb 8-12      | Asynchronous Programming                                                    |          | **Team Formation Due**    |
