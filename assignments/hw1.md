@@ -166,6 +166,9 @@ for each room, and those instances will be created by your `CoveyRoomsStore`. Ad
 1. Change the `roomSubscriptionHandler` and `roomJoinHandler` to retrieve the correct `CoveyRoomController` from your
 `CoveyRoomsStore`, based on the `coveyRoomID` requested.
 
+Conveniently (or not so conveniently, depending on how you see it), Avery has already written a comprehensive test suite
+for this feature. To be deemed acceptable, your code must pass all of these tests, and also have no errors reported by the linter.
+
 You do not need to correct any design flaws that you've identified in Avery's code already (for instance, the naming violations) - when we review your code, we'll know that this was Avery's fault, and have them improve their work for next time!
  
 ### Rubric Specification for Part 3
@@ -179,13 +182,13 @@ To receive a mark of "Satisfactory" for Part 3, your code submission must:
 
 To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
-* Have no style warnings or errors as reported by `npm run-script lint`
+* Have no style errors (may have warnings) as reported by `npm run-script lint`
 * Have no `@ts-ignore` or `eslint-disable` annotations
 
 
 **Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 3.
-Please note that your code *must* pass all the automated tests that included with the handout, and *must* have no warnings
-or errors reported by the style checker that is included with the handout. **Do not wait to test or style check your code until the last minute.**
+Please note that your code *must* pass all the automated tests that included with the handout, and *must* have no 
+errors reported by the style checker that is included with the handout. **Do not wait to test or style check your code until the last minute.**
 ## Submission Instructions
 TBD
 
