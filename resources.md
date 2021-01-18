@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Other Resources
-nav_order: 5
+nav_order: 7
 ---
 
 ## Other Resources
