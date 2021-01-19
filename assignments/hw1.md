@@ -170,7 +170,7 @@ Conveniently (or not so conveniently, depending on how you see it), Avery has al
 for this feature. To be deemed acceptable, your code must pass all of these tests, and also have no errors reported by the linter.
 
 You do not need to correct any design flaws that you've identified in Avery's code already (for instance, the naming violations) - when we review your code, we'll know that this was Avery's fault, and have them improve their work for next time!
- 
+
 ### Rubric Specification for Part 3
 Part 3 will account for 1/3 of your overall grade on this assignment.
 
@@ -178,12 +178,12 @@ To receive a mark of "Satisfactory" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Follow the design specification outlined above
 * Conform to our [style guide](/policies/style) *and* have no style warnings or errors as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Have no style errors (may have warnings) as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 
 **Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 3.
