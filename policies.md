@@ -24,7 +24,7 @@ Most lectures will feature interactive activities and/or polls that support the 
 If you join class in person, you are strongly encouraged to bring your laptop or phone to class so that you can participate in the activities.
 
 ## Grading
-There will be three programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
+There will be four programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is:
 * 36% Individual homework assignments
 * 29% Team final project
 * 10% Participation in synchronous, in-class activities
