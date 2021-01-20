@@ -47,14 +47,20 @@ Review Avery's code to understand the role of the following types, and create a 
 * `roomSubscriptionHandler` (in `requestHandlers/CoveyRoomRequestHandlers.ts`)
 * `IVideoClient` (in `lib/IVideoClient.ts`)
 
-With each CRC card, include 2-3 sentences that provide additional context to describe the class in relation to the rest of the project.
 
-Note that unlike purely object-oriented languages, TypeScript functions are first-class entities that can be passed around as objects.
+
+Note that TypeScript functions are first-class entities that can be passed around as objects.
 Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as classes.
 In a language like Java, each of these functions would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
-It is up to you to define the responsibilities and collaborators for each of these 7 types.
+Each CRC card should include 
+  * the name of the class, function or interface being described
+  * a short phrase or sentence describing the responsibility of this class in the context of the entire application
+  * the collaborators of the class.  These are the classes which are directly coupled to the class.  In some cases, this list may be open-ended.
+  * the portion of the application's state is that is kept in an object of this class.
+
+
 
 **Notes about `Promise` and `async/await` in Avery's code**: You'll notice that Avery's code makes use of some types and
 keywords that may not be clear to you right now, for instance the `addPlayer` method in `CoveyRoomController`:
@@ -88,17 +94,15 @@ Part 1 will account for 1/3 of your overall grade on this assignment.
 
 To receive a mark of "Satisfactory" for Part 1, your submission must satisfy this specification:
 * Include a CRC card for each of the 7 types listed above
-* Each card must include a short phrase or two describing the business
- responsibilities of and state
- stored by each type
-* Each card must include all relevant collaborators
-* Each card must have 2-3 sentences explaining the relationship of the class to the overall project, adding additional context beyond the content of the card otherwise
+* Each card must include a short phrase or two describing the responsibilities of the type in the context of the application
+* Each card must include all relevant collaborators (when these can be determined from the codebase)
+* Each card must include a description of the state that is kept by objects of the class.
 
 To receive a mark of "Meets minimum expectations", your submission for Part 1 must satisfy this specification:
 * Include a CRC card for each of the 7 types listed above
-* Each card includes a short phrase or two describing the business responsibilities of and state stored by each type. Some of these may be incorrect, or irrelevant.
+* Each card includes a short phrase or two describing the responsibilities of and state stored by each type, as outlined above. Some of these may be incorrect or irrelevant.
 * Most cards include their relevant collaborators, but some may be incorrect
-* Each card must have 2-3 sentences explaining the relationship of the class to the overall project, but these explanations might simply restate the words displayed in the card without adding additional context
+
 
 Submissions that do not meet the above criteria will receive no credit for part 1.
 
