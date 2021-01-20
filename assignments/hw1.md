@@ -5,7 +5,7 @@ permalink: /assignments/hw1
 parent: Assignments
 ---
 
-# Assignment 1: Onboarding
+# Assignment 1: Onboarding **Due Friday Feb 5, 10:00pm EST**{: .label .label-red }
 
 Welcome aboard to the Covey.Town team! We're glad that you're here and ready to join our development team as a new software engineer.
 We're building an open source virtual meeting application, and are very happy to see that we have so many new developers who can help make this application a reality.
@@ -30,13 +30,17 @@ The objectives for this first assignment, are to:
 * Write new code in TypeScript 
 
 Parts 1 and 2 of this assignment should be completed in a text editor or word processor, and submitted as a PDF.
-Part 3 is a coding task, and you should implement it using [the handout code](#todo).
+Part 3 is a coding task, and you will implement it by modifying the same code that you are documenting in Parts 1 and 2.
 
 ## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
 "Not Satisfactory" by upper management and was rejected. Avery spent the whole weekend trying to rewrite it following
 the design principles covered in Lessons 1.2-1.3. Avery's done an OK job at this, and the code is much better, but it's still missing
 design documents. Your first task is to review Avery's code and document the design.
+
+[Download Avery's code for the backend module here]({{ site.baseurl }}{% link assignments/hw1-handout.zip %}).
+Extract this archive, run `npm install` in it to fetch all of the dependencies, and open the code in your IDE
+to start to get a handle on what Avery did here.
 
 Review Avery's code to understand the role of the following types, and create a CRC card for each:
 * `PlayerSession` (in `src/types/PlayerSession.ts`)
@@ -47,14 +51,14 @@ Review Avery's code to understand the role of the following types, and create a 
 * `roomSubscriptionHandler` (in `requestHandlers/CoveyRoomRequestHandlers.ts`)
 * `IVideoClient` (in `lib/IVideoClient.ts`)
 
-
+Please refer to Lesson 2.1 for more details about CRC cards, and examples of CRC cards.
 
 Note that TypeScript functions are first-class entities that can be passed around as objects.
 Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as classes.
 In a language like Java, each of these functions would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
-Each CRC card should include 
+Each CRC card should include:
   * the name of the class, function or interface being described
   * a short phrase or sentence describing the responsibility of this class in the context of the entire application
   * the collaborators of the class.  These are the classes which are directly coupled to the class.  In some cases, this list may be open-ended.
@@ -193,6 +197,25 @@ To receive a mark of "Meets minimum expectations" for Part 3, your code submissi
 **Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 3.
 Please note that your code *must* pass all the automated tests that included with the handout, and *must* have no 
 errors reported by the style checker that is included with the handout. **Do not wait to test or style check your code until the last minute.**
-## Submission Instructions
-TBD
 
+## Submission Instructions
+Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
+[sign into Canvas](https://northeastern.instructure.com/courses/60188) and then click the link on our course for "GradeScope". 
+You should then also have the option to create an account on GradeScope (if you don't already have one) so that you can log in to GradeScope directly.
+Please contact the instructors immediately if you have difficulty accessing the course on GradeScope.
+
+Parts 1 & 2 should be submitted be compiled into a single PDF and submitted to the assignment "Homework 1 (Parts 1 & 2)" on GradeScope.
+Please use GradeScope's "tagging" interface to associate each of your answers with the questions in the rubric.
+
+To submit Part 3: run the command `npm run-script pack` in your project directory, which will create a zip file that is properly
+structured for submission. Submit this zip file to the assignment "Homework 1 (Part 3)" on GradeScope.
+GradeScope will provide you with feedback on your submission, providing a numeric score of:
+* 2 (Satisfactory)
+* 1 (Meets minimum expecations)
+* 0 (Not passing)
+
+You can also view the complete output from running the tests and linter on GradeScope. If you have any doubts
+about the autograder, please contact the course staff immediately. In particular: if you are not able to reproduce
+and debug test or linter failures on your local machine, **please** ask the TAs for assistance: otherwise you'll waste
+an immense amount of time waiting for the autograder to complete, when you could get the same feedback in seconds running
+the tests + linter locally.
