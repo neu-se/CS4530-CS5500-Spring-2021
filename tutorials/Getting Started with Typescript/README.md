@@ -12,7 +12,7 @@ Typescript is a superscript of JavaScript which adds type information and other 
 
 1. Open VSCode and press the ctrl + `~` (Tilde or back tick key) to open a terminal.`
   - Optionally you can open a separate shell (Do not use powershell)
-2. Run the command `sudo npm install -g typescript` in the terminal.
+2. Run the command `npm install -g typescript` in the terminal.
   - Typescript should now be installed globally and accessible from the terminal.
 3. Verify the installation using the command `tsc -v` in the terminal. (Do NOT use powershell)
   - ![image](./images/installing-tsc.JPG)

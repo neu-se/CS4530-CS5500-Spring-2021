@@ -7,7 +7,7 @@ Visual Studio Code is a lightweight but powerful source code editor which runs o
 
 - Administrative access on the host machine for software installation.
 
-## Installation Steps (Windows)
+## Installation Steps (Windows / Mac)
 
 1. Download the VSCode installer from the [VSCode website](https://code.visualstudio.com/download).
    - ![image](./images/download.JPG)
@@ -25,9 +25,9 @@ Visual Studio Code is a lightweight but powerful source code editor which runs o
 8. Once the installation is complete, you will see the below screen and you are ready to use VSCode.
    - ![image](./images/finish.JPG)
 
-## Installation (Linux / Mac)
+## Installation (Linux)
 
-- The above instructions for Windows should also work, but VSCode is also provided as a snap package
+- The above instructions for Windows/Mac should also work, but VSCode is also provided as a snap package
 
 1. Install snap if you haven't already by running `sudo apt update` and then `sudo apt install snapd`.
 2. Install VSCode by running `sudo snap install --classic code`.

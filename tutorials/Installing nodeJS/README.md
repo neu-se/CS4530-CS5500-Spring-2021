@@ -37,10 +37,15 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 6. NodeJS is now installed!
 
 ## Installation Steps (Linux / Mac)
-- The above steps should also work, but node.js is available as a snap package as well.
+- The above steps should also work, but node.js can be installed using the
+node version manager (nvm).
 
-1. Install snap if you haven't already by running `sudo apt update` and then `sudo apt install snapd`.
-2. Install VSCode by running `sudo snap install node --channel=14/stable --classic`.
+1. Run either `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash` or `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`.
+2. Close and reopen a terminal.
+3. Verify nvm is working by entering `command -v nvm`. If your terminal prints
+out `nvm`, it should be working. If you see `vm: command not found` or no
+feedback, open a new terminal and trying again or restart from step 1.
+4. Install node by typing `nvm install 14`.
 
 ## Verification
 
