@@ -6,7 +6,7 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 - Administrative access on the host machine for software installation.
 
-## Installation Steps
+## Installation Steps (Windows)
 
 1. Dowload the nodeJS installer for the latest stable nodeJS release (14.x.x) from [nodejs.org](https://nodejs.org/en/).
 ![image](./images/download.JPG)
@@ -36,11 +36,17 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
    - press enter when prompted to complete the installation.
 6. NodeJS is now installed!
 
+## Installation Steps (Linux / Mac)
+- The above steps should also work, but node.js is available as a snap package as well.
+
+1. Install snap if you haven't already by running `sudo apt update` and then `sudo apt install snapd`.
+2. Install VSCode by running `sudo snap install node --channel=14/stable --classic`.
+
 ## Verification
 
-1. Open cmd or windows powershell.
-2. Run the command `*node -v*`
+1. Open a shell or windows powershell.
+2. Run the command `node -v`
   - This should print the current version of nodeJS installed (v14.x.x)
-3. Run the command `*npm -v*`
+3. Run the command `npm -v`
   - This should print the current version of npm installed (v6.x.x)
 ![image](./images/verification.JPG)
