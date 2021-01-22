@@ -46,6 +46,7 @@ design documents. Your first task is to review Avery's code and document the des
 [Download Avery's code for the backend module here]({{ site.baseurl }}{% link assignments/hw1-handout.zip %}).
 Extract this archive, run `npm install` in it to fetch all of the dependencies, and open the code in your IDE
 to start to get a handle on what Avery did here.
+To help you set up a local development environment for this class, we've prepared a tutorial for [setting up a development environment with NodeJS, VSCode and TypeScript]({{ site.baseurl }}{% link tutorials/week1-getting-started.md %}).
 
 Review Avery's code to understand the role of the following types, and create a CRC card for each:
 * `PlayerSession` (in `src/types/PlayerSession.ts`)
