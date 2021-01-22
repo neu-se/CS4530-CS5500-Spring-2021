@@ -42,5 +42,14 @@ Below is a list of extensions that you may find useful.
 2. Prettier - code formatter
 3. vscode-icons
 4. ESLint
+5. Andromeda (Color theme: Andromeda Colorizer)
 
 ![image](./images/useful-extensions.JPG)
+
+## Installing Extensions (eg. ESLint)
+
+1. Click on the extensions tab on the left in VSCode.
+2. Search ESLint.
+3. Click on Install.
+4. Done!
+    - ![image](./images/eslint-search.JPG) 
