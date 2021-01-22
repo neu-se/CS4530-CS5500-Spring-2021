@@ -127,7 +127,7 @@ server code. Describe the role of this pattern in the overall behavior of this s
 1. Avery received a warning for adherence to our project's naming conventions. Thankfully, we think that the 
 names of each type are OK, and similarly, that the names for each property are OK.
 However, we were concerned with some of the names of local variables within 
-Avery's code. Using the rules outlined in our [style guide](/policies/style), find three naming violations in local variables in Avery's code and
+Avery's code. Using the rules outlined in our [style guide]({{ site.baseurl }}{% link style.md %}), find three naming violations in local variables in Avery's code and
 suggest a better name for each.
 
 The following *optional* question does not count towards your grade, but will be used to help Avery improve their design in the future (which 
