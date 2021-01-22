@@ -3,6 +3,7 @@ layout: page
 title: Policies
 permalink: /policies/
 nav_order: 7
+has_children: true
 ---
 
 ## Homework policy 

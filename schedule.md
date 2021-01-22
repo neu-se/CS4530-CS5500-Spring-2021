@@ -6,9 +6,9 @@ nav_order: 1
 ---
 | Week              | Topics                                                                      | Readings | HW |
 |-------------------|-----------------------------------------------------------------------------|----------|----|
-| [#1: Jan 19-22]({{ site.baseurl }}{% link lectures/week1.md %})     | Course Overview<br />Design Principles					                  |          | HW1 Out   |
+| [#1: Jan 19-22]({{ site.baseurl }}{% link lectures/week1.md %})     | Course Overview<br />Design Principles					                  |          | [HW1 Out]({{ site.baseurl }}{% link assignments/hw1.md %})   |
 | #2: Jan 25-29     | Knowledge sharing, documenting designs<br />Design Patterns                 |          | Project Spec Out    |
-| #3: Feb 1-5       | Software Architecture<br />REST                           			      |          | **HW1 Due**<br />HW2 Out, Team Formation Out    |
+| #3: Feb 1-5       | Software Architecture<br />REST                           			      |          | **[HW1 Due]({{ site.baseurl }}{% link assignments/hw1.md %})**<br />HW2 Out, Team Formation Out    |
 | #4: Feb 8-12      | Asynchronous Programming                                                    |          | **Team Formation Due**    |
 | #5: Feb 15-19     | Introduction to Testing<br />Test Adequacy Measures	                      |          | **HW2 Due**<br />HW3 Out, Project Pitch Out    |
 | #6: Feb 22-26     | UI Design + React<br />Testing Larger Units                                 |          | **Project Pitch Due**<br /> Project Plan Out    |
