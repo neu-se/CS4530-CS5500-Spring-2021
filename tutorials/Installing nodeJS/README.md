@@ -36,6 +36,34 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
    - press enter when prompted to complete the installation.
 6. NodeJS is now installed!
 
+## Installing NodeJS with NVM for Windows
+
+1. Download `nvm-setup.zip` from [nvm-windows](https://github.com/coreybutler/nvm-windows/releases).
+   - ![image](./images/download-nvmw.JPG)
+2. Extract the contents of `nvm-setup.zip` and run the executable `nvm-setup.exe`.
+   - This should open the nvm installation wizard.
+3. Accept the license agreement and click next.
+   - ![image](./images/nvmw-license.JPG)
+4. Select the destination for installing nvm and click next.
+   - ![image](./images/nvmw-destination.JPG)
+5. Select the destination of NodeJS installation Symlink and click next.
+   - ![image](./images/nvmw-symlink.JPG)
+6. Click on install to begin installation.
+   - ![image](./images/nvmw-finish.JPG)
+7. Upon completion, you will see the below window
+   - ![image](./images/nvmw-finished.JPG)
+8. Open a command prompt with administrative privileges.
+9. Verify the installation, run the command `*nvm version*`
+   - This should display the version of nvm installed.
+   - ![image](./images/nvmw-verification.JPG)
+10. Run the command `*nvm list available*` to display all available NodeJS versions.
+   - ![image](./images/nvm-list-available.JPG)
+11. Install the latest LTS version of nodeJS available using the command `*nvm install 14.15.4*`.
+12. To use this version of NodeJS, run the command `*nvm use 14.15.4*`.
+13. Now, NodeJS should be installed and ready for use. To verify the installation run the below commands:
+   - `*node -v*`
+   - `*npm -v*`
+   - ![image](./images/nvm-use-14.JPG)
 ## Installation Steps (Linux / Mac)
 - The above steps should also work, but node.js can be installed using the
 node version manager (nvm).
