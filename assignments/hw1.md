@@ -32,6 +32,11 @@ The objectives for this first assignment, are to:
 Parts 1 and 2 of this assignment should be completed in a text editor or word processor, and submitted as a PDF.
 Part 3 is a coding task, and you will implement it by modifying the same code that you are documenting in Parts 1 and 2.
 
+**This is an individual assignment.** 
+
+Please post any questions about this assignment on Piazza.
+
+
 ## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
 "Not Satisfactory" by upper management and was rejected. Avery spent the whole weekend trying to rewrite it following
