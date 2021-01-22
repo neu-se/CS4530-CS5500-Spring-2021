@@ -37,6 +37,8 @@ programming.
     * [Slides]({{ site.baseurl }}{% link Slides/Lesson 1.3 Object-Oriented Principles.pptx %}) 
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson1.3.pdf %})
 
+### Tutorial
+* [Setting up a development environment with NodeJS, VSCode and TypeScript]({{ site.baseurl }}{% link tutorials/week1-getting-started.md %})
 ### Resources
 * [Income Tax Example]({{ site.baseurl }}{% link /Examples/incomeTax.ts %})
 * [Shapes Example]({{ site.baseurl }}{% link /Examples/shapes.zip %})
