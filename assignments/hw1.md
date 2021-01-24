@@ -36,6 +36,9 @@ Part 3 is a coding task, and you will implement it by modifying the same code th
 
 Please post any questions about this assignment on Piazza.
 
+### Change Log
+* 1/24: Updated handout file to copy `.env.example` to `.env`. If you already have the handout, you can fix yours by copying the file `.env.example` to `.env`. If you download the handout now, it will already be in position. - JSB
+
 
 ## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
