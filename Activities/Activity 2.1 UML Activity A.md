@@ -1,7 +1,7 @@
 --
 layout: lecture
 title: Activity 2.1 UML Activity A
-permalink: /Activities/Activity1.3
+permalink: /Activities/Activity2.1
 parent: Activities
 ---
 
