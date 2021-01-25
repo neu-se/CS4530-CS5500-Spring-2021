@@ -40,7 +40,7 @@ In this week of the course, you will learn
 
 
 ### Resources
-* In class slides from Prof Bell's section: [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.key %})
+* In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.key %})
 
 
 ### Additional Readings:
