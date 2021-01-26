@@ -37,10 +37,12 @@ programming.
     * [Slides]({{ site.baseurl }}{% link Slides/Lesson 1.3 Object-Oriented Principles.pptx %}) 
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson1.3.pdf %})
 
+### Tutorial
+* [Setting up a development environment with NodeJS, VSCode and TypeScript]({{ site.baseurl }}{% link tutorials/week1-getting-started.md %})
 ### Resources
 * [Income Tax Example]({{ site.baseurl }}{% link /Examples/incomeTax.ts %})
 * [Shapes Example]({{ site.baseurl }}{% link /Examples/shapes.zip %})
-
+* In class slides from Prof Bell's section: [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-21-Introduction.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-21-Introduction.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-21-Introduction.key %})
 
 
 ### Additional Readings:
