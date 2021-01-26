@@ -71,7 +71,7 @@ Each CRC card should include:
   * the name of the class, function or interface being described
   * a short phrase or sentence describing the responsibility of this class in the context of the entire application
   * the collaborators of the class.  These are the classes which are directly coupled to the class.  In some cases, this list may be open-ended.
-  * the portion of the application's state is that is kept in an object of this class.
+  * the portion of the application's state is that is kept in an object of this class (note: methods to not have state)
 
 
 
