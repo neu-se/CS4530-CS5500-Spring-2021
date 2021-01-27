@@ -40,6 +40,11 @@ In this week of the course, you will learn
 
 
 ### Resources
+### Resources
+* [Example 2.1 Adapter]({{ site.baseurl }}{% link /Examples/Example 2.1 Adapter.ts %})
+* [Example 2.2 Singleton]({{ site.baseurl }}{% link /Examples/Example 2.2 Singleton.zip %})
+* [Example 2.3 Observer]({{ site.baseurl }}{% link /Examples/Example 2.3 Observer.zip %})
+* [Example 2.4 Shapes with Visitors]({{ site.baseurl }}{% link /Examples/Example 2.4 Shapes with Visitors.zip %})
 * In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.key %})
 
 
