@@ -38,7 +38,8 @@ Please post any questions about this assignment on Piazza.
 
 ### Change Log
 * 1/24: Updated handout file to copy `.env.example` to `.env`. If you already have the handout, you can fix yours by copying the file `.env.example` to `.env`. If you download the handout now, it will already be in position. - JSB
-* 1/26: Update broken link to style guide in part 3 rubric
+* 1/26: Update broken link to style guide in part 3 rubric - JSB
+* 1/27: Clarify that `roomJoinHandler` and `roomSubscriptionHandler` should not "be treated as classes," but more precisely, that you should create a CRC card for each, even though they are not classes. - JSB
 
 
 ## Part 1: Documenting the design 
@@ -64,7 +65,7 @@ Review Avery's code to understand the role of the following types, and create a 
 Please refer to Lesson 2.1 for more details about CRC cards, and examples of CRC cards.
 
 Note that TypeScript functions are first-class entities that can be passed around as objects.
-Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as classes.
+Hence, while traditionally the first 'C' in 'CRC' stands for *Class* (that is, we make CRC cards for *classes*), for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as sufficiently important types to each have CRC cards.
 In a language like Java, each of these functions would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
