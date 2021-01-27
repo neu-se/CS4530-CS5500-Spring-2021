@@ -29,17 +29,16 @@ In this week of the course, you will learn
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson2.2.pdf %})
     
 * 2.3: Design Patterns
-    * Video TBD
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5482871)
     * [Slides]({{ site.baseurl }}{% link Slides/Lesson 2.3 Design Patterns.pptx %})
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson2.3.pdf %})
     
 * 2.4: Design Patterns
-    * Video TBD
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5482872)
     * [Slides]({{ site.baseurl }}{% link Slides/Lesson 2.4 Design Patterns (contd).pptx %})
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson2.4.pdf %})  
 
 
-### Resources
 ### Resources
 * [Example 2.1 Adapter]({{ site.baseurl }}{% link /Examples/Example 2.1 Adapter.ts %})
 * [Example 2.2 Singleton]({{ site.baseurl }}{% link /Examples/Example 2.2 Singleton.zip %})
