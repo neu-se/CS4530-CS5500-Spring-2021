@@ -38,6 +38,7 @@ Please post any questions about this assignment on Piazza.
 
 ### Change Log
 * 1/24: Updated handout file to copy `.env.example` to `.env`. If you already have the handout, you can fix yours by copying the file `.env.example` to `.env`. If you download the handout now, it will already be in position. - JSB
+* 1/26: Update broken link to style guide in part 3 rubric
 
 
 ## Part 1: Documenting the design 
@@ -194,7 +195,7 @@ Part 3 will account for 1/3 of your overall grade on this assignment.
 To receive a mark of "Satisfactory" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Follow the design specification outlined above
-* Conform to our [style guide](/policies/style) *and* have no style warnings or errors as reported by `npm run-script lint`
+* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
 * Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
