@@ -80,7 +80,10 @@ that you would recognize as your computer) and click `Add SSH key`.
 After you add your ssh key, you are ready to clone the repository locally!
 Navigate back to your repo page and locate the green `Code` button with an
 arrow. Make sure it says `Clone with SSH` and click the clipboard to copy
-the location. Navigate back to your terminal and type
+the location.
+    ![image](./assets/week2-git/git-clone.jpg)
+
+Navigate back to your terminal and type
 `git clone [copied location]`. Hit enter to accept the SSH prompt (this will
 only happen the first time you access a repo). This will clone your repo
 locally for you to edit! If you encounter an error saying you do not have
@@ -117,7 +120,51 @@ For review, when working on code you:
 
 The above workflow is great when you are the only developer on a project.
 Now we will discuss an important concept when working with other developers:
-branching.
+branching. When adding code to a shared code-base, it is good practice to create
+a branch to work on locally, using the flow above, and when you want to combine
+it with the existing code (called merging), to open what is called a
+`Pull Request`. This allows for code review (as someone else can approve the
+request), helps prevent nasty merging issues (as you can see how the branches)
+will merge before accepting the request, and keeps feature development
+separate from each other for good development modularity. To get an intuitive
+idea for what is going on, review this short graphic from github:
+https://guides.github.com/introduction/flow/.
+
+To create a branch, you can type `git checkout -b [name of new branch]`. This
+is shorthand for `git branch [name of new branch]` followed by
+`git checkout [branch name]`. To see all the branches for the repo, type
+`git branch` with no arguments. To switch between branches, type
+`git checkout [branch name]`. When you are on a branch, you can pull, add,
+commit, and push like a normal workflow above. When you are ready to merge
+with the master branch, you can either open a pull request or (and this is
+not recommended because it can cause merge conflicts that are difficult to
+resolve and can mess with other people's code) merge directly with the master
+branch. To open a pull request, navigate to the repo on the github website and
+select your branch from the branch drop down menu (on top of where the files
+are listed on the left side; master will likely be selected as default).
+Above the files should say "This branch is x commits ahead or behind master".
+To the left of that select pull request.
+    ![image](./assets/week2-git/git-pull-request.jpg)
+
+Add an optional comment and select
+`Create pull request`. Github will check for any merge conflicts, and if there
+exist none, a collaborator (we suggest someone else in your group) can click
+`Merge pull request` and then `Confirm merge` to merge into the master branch.
+After a branch is merged, you may wish to delete the branch. You can either do
+this in two ways. First, by selecting the `[Number] branches` next to the
+branch pull down menu for the repo and then clicking the trash can next to the
+branch to delete. Second, you can type `git branch -d [branch name]` into a
+terminal.
+
+Github also lets you work entirely with branches from the website.
+This short guide shows how: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository.
+
+To summarize:
+  - Create a branch with `git checkout -b [name of new branch]`.
+  - Switch between branches with `git checkout [name of branch]`.
+  - See all open branches with `git branch`.
+  - Open and merge pull requests on the github website.
+  - Delete a branch with `git branch -d [name of branch]`.
 
 # Merging and Various Errors
 
@@ -128,6 +175,12 @@ you wish to add all the changed files that are currently being tracked (i.e.
 already exist in the main branch), you can use the flag `-a` when committing.
 This equates to typing `git commit -am "[Descriptive Message]"` instead of
 `git add`ing each file and then committing.
+- `Forking` is a form of branching in which you create a local copy of an
+existing repo (and use this copy as if it is your own), which can later be
+merged like a normal branch using a pull request. This type of process is
+usually used in large, open-source projects when developers add features, but
+you can use it too! For example, these tutorials are developed on a local fork
+that gets merged with the website master repo when we finish a new one!
 - Github supports emojis! To use one, consult the list here: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md. Select your favorite and add
 the id of the emoji in question to your git commit message. A personal favorite
 of one of the authors is `":space_invader:"`. These are fun to add to any
