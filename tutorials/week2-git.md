@@ -13,7 +13,7 @@ Contents:
 * [Basic Commands](#basic-commands)
 * [Branching](#branching)
 * [Merging and Various Errors](#merging-and-various-errors)
-* [More Advanced Commands, and Fun Stuff](#more-advance-commands-and-fun-stuff)
+* [More Advanced Commands and Fun Stuff](#more-advanced-commands-and-fun-stuff)
 
 If you run into any difficulties following any of these steps, please post
 (in a non-private question) on Piazza.
