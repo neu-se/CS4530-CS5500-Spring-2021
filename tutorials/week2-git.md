@@ -13,6 +13,7 @@ Contents:
 * [Basic Commands](#basic-commands)
 * [Branching](#branching)
 * [Merging and Various Errors](#merging-and-various-errors)
+* [Shortcuts, More Advanced Commands, and Fun Stuff](#extras)
 
 If you run into any difficulties following any of these steps, please post
 (in a non-private question) on Piazza.
@@ -88,6 +89,36 @@ the steps for generating and adding the public key to your Github.
 
 # Basic Commands
 
+There are a few basic command you need to know to use git effectively.
+The basic workflow of working with git is when you resume working on a project,
+you type `git pull` in the github enabled folder. This will sync your local
+branch with the remote server (i.e. the `Master` branch,
+implicitly selected or explicitly  denoted `origin master`).
+Then you work on your code saving normally. When you are done (or want to
+create a checkpoint), you first add your code, commit it (with a message),
+and then push it. To check on the status of your commits, you can type
+`git status`. This command will show you what files you have edited locally
+that are not up to date with the master branch in red. To add them, type
+`git add [insert name of file]` for each file to add. Of note, you can tab
+complete the file name and use regular expressions to add more than one file.
+After you add a file, it will turn green in the `git status` menu.
+Then, you type `git commit -m "[Some explanatory message]"`. Commits are how
+git tracks versions of the code. Finally, you type `git push` and this should
+update the master branch (seen on the website) with your code changes.
+
+For review, when working on code you:
+1. `git pull`
+2. Work on your code
+3. `git add [file name]`
+4. `git commit -m "[Descriptive message]"`
+5. `git push`
+
 # Branching
 
+The above workflow is great when you are the only developer on a project.
+Now we will discuss an important concept when working with other developers:
+branching. 
+
 # Merging and Various Errors
+
+# Shortcuts, More Advanced Commands, and Fun Stuff
