@@ -168,6 +168,52 @@ To summarize:
 
 # Merging and Various Errors
 
+The most common error with git is a merge error. This occurs when you try to
+push something to a branch and the code you edited does not agree with the same
+code in some other commit already committed to a branch. The best way to fix
+merge errors is to take precautionary steps to avoid them. Best practices for
+doing this have already been mentioned: `git pull` when resuming work and
+do not try to merge directly with master, open a pull request. However,
+merge conflicts are bound to happen, and they, quite frankly are a headache
+sometimes. We can try to help you with these, but here we provide the steps
+you should take first to fix them.
+
+To see where the conflicts lie (after you git commit and git complains there
+are merge conflicts), just type `git status`. This will tell you the files
+that are in conflict. To manually fix the conflict, open the file. The git
+merging system will have left you with some information on the differences
+between the files that cause the conflict. We highly recommend that if you
+do not use the Atom text editor normally that you download it solely for this
+purpose. Atom is a popular IDE released by github, so it provides highlighting
+for merge conflicts. You can download it on Linux by typing `sudo apt-get
+install atom`, on Mac by typing `brew install atom`, and on Windows by `idk
+what to do here`. The git merge tool will add something to a file such as:
+
+```
+<<<<<<< HEAD
+console.log("Help! I have a merge conflict!");
+=======
+console.log("I have a merge conflict! Help!");
+>>>>>>> test_branch
+```
+
+The left arrows followed by HEAD indicate the code in the branch you are trying
+to merge with (in this case main). The equal signs denote the separation between
+the two versions, and the code that follows them until the right arrow is the
+code in the branch you are trying to merge (in this case, denoted by test_branch after the right arrows). To fix this merge manually, pick which version you
+want, delete the code from the other branch, and delete the left arrows, "HEAD",
+the right arrows, and the name of the merging branch (i.e. "test_branch").
+Then save the file, re-add it to mark it as fixed, and then commit and push
+as normal.
+
+We recommend Atom because this process is visually highlighted in the file
+as shown:
+    ![image](./assets/week2-git/atom-merge-example.jpg)
+
+You can just click on the "Use me" button for whichever version you want to
+use, which simplifies the process greatly.
+
+
 # More Advanced Commands and Fun Stuff
 
 - One of the best shortcuts is using flags for `git commit`. In particular, if
@@ -175,12 +221,37 @@ you wish to add all the changed files that are currently being tracked (i.e.
 already exist in the main branch), you can use the flag `-a` when committing.
 This equates to typing `git commit -am "[Descriptive Message]"` instead of
 `git add`ing each file and then committing.
+
+- Sometimes you just mess up your code badly and you want to revert to the
+previous commit that was working. To do this, use the `git stash` command.
+First, type `git stash`. This command reverts you back to your previous commit
+and actually saves your changes locally in a stash (i.e you can get them back).
+However, in our example, we just want to dump the bad code, so after `git stash`
+type `git stash drop`. Now your bad code breaking changes are gone. Poof!
+
+- Sometimes you might have already pushed your bad code! In order to "undo"
+this pushed commit, use `git revert`. Be warned though, this is entering into
+the trickier parts of git, and it could really really mess up your code if
+you aren't careful. Find the hash of your git commit you want to undo on the
+web page commit history. Conveniently, there is a copy button for this hash
+for each commit. Alternatively, you can type `git log` and it will show the
+commit history (be warned if this is long, you might want to add flags as to
+not have to continuously press enter to scroll through it).
+Then navigate to your terminal and type `git revert [copied hash]`. This is a
+separate commit that undoes the other commit, push this commit, and your bad
+code disappears (and has a traceable history associated with the undo in the
+commit history). Again, this is a warning that you really could mess up your
+code by doing this, and we may not be able to help you fix it. To be on the
+safer side, only revert your last commit when you realize you pushed bad or
+broken code. 
+
 - `Forking` is a form of branching in which you create a local copy of an
 existing repo (and use this copy as if it is your own), which can later be
 merged like a normal branch using a pull request. This type of process is
 usually used in large, open-source projects when developers add features, but
 you can use it too! For example, these tutorials are developed on a local fork
 that gets merged with the website master repo when we finish a new one!
+
 - Github supports emojis! To use one, consult the list here: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md. Select your favorite and add
 the id of the emoji in question to your git commit message. A personal favorite
 of one of the authors is `":space_invader:"`. These are fun to add to any
