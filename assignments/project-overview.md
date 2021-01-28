@@ -21,7 +21,7 @@ All implementation will take place in the TypeScript programming language, using
 | 2/12/21 | Team Formation | Specify preferences for teammates |
 | 2/26/21 | Project Pitch | Propose a new feature for Covey.Town that can be implemented within 5 weeks |
 | 3/12/21 | Project Plan | Refine the scope of your feature based on staff feedback, define detailed requirements and project acceptance criteria. Propose a high-level design. |
-| 4/12/21 | Project Implementation and Documentation | Deliver your new feature, including design documentation and tests |
+| 4/15/21 | Project Implementation and Documentation | Deliver your new feature, including design documentation and tests |
 
 ### Team Formation
 All projects will be completed in a team of 3-4 students.
