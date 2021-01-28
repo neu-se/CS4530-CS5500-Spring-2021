@@ -8,6 +8,7 @@ This tutorial describes the basic usage of git, a version control system to
 track code changes among yourself and your collaborators.
 
 Contents:
+* [Accessing Khoury Github](#khoury-github)
 * [Gitting Started!](#gitting-started)
 * [Basic Commands](#basic-commands)
 * [Branching](#branching)
@@ -16,16 +17,24 @@ Contents:
 If you run into any difficulties following any of these steps, please post
 (in a non-private question) on Piazza.
 
+# Accessing Khoury Github
+
+We recommend using the Khoury Github for this class, as it will be the site
+you use for your final project. You can login with your Khoury account here:
+https://github.ccs.neu.edu/login. If you do not already have a Khoury account,
+you can request one at https://my.khoury.northeastern.edu/account/apply#_ga=2.224677850.1566269507.1611587596-1185439082.1610317450. Once you do
+this, you will be emailed your account information when it is approved by the
+IT department.
+
 # Gitting Started!
 
 Git is a version control system that lets you share versions of code remotely
 with other collaborators (or have a remote version you can save and access from
 any computer). The central platform that we will be using is an online service
 called Github (other services also exist, like GitLab). You can create your own
-account online at https://github.com/, or Khoury College has an institutional
-Github you can log into with your Khoury account. This website can be found at
-https://github.ccs.neu.edu/login. We recommend using the Khoury Github, as this
-will be what you will be using for your final projects.
+account online at https://github.com/, or use the Khoury Github mentioned above.
+Again, we recommend using the Khoury Github, as this will be what you will be
+using for your final projects.
 
 Once you login, you can create a new repository (which is a another name for
 a git enabled folder) by clicking "New" button in the upper left corner:
