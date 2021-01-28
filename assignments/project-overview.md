@@ -54,7 +54,7 @@ The course staff will provide feedback on your project to help ensure that the s
 The project pitch will include:
 * User stories: high level description of how users will interact with your new feature. User stories are requirements specified in the format 
 "As a < type of user >, I want < some goal > so that < some reason >." You should include at least 3 different user stories to describe how users will interact with your feature.
-* Acceptance testing criteria: For each of the user stories, describe how you (and we) would determine that the functionality is correctly implemente.
+* Acceptance testing criteria: For each of the user stories, describe how you (and we) would determine that the functionality is correctly implemented.
 
 ### Project Plan
 Based on the feedback that you receive from the course staff, you will propose a detailed plan to implement your new feature.
@@ -74,8 +74,7 @@ codebase is independent of the grade you receive, but provides a platform for mo
 Your final deliverable will include:
 * The implementation of your new feature
 * Automated tests for your new feature
-* A README that includes:
-    * Instructions to deploy Covey.Town with your new feature
-    * The final version of your use cases
-    * Documentation of your design (using CRC cards, UML class diagrams, and/or UML sequence diagrams as you find necessary; remember that a picture is worth a thousand words!). In particular,
+* A README.md document that includes instructions to deploy Covey.Town with your new feature
+* A FEATURE.md document that describes the final version of your use cases
+* A DESIGN.md document that includes documentation of your design (using CRC cards, UML class diagrams, and/or UML sequence diagrams as you find necessary; remember that a picture is worth a thousand words!). In particular,
     for any change that you had to make to the existing codebase, provide a rationale for why the change was made, and what alternatives were considered.
