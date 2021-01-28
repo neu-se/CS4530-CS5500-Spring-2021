@@ -13,7 +13,7 @@ Contents:
 * [Basic Commands](#basic-commands)
 * [Branching](#branching)
 * [Merging and Various Errors](#merging-and-various-errors)
-* [Shortcuts, More Advanced Commands, and Fun Stuff](#extras)
+* [More Advanced Commands, and Fun Stuff](#more-advance-commands-and-fun-stuff)
 
 If you run into any difficulties following any of these steps, please post
 (in a non-private question) on Piazza.
@@ -121,7 +121,7 @@ branching.
 
 # Merging and Various Errors
 
-# Shortcuts, More Advanced Commands, and Fun Stuff
+# More Advanced Commands and Fun Stuff
 
 - One of the best shortcuts is using flags for `git commit`. In particular, if
 you wish to add all the changed files that are currently being tracked (i.e.
