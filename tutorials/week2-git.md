@@ -117,8 +117,19 @@ For review, when working on code you:
 
 The above workflow is great when you are the only developer on a project.
 Now we will discuss an important concept when working with other developers:
-branching. 
+branching.
 
 # Merging and Various Errors
 
 # Shortcuts, More Advanced Commands, and Fun Stuff
+
+- One of the best shortcuts is using flags for `git commit`. In particular, if
+you wish to add all the changed files that are currently being tracked (i.e.
+already exist in the main branch), you can use the flag `-a` when committing.
+This equates to typing `git commit -am "[Descriptive Message]"` instead of
+`git add`ing each file and then committing.
+- Github supports emojis! To use one, consult the list here: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md. Select your favorite and add
+the id of the emoji in question to your git commit message. A personal favorite
+of one of the authors is `":space_invader:"`. These are fun to add to any
+commit, but in particular a `git commit -am "Done!! :space_invader:"` for when
+you finish a programming assignment is always fun :)
