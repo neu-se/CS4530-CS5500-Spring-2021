@@ -57,10 +57,56 @@ cloning. Two steps are needed before you can do this process:
 2. You need to add an ssh key to your github page (or you can clone using
   https).
 
-For step one, if you are on a linux machine, type `sudo apt-get update` and then
+For step one,
+- If you are on a linux machine, type `sudo apt-get update` and then
 type `sudo apt-get install git`.
-If you are on a mac, type `brew install git`. If you are on a windows machine,
-`Not sure what to do, insert here`.
+- If you are on a mac, type `brew install git`. 
+- If you are on a windows machine, follow the steps below:
+    1. Download the git installer from the git-scm [website](https://git-scm.com/downloads)
+        - ![image](./assets/week2-git/git-website.JPG)
+    2. Run the installer and click yes on the windows prompt to allow installation.
+    3. Click next on the information page.
+        - ![image](./assets/week2-git/git-setup-1.JPG)
+    4. Select the destination folder for installation and click next.
+        - ![image](./assets/week2-git/git-setup-2.JPG)
+    5. Select all components and click next.
+        - ![image](./assets/week2-git/git-setup-3.JPG)
+    6. Click next on select start menu folder.
+        - ![image](./assets/week2-git/git-setup-4.JPG)
+    7. Select the editor of choice for Git (I've kept the default Vim.JPG) and click next.
+        - ![image](./assets/week2-git/git-setup-5.JPG)
+    8. Select "Let git decide" for the default branch and click next.
+        - ![image](./assets/week2-git/git-setup-6.JPG)
+    9. Select "Git from the command line and also 3rd party software" and click next.
+        - ![image](./assets/week2-git/git-setup-7.JPG)
+    10. Select "Use OpenSSL library" and click next.
+        - ![image](./assets/week2-git/git-setup-8.JPG)
+    11. Select "Checkout windows-style, commit unix-style line endings" and click next.
+        - ![image](./assets/week2-git/git-setup-9.JPG)
+    12. Select "Use MinTTY" and click next.
+        - ![image](./assets/week2-git/git-setup-10.JPG)
+    13. Select "default" and click next.
+        - ![image](./assets/week2-git/git-setup-11.JPG)
+    14. Select "Git Credential Manager Core" and click next.
+        - ![image](./assets/week2-git/git-setup-12.JPG)
+    15. Enable both options and click next.
+        - ![image](./assets/week2-git/git-setup-13.JPG)
+    16. Select "Enable support for experimental consoles" and click Install.
+        - ![image](./assets/week2-git/git-setup-14.JPG)
+    17. Git has now been installed. Click finish to exit
+        - ![image](./assets/week2-git/git-setup-15.JPG)
+- To verify the installation of git:
+    1. Open a terminal (cmd/powershell)
+    2. Run the command `*git --version*`
+    3. You should see the version of git installed
+        - ![image](./assets/week2-git/git-setup-verify.JPG)
+
+Setting your SSH key on Windows:
+1. Open git bash
+2. Run the command: `*ssh-keygen*`
+    - Hit enter for all options and an RSA key-pair will be generated!
+    - However, it is a good idea to set a passphrase.
+    - ![image](./assets/week2-git/ssh-keygen.JPG)
 
 After you install git, navigate to your home directory and type `ssh-keygen`.
 Press enter for all options, and optionally enter a password when prompted. It
@@ -185,9 +231,8 @@ merging system will have left you with some information on the differences
 between the files that cause the conflict. We highly recommend that if you
 do not use the Atom text editor normally that you download it solely for this
 purpose. Atom is a popular IDE released by github, so it provides highlighting
-for merge conflicts. You can download it on Linux by typing `sudo apt-get
-install atom`, on Mac by typing `brew install atom`, and on Windows by `idk
-what to do here`. The git merge tool will add something to a file such as:
+for merge conflicts. You can download it on Linux by typing `sudo apt-get install atom`, 
+on Mac by typing `brew install atom`. The git merge tool will add something to a file such as:
 
 ```
 <<<<<<< HEAD
@@ -213,7 +258,12 @@ as shown:
 You can just click on the "Use me" button for whichever version you want to
 use, which simplifies the process greatly.
 
-
+For windows, we recommend using TortoiseGit as the mergetool.
+1. Download the installer for TortoiseGit from the official [website](https://tortoisegit.org/).
+    - ![image](./assets/week2-git/tortoise-git.JPG)
+2. Run the installer
+3. Select the installation directory and click next on all windows to complete the installation.
+4. When attempting to merge conflicts from the CLI, tortoisemerge should be the default option now. 
 # More Advanced Commands and Fun Stuff
 
 - One of the best shortcuts is using flags for `git commit`. In particular, if
