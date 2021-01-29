@@ -67,14 +67,20 @@ The project plan will include:
 We will use the work breakdown and schedule as the basis for weekly check-ins with your team's TA.
 
 ### Project Implementation and Documentation
-Your final deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo.
+Your final team deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo.
 *Optionally,* you may also open a pull request to merge your feature into our main repository (submitting a pull request, or the pull request being merged into our
 codebase is independent of the grade you receive, but provides a platform for more visiblity of your project). 
 
-Your final deliverable will include:
+Your final team deliverable will include:
 * The implementation of your new feature
 * Automated tests for your new feature
 * A README.md document that includes instructions to deploy Covey.Town with your new feature
 * A FEATURE.md document that describes the final version of your use cases
 * A DESIGN.md document that includes documentation of your design (using CRC cards, UML class diagrams, and/or UML sequence diagrams as you find necessary; remember that a picture is worth a thousand words!). In particular,
     for any change that you had to make to the existing codebase, provide a rationale for why the change was made, and what alternatives were considered.
+* A 10 minute video that demonstrates the usage of your feature
+    
+Accompanying the final team deliverable will be an *individual reflection*, which every student must submit on their own, which will include your reflections on:
+* The evolution of your project concept: How does the project that you delivered compare to what you originally planned to deliver? What caused these deviations?
+* The software engineering processes that you feel could have been improved in your project: were there any procesess that in hindsight, you wish that you followed, or wish that you followed better?
+* Your team dynamic: Provide a frank (and ideally, blameless) postmortem of your and your teammates collaborative performance and participation. If you had to do this same project over with the same teammates, what would *you* have done differently (or not) to improve your team's overall performance?
