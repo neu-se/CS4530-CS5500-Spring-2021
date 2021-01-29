@@ -23,7 +23,7 @@ If you run into any difficulties following any of these steps, please post
 We recommend using the Khoury Github for this class, as it will be the site
 you use for your final project. You can login with your Khoury account here:
 https://github.ccs.neu.edu/login. If you do not already have a Khoury account,
-you can request one at https://my.khoury.northeastern.edu/account/apply#_ga=2.224677850.1566269507.1611587596-1185439082.1610317450. Once you do
+you can request one at https://my.khoury.northeastern.edu/account/apply. Once you do
 this, you will be emailed your account information when it is approved by the
 IT department.
 
@@ -60,7 +60,7 @@ cloning. Two steps are needed before you can do this process:
 For step one,
 - If you are on a linux machine, type `sudo apt-get update` and then
 type `sudo apt-get install git`.
-- If you are on a mac, type `brew install git`. 
+- If you are on a mac, type `git --version`. If it is already installed, it will print out the current version (and you're ready to go!). If it is not already installed, you will be prompted with the option to install Git by installing the XCode Command Line Tools - follow the prompts to install XCode Command Line Tools, and when you're done, you'll have git (along with several other useful tools)
 - If you are on a windows machine, follow the steps below:
     1. Download the git installer from the git-scm [website](https://git-scm.com/downloads)
         - ![image](./assets/week2-git/git-website.JPG)
