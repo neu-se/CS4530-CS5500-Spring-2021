@@ -36,6 +36,11 @@ Part 3 is a coding task, and you will implement it by modifying the same code th
 
 Please post any questions about this assignment on Piazza.
 
+### Change Log
+* 1/24: Updated handout file to copy `.env.example` to `.env`. If you already have the handout, you can fix yours by copying the file `.env.example` to `.env`. If you download the handout now, it will already be in position. - JSB
+* 1/26: Update broken link to style guide in part 3 rubric - JSB
+* 1/27: Clarify that `roomJoinHandler` and `roomSubscriptionHandler` should not "be treated as classes," but more precisely, that you should create a CRC card for each, even though they are not classes. - JSB
+
 
 ## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
@@ -60,7 +65,7 @@ Review Avery's code to understand the role of the following types, and create a 
 Please refer to Lesson 2.1 for more details about CRC cards, and examples of CRC cards.
 
 Note that TypeScript functions are first-class entities that can be passed around as objects.
-Hence, while traditionally the first 'C' in 'CRC' stands for *Class*, for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as classes.
+Hence, while traditionally the first 'C' in 'CRC' stands for *Class* (that is, we make CRC cards for *classes*), for this design exercise, we'll consider the two functions `roomJoinHandler` and `roomSubscriptionHandler` as sufficiently important types to each have CRC cards.
 In a language like Java, each of these functions would likely end up being a class with a single function --- in TypeScript, we can 
 have that single function stand on its own without being part of a class.
 
@@ -68,7 +73,7 @@ Each CRC card should include:
   * the name of the class, function or interface being described
   * a short phrase or sentence describing the responsibility of this class in the context of the entire application
   * the collaborators of the class.  These are the classes which are directly coupled to the class.  In some cases, this list may be open-ended.
-  * the portion of the application's state is that is kept in an object of this class.
+  * the portion of the application's state is that is kept in an object of this class (note: methods to not have state)
 
 
 
@@ -191,7 +196,7 @@ Part 3 will account for 1/3 of your overall grade on this assignment.
 To receive a mark of "Satisfactory" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Follow the design specification outlined above
-* Conform to our [style guide](/policies/style) *and* have no style warnings or errors as reported by `npm run-script lint`
+* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
 * Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
