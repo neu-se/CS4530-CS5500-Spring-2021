@@ -59,7 +59,11 @@ to start to get a handle on what Avery did here.
 To help you set up a local development environment for this class, we've prepared a tutorial for [setting up a development environment with NodeJS, VSCode and TypeScript]({{ site.baseurl }}{% link tutorials/week1-getting-started.md %}).
 
 ### Updating the CoveyRoomsStore
-Avery has already modified the `CoveyRoomController` to generate and keep track of the ID and update password for each room, and has stubbed out
+Avery has already modified the `CoveyRoomController` to generate and keep track of the ID and update password for each room.
+Avery is using the [nanoid](https://www.npmjs.com/package/nanoid) library to generate random strings for both the ID and password, which should
+ensure that IDs are unique, and that passwords are hard to guess. These values are automatically generated in the constructor of `CoveyRoomController`,
+so you won't need to worry about this aspect of the design.
+Avery has also stubbed out
 functions in `CoveyRoomStore` for creating, updating, listing and deleting rooms. You should begin your implementation with these functions in `CoveyRoomStore.ts`:
 
 ```
@@ -81,7 +85,8 @@ functions in `CoveyRoomStore` for creating, updating, listing and deleting rooms
    * Updates the friendlyName and/or public visibility of a room if there is a room that has the
    * specified ID and password. Only updates fields that are passed (note friendlyName or makePublic
    * might be undefined). Returns true if a room was found matching the ID and password, or false
-   * otherwise.
+   * otherwise. If there are no updates (e.g. friendlyName === undefined && makePublic === undefined),
+   * but the room ID and password are valid, this method should still return true.
    *
    * @param coveyRoomID
    * @param coveyRoomPassword
@@ -92,7 +97,9 @@ functions in `CoveyRoomStore` for creating, updating, listing and deleting rooms
 
   /**
    * Deletes the room specified by ID. Only deletes the room if the password specified as a
-   * parameter here matches the password stored by the matching CoveyRoomController.
+   * parameter here matches the password stored by the matching CoveyRoomController. This method
+   * should both remove the room from the RoomStore's listing of rooms, and also disconnect
+   * any players from the room (by calling CoveyRoomController.disconnectAllPlayers).
    *
    * Returns true if the room was found, password matched, and the room was deleted. Otherwise
    * returns false.
