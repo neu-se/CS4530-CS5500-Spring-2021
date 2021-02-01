@@ -19,7 +19,7 @@ If you run into any difficulties following any of these steps, please post (in a
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-There are many ways that you can install Node.js: for instance, you can use a package manager like 
+There are many ways that you can install Node.js: for instance, you can use a package manager like
 `snap` or `homebrew` to install it; you can download an installer directly from the Node.js website, and you can,
 of course, build it from source.
 
@@ -28,7 +28,7 @@ are in active development (like Node.js is), sometimes you end up needing to hav
 and different projects that you work on might require different versions of Node.js. These annoyances are quite rare,
 but when it happens that you need to have mutliple versions of Node.js installed, it's super handy to have your system set up already
 so that installing multiple versions and switching between it is easy. You can use our instructions to set up nvm even if you
-have previously installed Node.js. 
+have previously installed Node.js.
 
 ## Installing NodeJS with NVM for Windows
 
@@ -58,7 +58,7 @@ have previously installed Node.js.
    - `*node -v*`
    - `*npm -v*`
    - ![image](./assets/week1-getting-started/node/nvm-use-14.JPG)
- 
+
 ## Installation Steps (Linux / Mac)
 
 1. Run either `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash` or `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`.
@@ -81,8 +81,8 @@ feedback, open a new terminal and trying again or restart from step 1.
 
 Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Read more [here](https://code.visualstudio.com/docs).
 While you are required to use *an* IDE for this class, it is not mandatory to use VSCode: if you already are comfortable developing TypeScript or JavaScript
-in another suitable IDE (like IntelliJ), then you are welcome to continue to use that. However, VSCode is the 
-"supported" option: if you struggle to get things like the linter set up correctly in VSCode, we will be happy to help you. 
+in another suitable IDE (like IntelliJ), then you are welcome to continue to use that. However, VSCode is the
+"supported" option: if you struggle to get things like the linter set up correctly in VSCode, we will be happy to help you.
 However, we can't provide such support for all IDEs.
 
 ## Pre-requisites
@@ -134,9 +134,9 @@ Below is a list of extensions that you may find useful.
 2. Search ESLint.
 3. Click on Install.
 4. Done!
-    - ![image](./assets/week1-getting-started/vsc/eslint-search.JPG) 
+    - ![image](./assets/week1-getting-started/vsc/eslint-search.JPG)
 
- 
+
 # Getting Started With Typescript
 
 Typescript is a superscript of JavaScript which adds type information and other features.

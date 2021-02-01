@@ -30,7 +30,7 @@ Other than that, Just the Docs requires no special Jekyll plugins and can run on
 ```bash
 $ bundle exec jekyll serve
 ```
-1. Point your web browser to [http://localhost:4000](http://localhost:4000)
+1. Point your web browser to [http://localhost:4000/CS4530-CS5500-Spring-2021/](http://localhost:4000/CS4530-CS5500-Spring-2021/)
 1. Reload your web browser after making a change to preview its effect.
 
 For more information, refer to [Just the Docs](https://pmarsceill.github.io/just-the-docs/).
