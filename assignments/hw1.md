@@ -48,6 +48,7 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/build/'],
 };
 ```
+* 2/1: Add submission warning about .tgz vs .zip
 
 
 ## Part 1: Documenting the design 
@@ -227,7 +228,7 @@ Parts 1 & 2 should be submitted be compiled into a single PDF and submitted to t
 Please use GradeScope's "tagging" interface to associate each of your answers with the questions in the rubric.
 
 To submit Part 3: run the command `npm run-script pack` in your project directory, which will create a zip file that is properly
-structured for submission. Submit this zip file to the assignment "Homework 1 (Part 3)" on GradeScope.
+structured for submission. **Important**: GradeScope only accepts .zip files, *not* .tgz files - if you run `npm pack`, you will get a .tgz file, and it will not be accepted by GradeScope. Please be sure to run `npm run-script pack`. Submit this zip file to the assignment "Homework 1 (Part 3)" on GradeScope.
 GradeScope will provide you with feedback on your submission, providing a numeric score of:
 * 2 (Satisfactory)
 * 1 (Meets minimum expecations)
