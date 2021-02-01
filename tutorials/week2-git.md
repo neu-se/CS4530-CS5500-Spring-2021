@@ -54,8 +54,12 @@ To get this repository on your local computer, you will do a process called
 cloning. Two steps are needed before you can do this process:
 
 1. You need to install git locally on your computer.
-2. You need to add an ssh key to your github page (or you can clone using
-  https).
+2. You need to add an ssh key to your Github page (or you can clone using
+  https). For context, using an ssh key allows you to authenticate your
+  computer with Github automatically using a cryptographic protocol. This
+  process tends to make working with git more smooth when developing your code, as you are automatically authenticated when you start up a new session
+  and don't have to type in your username and password every time you want to
+  sync the Github repository with your local computer.
 
 For step one,
 - If you are on a linux machine, type `sudo apt-get update` and then
@@ -134,7 +138,9 @@ Navigate back to your terminal and type
 only happen the first time you access a repo). This will clone your repo
 locally for you to edit! If you encounter an error saying you do not have
 access rights, you have messed something up in adding your ssh key. Retry
-the steps for generating and adding the public key to your Github.
+the steps for generating and adding the public key to your Github. Further
+information for troubleshooting and/or setting up an ssh key on other systems
+as needed can be found at: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh.
 
 # Basic Commands
 
@@ -231,7 +237,7 @@ merging system will have left you with some information on the differences
 between the files that cause the conflict. We highly recommend that if you
 do not use the Atom text editor normally that you download it solely for this
 purpose. Atom is a popular IDE released by github, so it provides highlighting
-for merge conflicts. You can download it on Linux by typing `sudo apt-get install atom`, 
+for merge conflicts. You can download it on Linux by typing `sudo apt-get install atom`,
 on Mac by typing `brew install atom`. The git merge tool will add something to a file such as:
 
 ```
@@ -263,7 +269,7 @@ For windows, we recommend using TortoiseGit as the mergetool.
     - ![image](./assets/week2-git/tortoise-git.JPG)
 2. Run the installer
 3. Select the installation directory and click next on all windows to complete the installation.
-4. When attempting to merge conflicts from the CLI, tortoisemerge should be the default option now. 
+4. When attempting to merge conflicts from the CLI, tortoisemerge should be the default option now.
 # More Advanced Commands and Fun Stuff
 
 - One of the best shortcuts is using flags for `git commit`. In particular, if
@@ -293,7 +299,7 @@ code disappears (and has a traceable history associated with the undo in the
 commit history). Again, this is a warning that you really could mess up your
 code by doing this, and we may not be able to help you fix it. To be on the
 safer side, only revert your last commit when you realize you pushed bad or
-broken code. 
+broken code.
 
 - `Forking` is a form of branching in which you create a local copy of an
 existing repo (and use this copy as if it is your own), which can later be
