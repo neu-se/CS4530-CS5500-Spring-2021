@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installing a Development Environment
+title: Version Control
 permalink: /tutorials/week2-git
 parent: Tutorials
 ---
@@ -22,8 +22,8 @@ If you run into any difficulties following any of these steps, please post
 
 We recommend using the Khoury Github for this class, as it will be the site
 you use for your final project. You can login with your Khoury account here:
-https://github.ccs.neu.edu/login. If you do not already have a Khoury account,
-you can request one at https://my.khoury.northeastern.edu/account/apply. Once you do
+[https://github.ccs.neu.edu/login](https://github.ccs.neu.edu/login). If you do not already have a Khoury account,
+you can request one at [https://my.khoury.northeastern.edu/account/apply](https://my.khoury.northeastern.edu/account/apply). Once you do
 this, you will be emailed your account information when it is approved by the
 IT department.
 
@@ -33,7 +33,7 @@ Git is a version control system that lets you share versions of code remotely
 with other collaborators (or have a remote version you can save and access from
 any computer). The central platform that we will be using is an online service
 called Github (other services also exist, like GitLab). You can create your own
-account online at https://github.com/, or use the Khoury Github mentioned above.
+account online at [https://github.com/](https://github.com/), or use the Khoury Github mentioned above.
 Again, we recommend using the Khoury Github, as this will be what you will be
 using for your final projects.
 
