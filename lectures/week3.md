@@ -44,7 +44,7 @@ In this week of the course, you will learn
 
 ### Resources
 * [Example 3.1 Transcript Server]({{ site.baseurl }}{% link /Examples/Example 3.1 transcript-server.zip %})
-* In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-Architecture.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-Architecture.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-Architecture.key %})
+* In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.key %})
 
 
 ### Additional Readings:
