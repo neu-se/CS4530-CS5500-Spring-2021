@@ -1,0 +1,20 @@
+Reflections on the CRC assignment
+
+1.  Should make collaborators just the depends-on relation (not its
+symmetric closure).  The symmetric closure adds no information, and in
+fact loses information (who depends on who?)
+
+2. We went astray by adding State to the list of things to go on the
+CRC card.  State is really part of responsibilities, as in:
+
+"Resonsibility: counts the number of ticks it receives"
+or
+"Responsibility: maintains the map from alarms to their locations"
+
+This also solves^H^H^H avoids  the problem of whether interfaces have state.
+
+IClock's Responsibility:  Defines the interface for classes that count
+count the number of ticks they receive.
+
+
+
