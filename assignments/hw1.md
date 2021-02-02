@@ -48,7 +48,8 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/build/'],
 };
 ```
-* 2/1: Add submission warning about .tgz vs .zip
+* 2/1: Add submission warning about .tgz vs .zip - JSB
+* 2/2: Clarify the checks on `eslint-disable` and `@ts-ignore` that GradeScope now performs, add small hint in Part 3 step 1 that proceeding to step 2 is required to fully implement `CoveyRoomStore` - JSB 
 
 
 ## Part 1: Documenting the design 
@@ -186,9 +187,9 @@ code (and you learn about frontend development in class), you'll also modify the
 Avery previously created the interface `ICoveyRoomsStore` to define the behavior for a new class, `CoveyRoomsStore`, 
 which will hold onto a collection of `CoveyRoomController`s, one per-room. Your coding task is:
 1. In the (empty) file `CoveyRoomsStore.ts`, define the new type `CoveyRoomsStore`, which should be a singleton, and
-implement the functionality of `ICoveyRoomsStore`.
+implement the functionality of `ICoveyRoomsStore`. Note that you'll need to proceed to step 2 to fully implement this method.
 1. Change the `CoveyRoomController` so that it is no longer a singleton. Instead, there will be one instance of this type
-for each room, and those instances will be created by your `CoveyRoomsStore`. Add a new *private*, *readonly* property, called `_coveyRoomID` (and a [TypeScript-style getter](https://www.typescriptlang.org/docs/handbook/classes.html#accessors)) to 
+for each room, and those instances will be created by your `CoveyRoomsStore`. Add a public constructor, and a new *private*, *readonly* property, called `_coveyRoomID` (and a [TypeScript-style getter](https://www.typescriptlang.org/docs/handbook/classes.html#accessors)) to 
 `CoveyRoomController` so that each room controller knows the name of the room that it is mapped to. Update the call to
 `getTokenForRoom` to pass this room ID instead of the hard-coded one.
 1. Change the `roomSubscriptionHandler` and `roomJoinHandler` to retrieve the correct `CoveyRoomController` from your
@@ -206,12 +207,12 @@ To receive a mark of "Satisfactory" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Follow the design specification outlined above
 * Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write (the `@ts-ignore` and `eslint-disable` lines that are provided in the handout can stay, and GradeScope will automatically tell you if it finds any new ones that you must remove)
 
 To receive a mark of "Meets minimum expectations" for Part 3, your code submission must:
 * Pass all included automated tests as reported by `npm test`
 * Have no style errors (may have warnings) as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write (the `@ts-ignore` and `eslint-disable` lines that are provided in the handout can stay, and GradeScope will automatically tell you if it finds any new ones that you must remove)
 
 
 **Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 3.
