@@ -37,11 +37,11 @@ We encourage you to start early so that you can post questions on Piazza, make t
 
 The objectives for this assignment, are to:
 * Expand an existing API following the coding conventions set out in an existing codebase
-* Practice asynchronous code, including making HTTP requests
-* **TBD something related to part 1**
+* Practice writing asynchronous code, including making HTTP requests
+* Relate architectural design principles to the design of a real codebase
 
-Part 1 is a coding task, and you will implement it by modifying the handout code that we provide with this assignment.
-Part 2 of this assignment should be completed in a text editor or word processor, and submitted as a PDF.
+Parts 1 and 2 are coding tasks, and you will implement them by modifying the handout code that we provide with this assignment.
+Part 3 of this assignment should be completed in a text editor or word processor, and submitted as a PDF.
 
 **This is an individual assignment.** 
 
@@ -53,7 +53,7 @@ Please post any questions about this assignment on Piazza.
 ## Part 1: 
 Avery has provided you with a sketch of the API that you should be implementing, and quite helpfully, has provided type definitions
 for the various API calls.
-**TODO add starter code**
+Start by [downloading this starter code]({{ site.baseurl }}{% link /assignments/hw2-handout.zip %})
 Extract this archive, run `npm install` in it to fetch all of the dependencies, and open the code in your IDE
 to start to get a handle on what Avery did here.
 To help you set up a local development environment for this class, we've prepared a tutorial for [setting up a development environment with NodeJS, VSCode and TypeScript]({{ site.baseurl }}{% link tutorials/week1-getting-started.md %}).
@@ -245,8 +245,33 @@ To receive a mark of "Meets minimum expectations" for Part 3, your code submissi
 **Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 2.
  **Do not wait to test or style check your code until the last minute.**
 
-## Part 3 TBD
+## Part 3: Software Architecture Research
+Avery is somewhat concerned that Covey.Town's launch could be an "epic fail:" if thousands of people try to connect to it,
+will the system handle the load, or will it grind to a halt, crash, and burn?
+While browsing around on Twitter, Avery found [a blogpost about software architectures for massively multiplayer multi-user environments](http://blog.ieeesoftware.org/2016/01/architectures-for-massively-multi-user.html).
+Read this blogpost, and based on its contents, answer the following questions related to Covey.Town's architecture and performance.
+Please keep each answer to within 2-4 sentences, and be sure to relate your answer to the blogpost.
 
+1. What aspects of Covey.Town involve N^2 traffic (with regards to N concurrent users)?
+1. How does the blog post suggest that multi-player games can improve responsiveness while still maintaining a consistent view of the world?
+1. One of the scaling approaches described in the blogpost is *sharding*. Given the system that you built in part 1 and 2, how would you suggest that we *shard* Covey.Town traffic across multiple servers?
+1. One day, we might want to allow more than 50 players to connect to the same room - perhaps, up to 1,000 in one room. How does the article suggest architecting communication in such a big room?
+
+### Rubric Specification for Part 3
+
+Each of the four questions in Part 3 will account for 1/12 of your overall grade for this assignment (that is, Part 3 will account for 1/3 of the overall grade,
+with each question weighted evenly).
+Each of the four questions will be graded to the following specification:
+
+To receive a mark of "Satisfactory" on a question:
+* The answer is factually correct, using the terminology and rationales provided in the blogpost
+* The provided explanation is 2-4 sentences, and relates the architectural concepts with the Covey.Town codebase
+
+To receive a mark of "Meets minimum expectations" on a question:
+* The answer is factually correct
+* The provided explanation is 2-4 sentences and discusses either an architectural concept or the Covey.Town codebase, but may not link them together
+
+Answers that do not meet the above criteria will receive no credit for that question.
 
 ## Submission Instructions
 Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
@@ -256,7 +281,7 @@ Please contact the instructors immediately if you have difficulty accessing the 
 
 Parts 1 and 2 should be submitted together on GradeScope.
 To submit Parts 1 and 2: run the command `npm run-script pack` in your project directory, which will create a zip file that is properly
-structured for submission. Submit this zip file to the assignment "Homework 2 (Parts 1 and 2)" on GradeScope.
+structured for submission. **Important**: GradeScope only accepts .zip files, *not* .tgz files - if you run `npm pack`, you will get a .tgz file, and it will not be accepted by GradeScope. Please be sure to run `npm run-script pack`. Submit this zip file to the assignment "Homework 2 (Parts 1 & 2)" on GradeScope.
 GradeScope will provide you with feedback on your submission, providing a numeric score for Part 1 and Part 2 of:
 * 2 (Satisfactory)
 * 1 (Meets minimum expecations)
@@ -268,4 +293,5 @@ and debug test or linter failures on your local machine, **please** ask the TAs 
 an immense amount of time waiting for the autograder to complete, when you could get the same feedback in seconds running
 the tests + linter locally.
 
-**Part 3 submission TBD**
+Part 3 should be submitted as a PDF on GradeScope to the assignment "Homework 2 (Part 3)".
+Please use GradeScope's "tagging" interface to associate each of your answers with the questions in the rubric.
