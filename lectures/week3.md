@@ -35,11 +35,11 @@ In this week of the course, you will learn
     * [Slides]({{ site.baseurl }}{% link Slides/Lesson 3.3 REST Protocols.pptx %}) 
     * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson3.3.pdf %})
     
-* 3.3: Building a REST Server
+* 3.4: Building a REST Server
 
-    * [Video] (to come)
-    * [Slides] (to come)
-    * [PDF] (to come)
+    * [Video](https://northeastern.instructure.com/courses/60188/modules/items/5503582)
+    * [Slides]({{ site.baseurl }}{% link Slides/Lesson 3.4 Building a REST server.pptx %}) 
+    * [PDF]({{ site.baseurl }}{% link Pdfs/Lesson3.4.pdf %}) 
 
 
 ### Resources
