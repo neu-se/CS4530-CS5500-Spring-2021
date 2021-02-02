@@ -45,6 +45,6 @@ In this week of the course, you will learn
 ### Resources
 * [Example 3.1 Transcript Server]({{ site.baseurl }}{% link /Examples/Example 3.1 transcript-server.zip %})
 * In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-01-Architecture.key %})
-
+	* See also: [Twitter Blog post from 2010 explaining architecture woes](https://blog.twitter.com/2013/new-tweets-per-second-record-and-how), [Blog post explainer of GFS](https://www.the-paper-trail.org/post/2008-10-01-the-google-file-system/), [Interview with Sean Quinlan discussing Google's work arounds to keep GFS working despite its architectural problems](https://queue.acm.org/detail.cfm?id=1594206), [Parler data leak this January was partially due to sequentially generated IDs](https://financialpost.com/technology/tech-news/common-development-error-likely-led-to-huge-parler-data-theft-says-expert)
 
 ### Additional Readings:
