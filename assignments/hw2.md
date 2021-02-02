@@ -173,8 +173,11 @@ export async function roomDeleteHandler(requestData: RoomDeleteRequest): Promise
 /**
  * Updates a room's friendlyName and/or public visibility.
  *
+ * Rejects the request (by setting `isOK` field on the envelope to `false`) if the request is to
+ * update the `friendlyName` to an empty string.
+ *
  * Sets the `isOK` field on the envelope to `true` if the room exists, password matches, and room
- * is deleted. Sets the `isOK` field on the envelope to `false` and the `message` field to "Invalid
+ * is updated. Sets the `isOK` field on the envelope to `false` and the `message` field to "Invalid
  * Request" if the room does not exist, or password does not match.
  *
  * @see CoveyRoomsStore.updateRoom - which will update the room's data
