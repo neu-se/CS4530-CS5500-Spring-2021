@@ -38,6 +38,7 @@ We encourage you to start early so that you can post questions on Piazza, make t
 The objectives for this assignment, are to:
 * Expand an existing API following the coding conventions set out in an existing codebase
 * Practice writing asynchronous code, including making HTTP requests
+* Read the documentation for a third-party library to learn how to call it
 * Relate architectural design principles to the design of a real codebase
 
 Parts 1 and 2 are coding tasks, and you will implement them by modifying the handout code that we provide with this assignment.
@@ -219,13 +220,17 @@ Avery has stubbed out the client, and even added boilerplate code to create the 
 Implement each one of the API client methods using the `_axios` client. Making a call of `_axios.get('/endpoint');` will result in a `GET` request to `/endpoint` on your server,
 `_axios.post('/endpoint', {foo: 'bar'})` will result in a `POST` request to `/endpoint`, passing the request body `{foo: 'bar'}`.
 
+Refer to the [axios documentation](https://www.npmjs.com/package/axios#axios-api), and use other internet sources to learn how to use this library.
+**Hint**: Here is a code snippet that makes an `HTTP POST` request to the endpoint `/endpoint`, passing `requestData`, and unwrapping the response as a `MyResponseType`:
+`const response = await this._axios.post<MyResponseType>('/endpoint', requestData);`.
+
 We have created an automated test suite to evaluate the functionality of your API client, and this test suite will run when you submit your assignment to GradeScope.
 
 However, we strongly encourage you to test your API client *locally* (on your own machine), so that you can find and fix errors faster than it would take to zip your code, upload it to GradeScope, and receive results.
 
 You can manually test your API client and API server by:
 1. Start the server (`npm run start`)
-1. Use the file `src/client/ClientExamples.ts` to manually execute the API. Run this file with `ts-node src/client/ClientExamples.ts`.
+1. Use the file `src/client/ClientExamples.ts` to manually execute the API. In a different terminal window (but in the same directory - the handout directory), run this file with `npx ts-node src/client/ClientExamples.ts`.
 
 ### Rubric Specification for Part 2
 Part 2 will account for 1/3 of your overall grade on this assignment.
