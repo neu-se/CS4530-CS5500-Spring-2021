@@ -19,7 +19,7 @@ Contents:
 
 To get the project with the transcript server, download the [Example_3.1.zip](../Examples/Example%203.1%20transcript-server.zip) and extract the contents of the zip file to your local machine.
 
-Use your terminal to navigate to the top level directory of the server such that the current working directory is "*/Example_3.1". Use 'npm install' to install necessary dependencies. Use the command 'npm run-script run' to start the server.
+Use your terminal to navigate to the top level directory of the server such that the current working directory is "*/Example_3.1". Use 'npm install' to install necessary dependencies. Use the command 'npm start' to start the server.
 
 The screen should now show the initial list of transcripts for students in the database and the location of the server:
 
@@ -223,7 +223,7 @@ Now that we have some idea about the server and it's code, let us add a new rout
 	 - If a file is uploaded, it's contents are printed and the server responds with a status code of 200.
 	 - *Note:* Our example assumes the file to be uploaded with the key "myFile" in our post request. You may choose any name you like, as long as the corresponding change is made in the request.
 5. Start the server using the command:
-	 - Command: `*npm run run*`.
+	 - Command: `*npm start*`.
 6. Create a sample text file to test this route. I have used the below command:
 	 - Command: `*echo "These are the contents of my test file." > test.txt*`
 7. Now, let us test the route using curl as below:
