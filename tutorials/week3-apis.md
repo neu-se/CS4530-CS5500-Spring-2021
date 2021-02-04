@@ -23,9 +23,8 @@ To get the project with the transcript server, download the [Example_3.1.zip](..
 
 Use your terminal to navigate to the top level directory of the server such that the current working directory is "*/Example_3.1". Use 'npm install' to install necessary dependencies. Use the command 'npm run-script run' to start the server.
 
-The screen should now show the initial list of transcripts for students in the database and the location of the server.
-
-[Server](./assets/week3-apis/server_start.png)
+The screen should now show the initial list of transcripts for students in the database and the location of the server:
+	![image](./assets/week3-apis/server_start.png)
 
 Download the [Postman app](https://www.postman.com/downloads/).
 
