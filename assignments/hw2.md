@@ -257,7 +257,7 @@ While browsing around on Twitter, Avery found [a blogpost about software archite
 Read this blogpost, and based on its contents, answer the following questions related to Covey.Town's architecture and performance.
 Please keep each answer to within 2-4 sentences, and be sure to relate your answer to the blogpost.
 
-1. What aspects of Covey.Town involve N^2 traffic (with regards to N concurrent users)?
+1. What aspects of Covey.Town involve sending N^2 network messages (with regards to N concurrent users)?
 1. How does the blog post suggest that multi-player games can improve responsiveness while still maintaining a consistent view of the world?
 1. One of the scaling approaches described in the blogpost is *sharding*. Given the system that you built in part 1 and 2, how would you suggest that we *shard* Covey.Town traffic across multiple servers?
 1. One day, we might want to allow more than 50 players to connect to the same room - perhaps, up to 1,000 in one room. How does the article suggest architecting communication in such a big room?
