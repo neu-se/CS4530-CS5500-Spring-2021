@@ -40,7 +40,7 @@ after the type of the variable (which is captured in the variable's type declara
 * Names for properties that are private must start with a `_`
 
 ### Documentation and Comments
-All public properties and methods (other than getters, setters, and constructorw) must be documented
+All public properties and methods (other than getters, setters, and constructors) must be documented
 using [JSDoc-style comments](https://devdocs.io/jsdoc/about-getting-started)
 that describes what the property/method does. Example:
 ```
