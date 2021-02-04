@@ -23,6 +23,7 @@ Use your terminal to navigate to the top level directory of the server such that
 The screen should now show the initial list of transcripts for students in the database and the location of the server:
 
 ![image](./assets/week3-apis/server_start.png)
+
 # How to use Postman to test an API
 
 *Note:* Make sure the transcript server is running.
@@ -130,9 +131,9 @@ Now that we have made a basic get request using Postman and Curl, let us explore
 ### With Curl
 - Run the following command in curl to make a POST request to the "/transcripts" route:
 	 - Command: `*curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "name=Julian Casablancas" http://localhost:4001/transcripts*`.
-	    - *-X POST*: Sets the request type as POST.
-			- *-H Content-Type: application/x-www-form-urlencoded*: Adds the header to set Content-Type to x-www-form-urlencoded(which is the default). Use *application/json* for JSON body.
-			- *-d "name=Julian Casablancas"*: Represents the request body in url encoded format.
+	    - `*-X POST*`: Sets the request type as POST.
+			- `*-H Content-Type: application/x-www-form-urlencoded*`: Adds the header to set Content-Type to x-www-form-urlencoded(which is the default). Use *application/json* for JSON body.
+			- `*-d "name=Julian Casablancas"*`: Represents the request body in url encoded format.
 	 - The server should respond with a JSON object with an entry "studentID" and the id number for the new student. Remember this id number, we are going to use it later.
 	 - ![image](./assets/week3-apis/curl_post_new_student.png)
 
@@ -158,8 +159,8 @@ Now that we have made a basic get request using Postman and Curl, let us explore
 
 - Run the following command in curl to make a DELETE request to the "/transcripts" route:
 	 - Command: `*curl -X DELETE http://localhost:4001/transcripts/5*`.
-	    - *-X DELETE*: Sets the request type as POST.
-			- *5*: Represents the ID of the student to delete.
+	    - `*-X DELETE*`: Sets the request type as POST.
+			- `*5*`: Represents the ID of the student to delete.
 	 - The server should delete the student and respond with "OK".
 	 - ![image](./assets/week3-apis/curl_delete_student.png)
 
@@ -174,3 +175,61 @@ To better understand how the server is serving these requests, look at index.ts 
 ![image](./assets/week3-apis/vscode_app_get.png)
 
 The behavior defined in the internal anonymous function for this request is what is returned to the client. The rest of our calls work the same way. Try looking at some of the other resources and use Postman to get information, post information, or delete information from the server!
+
+Now that we have some idea about the server and it's code, let us add a new route to the server. Let us assume there is a new requirement in the project which would allow students to upload their transcripts to the server as text files. Let us try to implement a simple file upload feature to the server.
+
+1. In order to handle file uploads, we must install the fileupload package for express. This can be done by running the following command at the root of our project (where package.json is located):
+	 - Command: `*npm install --save express-fileupload*`.
+	 - ![image](./assets/week3-apis/express-fileupload.png)
+2. Let us import this package in index.ts as below:
+	 - ```javascript
+		import * as fileUpload from 'express-fileupload';
+		 ```
+3. Next, we must register the middleware for express as below:
+	 - ```javascript
+		app.use(fileUpload());
+		 ```
+	 - *Note:* This should happen **after** the call to app creation:
+		 - ```javascript
+			// create the server, call it app
+			const app: express.Application = express();
+       ```
+	 - *Note:* This should happen **before** registration of routes:
+		 - ```javascript
+			app.get('/', (req:express.Request, res:express.Response) => {
+				ngets++;
+				console.log(`Handling GET/`,ngets)
+				res.status(200).send(`This is GET number ${ngets} on the current server`);
+			});
+			 ```
+4. Next we need to implement a route for file uploads, and register a handler for it. This can be done as below:
+	 - ```javascript
+		app.post('/upload', (req: express.Request, res: express.Response) => {
+
+			if(!(<any>req).files || Object.keys((<any>req).files).length === 0) {
+				res.status(500).send('Failed');
+				return;
+			}
+
+			console.log('File info: ', (<any>req).files.myFile);
+			console.log('Contents of file: ', (<any>req).files.myFile.data.toString());
+			res.status(200).send('File Upload Successful');
+
+		});
+		 ```
+	 - The code registers a POST route at "/upload"
+	 - If no files are uploaded, it responds with a 500 status code.
+	 - If a file is uploaded, it's contents are printed and the server responds with a status code of 200.
+	 - *Note:* Our example assumes the file to be uploaded with the key "myFile" in our post request. You may choose any name you like, as long as the corresponding change is made in the request.
+5. Start the server using the command:
+	 - Command: `*npm run run*`.
+6. Create a sample text file to test this route. I have used the below command:
+	 - Command: `*echo "These are the contents of my test file." > test.txt*`
+7. Now, let us test the route using curl as below:
+	 - Command: `*curl -F "myFile=@./test.txt" http://localhost:4001/upload*`.
+	   - `*-F "myFile=@./test.txt"*`: Sets the file to be uploaded as test.txt.
+		   - *Note:* **myFile** was used because that was the key used in the request handler.
+		 - Headers and request method are automatically set by curl.
+	 - ![image](./assets/week3-apis/curl_file_upload.png)
+8. If you return to the terminal running the server, you should see the details of the file printed.
+	 - ![image](./assets/week3-apis/server_file_upload.png)
