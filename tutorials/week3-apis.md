@@ -74,7 +74,7 @@ Open *git bash* on Windows or a *terminal* on Linux/Mac.
 
 Verify that Curl is installed using the command `*curl --help*`.
 
-![image](./assets/week3-apis/curl_verify.png)
+![image](./assets/week3-apis/curl_verify.PNG)
 
 All the following commands will be run in the same terminal.
 
@@ -84,7 +84,7 @@ In order to do this, run the command:
 
 *Note:* The flag *-i* is optional and is used to display additional information such as headers.
 
-![image](./assets/week3-apis/curl_basic_get.png)
+![image](./assets/week3-apis/curl_basic_get.PNG)
 
 If you go back to the terminal running your server, you should see 'Handling GET/ 1' printed to the screen.
 
@@ -110,7 +110,7 @@ Now that we have made a basic get request using Postman and Curl, let us explore
 	 - Command: `*curl -X GET http://localhost:4001/transcripts*`.
 	    - *Note:* `*-X GET*` is used to specify the request type as GET (default is GET).
 	 - you should see the server returned 4 JSON objects corresponding to 4 students in the the class. Each object contains the student's ID and the student's name under an object named "student", and the student's grade as a collection corresponding to a field named "grades".
-	 - ![image](./assets/week3-apis/curl_transcripts.png)
+	 - ![image](./assets/week3-apis/curl_transcripts.PNG)
 
 ### Result on the server
 - If you return to the server, you should see the statement "Handling GET/transcripts" along with a collection of objects corresponding to the JSON object in the Postman server.
@@ -136,7 +136,7 @@ Now that we have made a basic get request using Postman and Curl, let us explore
 			- `*-H Content-Type: application/x-www-form-urlencoded*`: Adds the header to set Content-Type to x-www-form-urlencoded(which is the default). Use *application/json* for JSON body.
 			- `*-d "name=Julian Casablancas"*`: Represents the request body in url encoded format.
 	 - The server should respond with a JSON object with an entry "studentID" and the id number for the new student. Remember this id number, we are going to use it later.
-	 - ![image](./assets/week3-apis/curl_post_new_student.png)
+	 - ![image](./assets/week3-apis/curl_post_new_student.PNG)
 
 ### Result on the server
 - If you go back to the terminal running the typescript server, you should see a message "Handling POST/transcripts name=<name you entered>, id=<student ID number>". You have successfully added the student to the database connected to the typescript server.
@@ -163,7 +163,7 @@ Now that we have made a basic get request using Postman and Curl, let us explore
 	    - `*-X DELETE*`: Sets the request type as POST.
 			- `*5*`: Represents the ID of the student to delete.
 	 - The server should delete the student and respond with "OK".
-	 - ![image](./assets/week3-apis/curl_delete_student.png)
+	 - ![image](./assets/week3-apis/curl_delete_student.PNG)
 
 ### Result on the server
 - If you return to the terminal running the server, you should see the message "Handling DEL /transcripts, id = 5".
@@ -181,7 +181,7 @@ Now that we have some idea about the server and it's code, let us add a new rout
 
 1. In order to handle file uploads, we must install the fileupload package for express. This can be done by running the following command at the root of our project (where package.json is located):
 	 - Command: `*npm install --save express-fileupload*`.
-	 - ![image](./assets/week3-apis/express-fileupload.png)
+	 - ![image](./assets/week3-apis/express-fileupload.PNG)
 2. Let us import this package in index.ts as below:
 	 - ```javascript
 		import * as fileUpload from 'express-fileupload';
@@ -231,6 +231,6 @@ Now that we have some idea about the server and it's code, let us add a new rout
 	   - `*-F "myFile=@./test.txt"*`: Sets the file to be uploaded as test.txt.
 		   - *Note:* **myFile** was used because that was the key used in the request handler.
 		 - Headers and request method are automatically set by curl.
-	 - ![image](./assets/week3-apis/curl_file_upload.png)
+	 - ![image](./assets/week3-apis/curl_file_upload.PNG)
 8. If you return to the terminal running the server, you should see the details of the file printed.
-	 - ![image](./assets/week3-apis/server_file_upload.png)
+	 - ![image](./assets/week3-apis/server_file_upload.PNG)
