@@ -8,10 +8,10 @@ nav_order: 1
 |-------------------|-----------------------------------------------------------------------------|----------|----|
 | [#1: Jan 19-22]({{ site.baseurl }}{% link lectures/week1.md %})     | Course Overview<br />Design Principles					                  |          | [HW1 Out]({{ site.baseurl }}{% link assignments/hw1.md %})   |
 | [#2: Jan 25-29]({{ site.baseurl }}{% link lectures/week2.md %})     | Knowledge sharing, documenting designs<br />Design Patterns                 |          | [Project Spec Out]({{ site.baseurl }}{% link assignments/project-overview.md %})    |
-| [#3: Feb 1-5]({{ site.baseurl }}{% link lectures/week3.md %})       | Software Architecture<br />REST                           			      |          | **[HW1 Due]({{ site.baseurl }}{% link assignments/hw1.md %})**<br />[HW2 Out](({{ site.baseurl }}{% link assignments/hw1.md %})), Team Formation Out    |
-| #4: Feb 8-12      | Asynchronous Programming                                                    |          | **Team Formation Due**    |
-| #5: Feb 15-19     | Introduction to Testing<br />Test Adequacy Measures	                      |          | **[HW2 Due]({{ site.baseurl }}{% link assignments/hw2.md %})**<br />HW3 Out, Project Pitch Out    |
-| #6: Feb 22-26     | UI Design + React<br />Testing Larger Units                                 |          | **Project Pitch Due**<br /> Project Plan Out    |
+| [#3: Feb 1-5]({{ site.baseurl }}{% link lectures/week3.md %})       | Software Architecture<br />REST                           			      |          | **[HW1 Due]({{ site.baseurl }}{% link assignments/hw1.md %})**<br />[HW2 Out]({{ site.baseurl }}{% link assignments/hw2.md %})<br />[Team Formation Out](https://docs.google.com/forms/d/e/1FAIpQLSdZu1Zv-45lxVN8d6BfhgMRCX3wM1C4DbSyjZgmSkR9_dPhKQ/viewform?usp=sf_link)    |
+| #4: Feb 8-12      | Asynchronous Programming                                                    |          | **[Team Formation Due](https://docs.google.com/forms/d/e/1FAIpQLSdZu1Zv-45lxVN8d6BfhgMRCX3wM1C4DbSyjZgmSkR9_dPhKQ/viewform?usp=sf_link)**    |
+| #5: Feb 15-19     | Introduction to Testing<br />Test Adequacy Measure<br/>Testing Systems	                      |          |  **[HW2 Due]({{ site.baseurl }}{% link assignments/hw2.md %})**<br />HW3 Out, Project Pitch Out    |
+| #6: Feb 22-26     | Requirements + UI Design <br/> React                                 |          | **Project Pitch Due**<br /> Project Plan Out    |
 | #7: Mar 1-5       | Debugging<br />Pull Requests + Code Review                                  |          | **HW3 Due**<br />HW4 Out |
 | #8: Mar 8-12      | Static Analysis + Bug-Finders<br />Technical Debt, Code Smells + Refactoring  |          |  **Project Plan Due**  |
 | #9: Mar 15-19     | SE for Distributed Systems<br />SE for Security 	                          |          |    **HW4 Due** |
