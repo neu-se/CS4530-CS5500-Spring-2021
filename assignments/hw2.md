@@ -190,10 +190,10 @@ export async function roomUpdateHandler(requestData: RoomUpdateRequest): Promise
 
 ``` 
 
-You can test your request handlers in two ways:
+You can test your request handlers in a few ways:
 1. By using Postman or Curl, as described in [the week 3 tutorial]({{ site.baseurl }}{% link tutorials/week3-apis.md %})
 1. By continuing the assignment to Part 2: implementing the REST client, and using your client to test your server
-1. By submitting your code to GradeScope, the autograder will test your server code.
+1. By submitting your code to GradeScope, the autograder will test your server code. It will test your server using our reference client.
 
 ### Rubric Specification for Part 1
 Part 1 will account for 1/3 of your overall grade on this assignment.
@@ -232,6 +232,8 @@ However, we strongly encourage you to test your API client *locally* (on your ow
 You can manually test your API client and API server by:
 1. Start the server (`npm run start`)
 1. Use the file `src/client/ClientExamples.ts` to manually execute the API. In a different terminal window (but in the same directory - the handout directory), run this file with `npx ts-node src/client/ClientExamples.ts`.
+
+GradeScope will automatically test your client using our reference server. Hence, you can receive full marks on this part even if your server is not functional, as long as your client implements the specification.
 
 ### Rubric Specification for Part 2
 Part 2 will account for 1/3 of your overall grade on this assignment.
