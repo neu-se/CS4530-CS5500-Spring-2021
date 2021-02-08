@@ -1,7 +1,7 @@
 ---
 layout: lecture
 title: Week 4 - Async functions
-permalink: /modules/week3-async
+permalink: /modules/week4-async
 parent: Modules
 ---
 ### Learning Objectives:
@@ -14,7 +14,8 @@ In this week of the course, you will learn
 
 
 ### Important Dates:
-* none this week
+* [HW2]({{ site.baseurl }}{% link assignments/hw2.md %}) **Due Feb 19 by 10pm**{: .label .label-red }
+
 
 ### Lessons:
 * 4.1: The JavaScript Event Handler Model
@@ -40,7 +41,7 @@ In this week of the course, you will learn
 
 ### Resources
 * [Examples for Lessons 4.1 and 4.2]({{ site.baseurl }}{% link /Examples/Example 4.1 slide-demos.zip %})
-* In class slides from Prof. Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.key %}) (Professor Wand says: these are a nice complement to Lessons 4.1-4.3.  You should read them even if you are not in Prof. Bell's section.)
+* In class slides from Prof. Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.key %}), [Activity Handout]({{ site.baseurl }}{% link Examples/Example 4.0 transcript-server-client.zip %})  (Professor Wand says: these are a nice complement to Lessons 4.1-4.3.  You should read them even if you are not in Prof. Bell's section.)
 
 
 ### Additional Readings:
