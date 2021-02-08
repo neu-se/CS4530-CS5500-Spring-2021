@@ -40,6 +40,7 @@ In this week of the course, you will learn
 
 ### Resources
 * [Examples for Lessons 4.1 and 4.2]({{ site.baseurl }}{% link /Examples/Example 4.1 slide-demos.zip %})
+* In class slides from Prof. Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.key %}) (Professor Wand says: these are a nice complement to Lessons 4.1-4.3.  You should read them even if you are not in Prof. Bell's section.)
 
 
 ### Additional Readings:
