@@ -50,7 +50,7 @@ module.exports = {
 ```
 * 2/1: Add submission warning about .tgz vs .zip - JSB
 * 2/2: Clarify the checks on `eslint-disable` and `@ts-ignore` that GradeScope now performs, add small hint in Part 3 step 1 that proceeding to step 2 is required to fully implement `CoveyRoomStore` - JSB 
-
+* 2/4: If you are having issues with prettier causing linter errors with arrow function arguments, please update your `.prettierrc` to set `arrowParens: 'always'` - JSB
 
 ## Part 1: Documenting the design 
 Avery's first prototype implementation of Covey.Town was unreadable spaghetti code that was deemed
