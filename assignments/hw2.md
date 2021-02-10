@@ -50,6 +50,7 @@ Please post any questions about this assignment on Piazza.
 
 ### Change Log
 * 2/5: Initial Release 
+* 2/10: Added hint in part 2 about response types - JSB
 
 ## Part 1: 
 Avery has provided you with a sketch of the API that you should be implementing, and quite helpfully, has provided type definitions
@@ -224,6 +225,10 @@ Implement each one of the API client methods using the `_axios` client. Making a
 Refer to the [axios documentation](https://www.npmjs.com/package/axios#axios-api), and use other internet sources to learn how to use this library.
 **Hint**: Here is a code snippet that makes an `HTTP POST` request to the endpoint `/endpoint`, passing `requestData`, and unwrapping the response as a `MyResponseType`:
 `const response = await this._axios.post<MyResponseType>('/endpoint', requestData);`.
+
+**Hint (2/10)**: The return type that you should be telling Axios to expect (`MyResponseType` in the prior hint) should be the *exact same* return type as the type returned by your corresponding request handler. TypeScript will *not* throw an error at
+runtime if you choose the wrong type, and instead there will be an error that will come from one (or all) of our tests failing
+since the data is malformed.
 
 We have created an automated test suite to evaluate the functionality of your API client, and this test suite will run when you submit your assignment to GradeScope.
 
