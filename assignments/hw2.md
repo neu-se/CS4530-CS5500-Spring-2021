@@ -68,7 +68,7 @@ so you won't need to worry about this aspect of the design.
 Avery has also stubbed out
 functions in `CoveyRoomStore` for creating, updating, listing and deleting rooms. You should begin your implementation with these functions in `CoveyRoomStore.ts`:
 
-```
+```ts
  /**
    * Returns a list of all of the publicly-visible rooms, representing each room as
    * {friendlyName: string, coveyRoomID: string}
@@ -128,7 +128,7 @@ To help future-proof the API and make it easier to pass metadata back to the cli
 When you implement your REST client, you'll find that using a standard approach to pass errors like this is quite useful.
 
 There are four handlers that are entirely unimplemented. Your task is to implement all four of these handlers following the specification, using the existing `roomJoinHandler` as an example.
-```
+```ts
 /**
  * List all of the rooms that are set to "publicly visible"
  *
