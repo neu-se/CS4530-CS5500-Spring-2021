@@ -51,7 +51,7 @@ Please post any questions about this assignment on Piazza.
 ### Change Log
 * 2/5: Initial Release 
 * 2/10: Added hint in part 2 about response types - JSB
-* 2/11: Added warning to not hardcode `http://localhost:8081` in the API client
+* 2/11: Added warning to not hardcode `http://localhost:8081` in the API client - JSB
 
 ## Part 1: 
 Avery has provided you with a sketch of the API that you should be implementing, and quite helpfully, has provided type definitions
