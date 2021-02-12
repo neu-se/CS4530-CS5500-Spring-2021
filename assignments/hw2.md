@@ -51,6 +51,7 @@ Please post any questions about this assignment on Piazza.
 ### Change Log
 * 2/5: Initial Release 
 * 2/10: Added hint in part 2 about response types - JSB
+* 2/11: Added warning to not hardcode `http://localhost:8081` in the API client
 
 ## Part 1: 
 Avery has provided you with a sketch of the API that you should be implementing, and quite helpfully, has provided type definitions
@@ -220,7 +221,7 @@ Your next task is to implement a client for the REST API that you created in the
 The client should be implemented in the file `src/client/RoomServiceClient.ts` and use the [axios library](https://www.npmjs.com/package/axios) to make requests to the server.
 Avery has stubbed out the client, and even added boilerplate code to create the axios client, and set the `baseURL` property on it.
 Implement each one of the API client methods using the `_axios` client. Making a call of `_axios.get('/endpoint');` will result in a `GET` request to `/endpoint` on your server,
-`_axios.post('/endpoint', {foo: 'bar'})` will result in a `POST` request to `/endpoint`, passing the request body `{foo: 'bar'}`.
+`_axios.post('/endpoint', {foo: 'bar'})` will result in a `POST` request to `/endpoint`, passing the request body `{foo: 'bar'}`. **Important (2/11):** When we test your API client, we will *not* be running the server at `localhost:8081` - so do *not* hard code that into your axios requests: please follow this syntax (otherwise the tests will all fail with `ECONNREFUSED 127.0.0.1:8081`).
 
 Refer to the [axios documentation](https://www.npmjs.com/package/axios#axios-api), and use other internet sources to learn how to use this library.
 **Hint**: Here is a code snippet that makes an `HTTP POST` request to the endpoint `/endpoint`, passing `requestData`, and unwrapping the response as a `MyResponseType`:
