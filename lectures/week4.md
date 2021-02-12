@@ -43,7 +43,11 @@ In this week of the course, you will learn
 * [Examples for Lessons 4.1 and 4.2]({{ site.baseurl }}{% link /Examples/Example 4.1 slide-demos.zip %})
 * [Server for Lesson 4.3]({{ site.baseurl }}{% link /Examples/Lesson 4.3 transcript-server.zip %})
 * [Client for Lesson 4.3]({{ site.baseurl }}{% link /Examples/Lesson 4.3 transcript-client.zip %})
-* In class slides from Prof. Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.key %}), [Activity Handout]({{ site.baseurl }}{% link Examples/Example 4.0 transcript-server-client.zip %})  (Professor Wand says: these are a nice complement to Lessons 4.1-4.3.  You should read them even if you are not in Prof. Bell's section.)
+* In-class slides from Prof. Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-08 - Asynchronous Programming I.key %}), [Activity Handout]({{ site.baseurl }}{% link Examples/Example 4.0 transcript-server-client.zip %})  (Professor Wand says: these are a nice complement to Lessons 4.1-4.3.  You should read them even if you are not in Prof. Bell's section.)
+* In-class slides from Prof. Wand's section (Thursday): 
+    [PDF]({{ site.baseurl }}{% link SynchronousSlides-Wand/February 11 Supplementary Slides.pdf %}), 
+    [PPT]({{ site.baseurl }}{% link SynchronousSlides-Wand/February 11 Supplementary Slides.pptx %})
+* In-class Examples from Prof. Wand's section (Thursday) [ZIP]({{ site.baseurl }}{% link /Examples/In-class examples week 04 wand.zip %})
 
 
 ### Additional Readings:
