@@ -50,6 +50,8 @@ Please post any questions about this assignment on Piazza.
 
 ### Change Log
 * 2/5: Initial Release 
+* 2/10: Added hint in part 2 about response types - JSB
+* 2/11: Added warning to not hardcode `http://localhost:8081` in the API client - JSB
 
 ## Part 1: 
 Avery has provided you with a sketch of the API that you should be implementing, and quite helpfully, has provided type definitions
@@ -67,7 +69,7 @@ so you won't need to worry about this aspect of the design.
 Avery has also stubbed out
 functions in `CoveyRoomStore` for creating, updating, listing and deleting rooms. You should begin your implementation with these functions in `CoveyRoomStore.ts`:
 
-```
+```ts
  /**
    * Returns a list of all of the publicly-visible rooms, representing each room as
    * {friendlyName: string, coveyRoomID: string}
@@ -127,7 +129,7 @@ To help future-proof the API and make it easier to pass metadata back to the cli
 When you implement your REST client, you'll find that using a standard approach to pass errors like this is quite useful.
 
 There are four handlers that are entirely unimplemented. Your task is to implement all four of these handlers following the specification, using the existing `roomJoinHandler` as an example.
-```
+```ts
 /**
  * List all of the rooms that are set to "publicly visible"
  *
@@ -219,11 +221,15 @@ Your next task is to implement a client for the REST API that you created in the
 The client should be implemented in the file `src/client/RoomServiceClient.ts` and use the [axios library](https://www.npmjs.com/package/axios) to make requests to the server.
 Avery has stubbed out the client, and even added boilerplate code to create the axios client, and set the `baseURL` property on it.
 Implement each one of the API client methods using the `_axios` client. Making a call of `_axios.get('/endpoint');` will result in a `GET` request to `/endpoint` on your server,
-`_axios.post('/endpoint', {foo: 'bar'})` will result in a `POST` request to `/endpoint`, passing the request body `{foo: 'bar'}`.
+`_axios.post('/endpoint', {foo: 'bar'})` will result in a `POST` request to `/endpoint`, passing the request body `{foo: 'bar'}`. **Important (2/11):** When we test your API client, we will *not* be running the server at `localhost:8081` - so do *not* hard code that into your axios requests: please follow this syntax (otherwise the tests will all fail with `ECONNREFUSED 127.0.0.1:8081`).
 
 Refer to the [axios documentation](https://www.npmjs.com/package/axios#axios-api), and use other internet sources to learn how to use this library.
 **Hint**: Here is a code snippet that makes an `HTTP POST` request to the endpoint `/endpoint`, passing `requestData`, and unwrapping the response as a `MyResponseType`:
 `const response = await this._axios.post<MyResponseType>('/endpoint', requestData);`.
+
+**Hint (2/10)**: The return type that you should be telling Axios to expect (`MyResponseType` in the prior hint) should be the *exact same* return type as the type returned by your corresponding request handler. TypeScript will *not* throw an error at
+runtime if you choose the wrong type, and instead there will be an error that will come from one (or all) of our tests failing
+since the data is malformed.
 
 We have created an automated test suite to evaluate the functionality of your API client, and this test suite will run when you submit your assignment to GradeScope.
 
