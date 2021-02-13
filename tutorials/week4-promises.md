@@ -151,9 +151,121 @@ Next, we will implement the comments section.
 
 # Implementing Comments Section
 
+Now we have a working video player and video search section. However, our Comments section is still empty.
+In this section, let us implement the comments section by fetching comments related to the video and displaying them.
+- Navigate to the src/components directory and open the file "Comments.tsx".
+- Notice a function on line 9 called "getAllComments".
+- We want to implement this function so that it will fetch all comments related to the video and display them.
 
+## Implementing the code
+
+1. Notice axios is already imported in the file on line 3.
+2. In order to get the comments related to a video, we need to do the following:
+   - We need to make a GET request to "https://www.googleapis.com/youtube/v3/commentThreads".
+   - Pass the video ID as a query parameter called "videoID".
+   - Pass 'snippet' as a query parameter called "part".
+   - Pass '10' as a query parameter called "maxResults". (to fetch only 10 results at a time)
+   - Pass the API key as a query parameter called "key".
+3. We can make a GET request using axios as below:
+   - ```JS
+      axios.get('my url', { options });
+   - This request will return a promise.
+4. Add the below code to make the desired request to youtube to the "getAllComments" function:
+   - ```JS
+      axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
+        params: {
+          part: 'snippet',
+          videoId: this.props.video.id.videoId,
+          maxResults: 10,
+          key: 'Your api key goes here', // Make sure you update this!
+        }
+      });
+5. This will return a promise with a response containing the below schema:
+   - ```JS
+      {
+         "kind": "youtube#commentThreadListResponse",
+         "etag": etag,
+         "nextPageToken": string,
+         "pageInfo": {
+            "totalResults": integer,
+            "resultsPerPage": integer
+         },
+         "items": [
+            {
+               "kind": "youtube#commentThread",
+               "etag": etag,
+               "id": string,
+               "snippet": {
+                  "channelId": string,
+                  "videoId": string,
+                  "topLevelComment": comments Resource,
+                  "canReply": boolean,
+                  "totalReplyCount": unsigned integer,
+                  "isPublic": boolean
+               },
+               "replies": {
+                  "comments": [
+                     comments Resource
+                  ]
+               }
+            }
+         ]
+      }
+6. Next we need to extract the commments and assign them to the comments variable. Let us use the async/await syntax as below: 
+   - ```JS
+      const commentThreads = await axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
+        params: {
+          part: 'snippet',
+          videoId: this.props.video.id.videoId,
+          maxResults: 10,
+          key: 'Your api key goes here', // Make sure you update this!
+        }
+      });
+      const comments = commentThreads.data.items.map(comment => { return {
+          textDisplay: comment.snippet.topLevelComment.snippet.textDisplay, 
+          id: comment.snippet.topLevelComment.id,
+          img: comment.snippet.topLevelComment.snippet.authorProfileImageUrl,
+          author: comment.snippet.topLevelComment.snippet.authorDisplayName, 
+        };
+      });
+      this.setState({ comments: comments });
+8. Save the file.
+9. In the terminal, run `*yarn start*`.
+   - You should now see the Comments populated below the video!
+   - ![image](./assets/week4-promises/comments-section-implemented.PNG)
 
 # Using Defaults in Axios
+
+Let us take another look at the two requests we wrote in the previos section.
+- ```JS
+      axios.get('https://www.googleapis.com/youtube/v3/search', {
+         params: {
+            part: 'snippet',
+            maxResults: 10,
+            key: 'Your api key goes here', // Make sure you update this!
+            q: searchTerm
+         }
+      });
+
+      axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
+         params: {
+            part: 'snippet',
+            videoId: this.props.video.id.videoId,
+            maxResults: 10,
+            key: 'Your api key goes here', // Make sure you update this!
+         }
+      });
+
+Comparing the two code snippets above, we can see a few parameters which are common to both requests.
+- The base URL is same for both requests: (https://www.googleapis.com/youtube/v3)
+- The following query parameters are common:
+    - `part: 'snippet'`
+    - `maxResults: 10`
+    - `key: API_KEY`
+
+We can configure axios to use a default base configuration for all requests. This helps to reduce code duplicity and organize the code better.
+
+
 
 # Generating Your Own API Key
 
