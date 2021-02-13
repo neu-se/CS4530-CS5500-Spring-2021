@@ -73,6 +73,30 @@ Please post any questions about this assignment on Piazza.
 ### Change Log
 * 2/19: Initial Release 
 
+## General Requirements and Grading
+This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout. 
+You may add additional helper methods to these files, and you may add `beforeEach`, `beforeAll`, `afterEach`, or `afterAll` to these test suites.
+You **must not** change the order of the tests or the names of the tests. To integrate with GradeScope, each test has a call to `ConfigureTest` and `StartTest` - these lines must not be changed. Your test may not use the value of `testConfiguration` other than in this call to `StartTest`.
+
+### Rubric Specification 
+Each of the three parts of this assignment will be weighted equally, each account for 1/3 of your overall grade on this assignment. All parts will be graded on the following rubric:
+
+To receive a mark of "Satisfactory" for the part, your tests for that part must:
+* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
+* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on each bug that we have planted in the server
+* Follow the design specification outlined above, in particular: tests should only call public APIs, be as small as possible and clear
+* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
+
+To receive a mark of "Meets minimum expectations" for Part 3, your tests for that part must:
+* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
+* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on *at least one* bug that we have planted in the server
+* Have no style errors (may have warnings) as reported by `npm run-script lint`
+* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
+
+**Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for that part.
+ **Do not wait to test or style check your code until the last minute.**
+ 
 ## Part 1 - REST Integration Tests:
 A good testing strategy includes a mix of tests both small and large in scope. In many cases, writing integration tests can be easier than writing unit tests, since the behavior of our systems is usually well-defined at the system level (for instance: "When a user creates a room in Covey.Town, the system returns the ID for the room, and a password for updating that room"), while the specification and behavior of individual units that service that request might be a bit more difficult to isolate. 
 Since the entire, end-to-end system is already implemented, we'll start off writing some integration tests for the API by using a REST client to make requests against a server, and observe the results.
@@ -120,26 +144,7 @@ Ripley has analyzed the specification for the Covey.Town room service, and has d
 ```
 
 Implement these tests in the file `client/CoveyRoomRest.test.ts`. Ripley has pre-configured these tests so that before they start, a server is deployed on a random port (so you can run the tests even if something else on your computer is using port 8081), and a client is automatically configured to connect to that testing server. In your tests, be sure to use the `apiClient` instance of the `RoomServiceClient` - this client will be automatically configured to connect to the server that the test starts up.
-**Do not change the names of the tests, their order of appearance in the test file, or add new tests.** However, feel free to add helper methods as necessary.
 
-### Rubric Specification for Part 1
-Part 1 will account for 1/3 of your overall grade on this assignment.
-
-To receive a mark of "Satisfactory" for Part 1, your tests in `CoveyRoomREST.test.ts` must:
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on each bug that we have planted in the server
-* Follow the design specification outlined above, in particular: tests should only call public APIs, be as small as possible and clear
-* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-To receive a mark of "Meets minimum expectations" for Part 1, your tests in `CoveyRoomREST.test.ts` must: 
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on *at least one* bug that we have planted in the server
-* Have no style errors (may have warnings) as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-**Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 1.
- **Do not wait to test or style check your code until the last minute.**
 
 ## Part 2 - CoveyRoomController Unit Tests: 
 While integration-level tests (which test multiple units) might be the easiest to write, they are often the hardest to debug, the most prone to flakiness, and slowest to run. 
@@ -153,7 +158,7 @@ describe('CoveyRoomController', () => {
   it('constructor should set the friendlyName property', () => {
   });
   describe('addPlayer', () => {
-    it('should use the coveyRoomID and userName properties when requesting a video token',
+    it('should use the coveyRoomID and player ID properties when requesting a video token',
       async () => {
       });
   });
@@ -203,7 +208,6 @@ describe('CoveyRoomController', () => {
 ```
 
 Implement these tests by using the public API of `CoveyRoomController` and the mocks defined in the file. You may also create new instances of `Player` directly in your tests as you feel necessary.
-**Do not change the names of the tests, their order of appearance in the test file, or add new tests.** However, feel free to add helper methods as necessary.
 
 ### Hints for using mocks
 Here is an example of a test that uses Jest Mocks, provided by the [jest-mock-extended](https://github.com/marchaos/jest-mock-extended) library (this is the library that Ripley chose to implement the mocks in the handout code).
@@ -232,25 +236,6 @@ For further reading on mocks and the different kinds of `expect` matchers that y
 * [Jest Matchers Reference](https://jestjs.io/docs/en/expect) describes all of the different `expect` calls that you can make use of, including those for mocks!
 * [Jest Mock-Extended Reference](https://github.com/marchaos/jest-mock-extended) provides more examples on mocking with Jest (Ripley installed this package in the handout code and used it to set up most of the mocks for you)
 
-
-### Rubric Specification for Part 2
-Part 2 will account for 1/3 of your overall grade on this assignment.
-
-To receive a mark of "Satisfactory" for Part 2, your tests in `CoveyRoomController.test.ts` must:
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on each bug that we have planted in the server
-* Follow the design specification outlined above, in particular: tests should only call public APIs, be as small as possible and clear
-* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-To receive a mark of "Meets minimum expectations" for Part 2, your tests in `CoveyRoomController.test.ts` must:
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on *at least one* bug that we have planted in the server
-* Have no style errors (may have warnings) as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-**Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 1.
- **Do not wait to test or style check your code until the last minute.**
 
 
 ## Part 3 - Socket Server Integration Tests
@@ -327,26 +312,8 @@ describe('RoomServiceApiSocket', () => {
 });
 ```
 
-Implement these tests in `CoveyRoomSocket.test.ts`. You may also create new instances of `Player` directly in your tests as you feel necessary. **Do not change the names of the tests, their order of appearance in the test file, or add new tests.** However, feel free to add helper methods as necessary.
+Implement these tests in `CoveyRoomSocket.test.ts`. You may also create new instances of `Player` directly in your tests as you feel necessary. 
 
-### Rubric Specification for Part 3
-Part 3 will account for 1/3 of your overall grade on this assignment.
-
-To receive a mark of "Satisfactory" for Part 3, your tests in `CoveyRoomSocket.test.ts` must:
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on each bug that we have planted in the server
-* Follow the design specification outlined above, in particular: tests should only call public APIs, be as small as possible and clear
-* Conform to our [style guide]({{ site.baseurl }}{% link style.md %}) *and* have no style warnings or errors as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-To receive a mark of "Meets minimum expectations" for Part 3, your tests in `CoveyRoomSocket.test.ts` must:
-* All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on *at least one* bug that we have planted in the server
-* Have no style errors (may have warnings) as reported by `npm run-script lint`
-* Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
-
-**Warning**{: .label .label-yellow }  Submissions that do not meet the above criteria will receive no credit for Part 1.
- **Do not wait to test or style check your code until the last minute.**
 
 ## Submission Instructions
 Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
