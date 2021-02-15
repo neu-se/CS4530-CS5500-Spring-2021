@@ -46,7 +46,7 @@ In this week of the course, you will learn
 * [Example 2.4 Shapes with Visitors]({{ site.baseurl }}{% link /Examples/Example 2.4 Shapes with Visitors.zip %})
 * In class slides from Prof Bell's section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-25-DesignDocs.key %})
 * In class slides from Prof Bell's section (Thursday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-DesignPatterns.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-DesignPatterns.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-01-28-DesignPatterns.key %})
-* [Programming Activity: Observer Pattern]({{ site.baseurl }}{% link Activities/Activity2.2_Observer.md %})
+* [Programming Activity: Observer Pattern]({{ site.baseurl }}{% link Activities/Activity2.2_Observer.md %}) ([Prof Bell's Solution]({{ site.baseurl }}{% link Activities/week2-designpatterns-observer-solution-bell.zip %}))
 
 
 ### Additional Readings:
