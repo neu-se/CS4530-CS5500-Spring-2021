@@ -8,11 +8,49 @@ parent: Tutorials
 This tutorial gives a basic introduction to promises and using axios to make http requests. 
 
 Contents:
+* [Promise Basics](#promise-basics)
 * [React Applicaion Overview and Setup](#app-overview)
 * [Implementing Video Search](#video-search)
 * [Implementing Comments Section](#coments)
 * [Using Defaults in Axios](#axios-defaults)
 * [Generating Your Own API key](#generate-api-key)
+
+
+# Promise Basics
+
+In Javascript, certain tasks can be performed asynchronously on background threads such as I/O operations, network requests, and timers. The different constructs available to handle such asynchronous events are callbacks, promises. Due to various problems associated with callbacks (such as callback hell), promises are the preferred construct for handling asynchronous behaviour. In simple terms, a promise is a function telling the caller, "I don't have what you need just yet, but I'm going to fetch that data and I *promise* to get back to you once I do; *then* can process the data as you see fit". There is also a reletively newer way of handling promises which processes them synchronously within the given closure called async/await.
+
+Looking at the code examples below should give a comparison between synchronous and asynchronous behaviour.
+
+- Example: Synchronous code:
+- ```JS
+   function doSomething() {
+      console.log('I always execute first.');
+      someSynchronousFunction(); // This will perform some tasks and the code stops here while it does so.
+      console.log('I always execute after the syncchronous function.');
+   }
+
+- Example: Asynchronous function:
+- ```JS
+   function doSomething() {
+      console.log('I always execute first.');
+      someAsynchronousFunctionWhichReturnsAPromise()
+         .then((data) => {
+            // This function will execute one the async task has completed.
+            console.log('This is the data you wanted: ', data);
+            console.log('I will get printed last');
+         });
+      console.log('I execute right after the Async task starts executing');
+   }
+
+- Example: Async/Await
+- ```JS
+   async function doSomething() { // This function now returs a promise because it is "async"
+      console.log('I always execute first.');
+      const data = await someAsynchronousFunctionWhichReturnsAPromise(); // This will perform some tasks and the code stops here while it does so.
+      console.log('This is the data you wanted: ', data);
+      console.log('I will get printed last');
+   }
 
 # React Applicaion Overview and Setup
 
@@ -263,9 +301,46 @@ Comparing the two code snippets above, we can see a few parameters which are com
     - `maxResults: 10`
     - `key: API_KEY`
 
-We can configure axios to use a default base configuration for all requests. This helps to reduce code duplicity and organize the code better.
+We can configure axios to use a default base configuration for all requests. This helps to reduce code duplicity and organize the code better. In order to do this in our application, we need to follow the below steps:
 
-
+1. Navigate to the src/apis directory and open the file "youtube.ts".
+2. Notice the default export for axios.create().
+    - This function creates an axios object with the desired base configuration.
+3. Add your API key on line 4 as below:
+    - `const API_KEY = 'Your API Key goes here';`
+4. Replace the export default statement with the code below:
+    - ```JS
+      export default axios.create({
+         baseURL: 'https://www.googleapis.com/youtube/v3',
+         params: {
+            part: 'snippet',
+            maxResults: 10,
+            key: API_KEY
+         }
+      });
+   - Now we have an axios client with default parameters configured. Let us use this in our code.
+5. Navigate to the src directory and open the file "App.tsx".
+   - Notice the import statement for youtube on line 8. 
+   - The default configured client is already imported. Let us use this instead of axios.
+6. Replace the call to `axios.get('https://www.googleapis.com/youtube/v3/search')`:
+    - From:
+      ```JS
+         axios.get('https://www.googleapis.com/youtube/v3/search', {
+            params: {
+               part: 'snippet',
+               maxResults: 10,
+               key: 'AIzaSyCghhuO7OwHrXOBlYd67CqGxmwswskvgL8',
+               q: searchTerm
+            }
+         })
+    - To:
+      ```JS
+         youtube.get('/search', {
+            params: {
+               q: searchTerm
+            }
+         })
+7. Make a similar change in Comments.tsx.
 
 # Generating Your Own API Key
 
