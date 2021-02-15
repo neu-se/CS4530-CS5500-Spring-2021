@@ -3,6 +3,7 @@ layout: page
 title: Installing a Development Environment
 permalink: /tutorials/week1-getting-started
 parent: Tutorials
+nav_order: 1
 ---
 This tutorial describes the basic steps needed to set up a development environment with NodeJS, TypeScript, and VisualStudio Code.
 At the end of this tutorial, you should have a complete local development environment that you can use to build and test

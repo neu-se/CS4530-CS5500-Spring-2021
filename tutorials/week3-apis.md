@@ -3,6 +3,7 @@ layout: page
 title: Testing APIs
 permalink: /tutorials/week3-apis
 parent: Tutorials
+nav_order: 3
 ---
 
 This tutorial describes how to test an API 
@@ -38,7 +39,7 @@ Once you have your workspace, create a new collection by selecting "New" from th
 
 ![image](./assets/week3-apis/new_collection.png)
 
-To make a new request, go to "New" and select "New Request". Name the request "Basic Get", as we will be getting the root resource from the server, sometimes noted as a simple backslash ('/'). Attach this request to the 'typescript-server' collection we created.
+To make a new request, go to "New" (in the button bar within the window, located under the larger button that says "Explore") and select "New Request". Name the request "Basic Get", as we will be getting the root resource from the server, sometimes noted as a simple backslash ('/'). Under "Select a collection or folder to save to:", attach this request to the 'typescript-server' collection we created.
 
 ![image](./assets/week3-apis/new_request.png)
 

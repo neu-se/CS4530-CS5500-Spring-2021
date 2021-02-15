@@ -3,6 +3,7 @@ layout: page
 title: Version Control
 permalink: /tutorials/week2-git
 parent: Tutorials
+nav_order: 2
 ---
 This tutorial describes the basic usage of git, a version control system to
 track code changes among yourself and your collaborators.
