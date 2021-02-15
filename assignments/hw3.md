@@ -24,24 +24,6 @@ and has created mocks for all of the significant external collaborators for the 
 Ripley has *also* outlined a series of integration tests for the room service API that can be implemented entirely using the publicly
 exposed client API (the REST endpoints and the socket protocol).
 
-### Overview of the socket protocol
-Your past coding assignments have focused on the REST side of the client and server, but you will now need to also interact with the socket server and client. Recall that the steps for a client to join a room are:
-1. Make a REST request to the `/members` service to fetch a session token
-2. Connect to the socket server using this session token as a credential
-
-Once the connection is established, the client and server communicate asynchronously: on either side, the code can call `emit('eventName', eventData)`, where `eventName` is a string that is ``, and `eventData` is an optional payload. 
-
-There is a single event that the client may send to the server:
-* `playerMovement` sent by the client to the server to indicate that the player controlling the client has moved on the map. The `eventData` is a `UserLocation` indicating the new location
-
-There are multiple events that the server may send to the client:
-* `playerMoved` sent by the server to the client when any player moves (this message may also be sent to the same player that moved). The payload is a `Player` object describing the player who just moved
-* `newPlayer` sent by the server to the client when a new player joins the room (aka when a new player makes a request to the `/members` resource). The payload is the `Player` object corresponding to the new player.
-* `playerDisconnect` sent by the server to the client when a player leaves the room. The payload is the `Player` object corresponding to the new player
-* `roomClosing` sent by the server to the client when the room is destroyed (aka when the room is deleted).
-
-The socket library will automatically generate the event `connected` on the client side once it establishes a connection to the server (it is not connected immediately, but rather, asynchronously). The socket library will also generate a `disconnected` event (on both the client and the server) when a connection is broken.
-
 These tests will be quite useful in the coming months and years of the project, and will allow the rest of the team to maintain and enhance the room service as the overall system needs change. For instance, we envision that, one day, the `CoveyRoomController` will keep its state in a database (rather than directly in-memory in NodeJS), and a comprehensive test suite for the behavior of `CoveyRoomController` will make it much easier to validate the correctness of a change like that.
 
 Your assignment will be graded following the rubric embedded in this document, which will consist of the marks "Satisfactory," "Meets Minimum Expectations," and "Not Acceptable."
@@ -50,21 +32,42 @@ We will grade your tests on several criteria:
 * Do your tests fail when run on buggy code? (Checked automatically by GradeScope)
 * Following the language in lesson 5.3: are your tests clear, do they only make calls against public APIs, and are they as small as possible?
 
-Based on past experiences, we project that this assignment could take you up to 18 hours (depending on your prior preparation).
-We encourage you to start early so that you can post questions on Piazza, make the most use of our TAs' tutorials, and
- attend office hours as necessary in order to ensure that you can reach Satisfactory marks across the board.
-
 The objectives for this assignment, are to:
 * Practice writing integration-level tests using TypeScript and Jest
 * Practice writing unit tests using TypeScript and Jest, including techniques like spies and mocks
 * Analyze asynchronous operations and define tests that ensure that events occur in their expected orders
 
+Based on past experiences, we project that this assignment could take you up to 18 hours (depending on your prior preparation).
+We encourage you to start early so that you can post questions on Piazza, make the most use of our TAs' tutorials, and
+ attend office hours as necessary in order to ensure that you can reach Satisfactory marks across the board.
+ 
 To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw3-handout.zip %}).
-From your HW2 solution, copy the files `client/RoomServiceClient.ts`, `requestHandlers/CoveyRoomRequestHandlers.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout. We will release the official solution for these files on 2/16 (some students have DRC accommodations to turn in HW2 as late as 2/15), after which point you may also use those official implementations.
-
+From your HW2 solution, copy the files `src/client/RoomServiceClient.ts`, `src/requestHandlers/CoveyRoomRequestHandlers.ts`, `src/lib/CoveyRoomsStore.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout. We will release the official solution for these files on 2/23 (some students have DRC accommodations to turn in HW2 as late as 2/22), after which point you may also use those official implementations.
+ 
 **This is an individual assignment.** 
-
+ 
 Please post any questions about this assignment on Piazza.
+
+
+### Overview of the socket protocol
+Your past coding assignments have focused on the REST side of the client and server, but you will now need to also interact with the socket server and client. Recall that the steps for a client to join a room are:
+1. Make a REST request to the `/members` service to fetch a session token
+2. Connect to the socket server using this session token as a credential
+
+Once the connection is established, the client and server communicate asynchronously: on either side, the code can call `emit('eventName', eventData)`, where `eventName` is one of the events listed below, and `eventData` is that event's corresponding payload. 
+
+There is a single event that the client may send to the server:
+* `playerMovement` sent by the client to the server to indicate that the player controlling the client has moved on the map. The `eventData` is a `UserLocation` indicating the new location
+
+There are multiple events that the server may send to the client:
+* `playerMoved` sent by the server to the client when any player moves (this message may also be sent to the same player that moved). The payload is a `Player` object describing the player who just moved
+* `newPlayer` sent by the server to the client when a new player joins the room (aka when a new player makes a request to the `/members` resource). The payload is the `Player` object corresponding to the new player.
+* `playerDisconnect` sent by the server to the client when a player leaves the room. The payload is the `Player` object corresponding to the player that disconnected
+* `roomClosing` sent by the server to the client when the room is destroyed (aka when the room is deleted).
+
+The socket library will automatically generate the event `connected` on the client side once it establishes a connection to the server (it is not connected immediately, but rather, asynchronously). The socket library will also generate a `disconnected` event (on both the client and the server) when a connection is broken.
+
+
 ### Suggested References
 * [Jest Matchers Reference](https://jestjs.io/docs/en/expect) describes all of the different `expect` calls that you can make use of, including those for mocks!
 * [Jest Async Testing Reference](https://jestjs.io/docs/en/asynchronous#asyncawait) describes how to use Jest to test asynchronous code. Note that there are multiple ways to do this (callbacks, promises, async/await). You are not *required* to use async/await, but Ripley thinks that it's the easiest way to implement these tests.
@@ -90,7 +93,7 @@ To receive a mark of "Satisfactory" for the part, your tests for that part must:
 
 To receive a mark of "Meets minimum expectations" for Part 3, your tests for that part must:
 * All pass when run on the reference server code (this is the code included in the handout: you can check this by running it locally, GradeScope runs these checks too)
-* GradeScope has *buggy* server implementations too - to receive a "Satisfactory," each test must *fail* on *at least one* bug that we have planted in the server
+* GradeScope has *buggy* server implementations too - to receive a "Meets minimum expectations," each test must *fail* on *at least one* bug that we have planted in the server
 * Have no style errors (may have warnings) as reported by `npm run-script lint`
 * Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
@@ -145,6 +148,34 @@ Ripley has analyzed the specification for the Covey.Town room service, and has d
 
 Implement these tests in the file `client/CoveyRoomRest.test.ts`. Ripley has pre-configured these tests so that before they start, a server is deployed on a random port (so you can run the tests even if something else on your computer is using port 8081), and a client is automatically configured to connect to that testing server. In your tests, be sure to use the `apiClient` instance of the `RoomServiceClient` - this client will be automatically configured to connect to the server that the test starts up.
 
+Each of the tests is declared with an `async` modifier, which means that you may use `await` within your test, and Jest will `await` on your test.
+Ripley shared this example integration test for the TranscriptServer:
+```ts
+it('should remove the deleted student from the list of students', async () => {
+      // Create 2 new Avery entries
+      const [createdAvery1, createdAvery2] = await Promise.all([
+        client.addStudent('Avery'),
+        client.addStudent('Avery')
+      ]);
+      // Fetch all Avery entries
+      const ids = await client.getStudentIDs('Avery');
+      // Make sure the 2 created ones are both listed
+      expect(ids).toContain(createdAvery1.studentID);
+      expect(ids).toContain(createdAvery2.studentID);
+
+      // Now do the deletion, then make sure that the one we deleted is gone, other still there
+      await client.deleteStudent(createdAvery2.studentID);
+      const idsAfterDelete = await client.getStudentIDs('Avery');
+      expect(idsAfterDelete).toContain(createdAvery1.studentID);
+      expect(idsAfterDelete).not.toContain(createdAvery2.studentID);
+});
+```
+
+When a test is declared as `async`, Jest will wait for your test to finish for up to 5,000 milliseconds, after which point it will fail with an error:
+```
+Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error
+``` 
+You can use this timeout to your advantage: if you find yourself needing to write a test that should fail if some asynchronous event *does not* occur, then a test that includes an `await` along the lines of `await somePromiseThatMustHappenForThisTestToPass;` and that promise does *not* resolve within 5,000 milliseconds, the test will fail.
 
 ## Part 2 - CoveyRoomController Unit Tests: 
 While integration-level tests (which test multiple units) might be the easiest to write, they are often the hardest to debug, the most prone to flakiness, and slowest to run. 
