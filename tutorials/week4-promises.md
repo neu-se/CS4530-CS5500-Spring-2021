@@ -134,6 +134,30 @@ The above code can be written as below:
       });
     console.log('I run third');
 
+### Error Handling with Promises
+
+In order to handle errors in promises, we need to use the .catch() function, which can be invoked similar to a .then().
+Assuming we used an incorrect file path, and the file cannot be found, the readFile function will throw an error. Let us catch this error with a .catch block.
+
+- ```JS
+   fs.promises.readFile('./src/test-files/file-that-doesnt-exist', 'utf8')
+        .then((data) => {
+          console.log('The contents of the file are: ', data);
+        }).catch((error: Error) => {
+           console.log('readFile failed because: ', error.message);
+        });
+
+For async/await we can use a try/catch block to catch the error
+
+- ```JS
+   async function asyncFileRead() {
+      try {
+         const data = await fs.promises.readFile('./src/test-files/filename', 'utf8');
+      } catch(error) {
+         console.log('readFile failed because: ', error.message);
+      }
+    }
+
 ## Nested Promises
 
 In certain cases, we may want to perform certain asynchronous actions one after the other. This can be achieved by nesting promises.
@@ -169,6 +193,8 @@ For example, suppose we want to read a directory and then read the first file we
           return fs.promises.readFile('./src/test-files/' + fileList[0], 'utf8')
         }).then((data) => {
           console.log('The contents of the file are printed last: ', data);
+        }).catch((error) => {
+           console.log('Error thrown by any promise above will be caught here: ', error.message);
         });
 5. Save the file and run the command:
    - `*npm start*`
@@ -207,7 +233,10 @@ This can be done as below:
           });
         );
       });
-      return Promise.all(promises);
+      return Promise.all(promises)
+         .catch((error) => {
+            console.log('Any promise that fails in the array above gets caught here: ', error.message);
+         });
     }
 
     asyncFileRead()
