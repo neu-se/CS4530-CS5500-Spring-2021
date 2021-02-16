@@ -9,9 +9,9 @@ This tutorial gives a basic introduction to promises and using axios to make htt
 
 Contents:
 * [Promise Basics](#promise-basics)
-* [Applicaion Setup](#app-overview)
-* [Promise Examples](#promise-examples)
-* [Youtube API Examples](#youtube-api-examples)
+* [React Applicaion Overview and Setup](#app-overview)
+* [Implementing Video Search](#video-search)
+* [Implementing Comments Section](#coments)
 * [Using Defaults in Axios](#axios-defaults)
 * [Generating Your Own API key](#generate-api-key)
 
@@ -52,207 +52,67 @@ Looking at the code examples below should give a comparison between synchronous 
       console.log('I will get printed last');
    }
 
-# Applicaion Setup
+# React Applicaion Overview and Setup
 
-Let us create a simple typescript application to work with promises. To do this, follow the below steps:
+In this tutorial, we will implement http requests in a React application using the Axios module. We have already implemented the React part of the application, but need some help integrating it with the Youtube API for fetching the required data. Although the code may seem daunting at first glance, we will be working on a very small subset of the code. We will dive deeper into react at a later point in this course.
 
-1. Open a terminal in the directory where you wish to create a new project.
-2. Install the global npm package Simple Typescript Starter using the command:
-   - `*npm install -g simple-typescript-starter*`
-3. Generate a new project called promises using the command below:
-   - `sts generate promises`
-   - This creates a new project called promises
-4. Navigate to the promises directory
-5. Run the below command to run the code:
-   - `*npm start*`
-   - It should print out "It Works!".
-6. The project is now set up
+We are developing a video streaming application which will allow a user to search for videos, watch them, and read comments posted on the video. The final product will look similar to the image shown below.
 
-# Promise Examples
+![image](./assets/weekx-promises-with-react/app-final.PNG)
 
-Let us implement some examples to understand how promises work and behave. As we know, promises are used for asynchronous tasks and a simple example of this is reading files from disks. Let us use the built-in NodeJS module for file system to explore promises.
+## Setting up the project
 
-*Note:* We will work in the file "src/index.ts". Before we get started, remove all the existing code from that file.
+1. Down the [project starter](./assets/weekx-promises-with-react/discount-youtube.zip)
+2. Unzip the contents to a new directory.
+3. Navigate to the new directory and open a terminal.
+4. Run "npm install".
+5. Run "yarn start" to start the application.
+6. This should open a new tab in your web browser at http://localhost:3000/
+7. The project base is ready.
+![image](./assets/weekx-promises-with-react/app-base.PNG)
 
-## Getting started 
+There are 2 key parts we need to implement in this application:
+1. Video Search
+2. Get Comments
 
-- To get started with reading file, let us start by creating some files that we can read.
-- In the "src" directory, create a new directory called "test-files".
-- Add a few .txt files to this directory with any content in it.
+- In order to do this, we will use the "axios" module and the Youtube data v3 API.
+   - Axios is already installed in the project.
+      - this can be done using `*npm install --save axios*` or `*yarn add axios --save*`
+   - We need an API key for the youtube API.
+      - Instructions for the same are given in the section [Generating Your Own API Key](#generate-api-key). 
 
-## Using fs functions
+# Implementing Video Search
 
-- In order to use fs functions, we need to import the fs module in index.ts as below:
-   - ```JS
-      import * as fs from 'fs';
-- The syntax for reading a file is as below:
-   - fs.promises.readFile('/path/to/file', 'utf8');
-   - This function returns a promise containing the contents of the file.
+As we know, at present our application neither shows any video nor does it show any search results. Let us change that.
 
-## Simple promise example
+- Navigate to the src directory and open the file "App.tsx".
+- Notice a function on line 13 called "searchYoutubeVideos".
+- We want to implement this function so that it will search for the available videos and select the first video from the returned results by default.
 
-Let us start by Asynchronously reading a file.
-1. Import fs into index.ts as shown above.
-2. As we know, we can read a file using `fs.promises.readFile('/path/to/file', 'utf8');`, but in order to access the results of a promise, we need to call the .then() method.
-3. Thus, to read the contents of the file, let us add a promise handler as below:
-   - ```JS
-      fs.promises.readFile('./src/test-files/filename', 'utf8')
-        .then((data) => {
-          console.log('The contents of the file are: ', data);
-        });
-4. Save the file and run the command:
-   - `*npm start*`
-   - The contents of the file should be printed out now.
-5. To better understand how asynchronous behaviour works, let us add a couple more console.log statements and observe how they behave:
-   - ```JS
-      console.log('I execute first');
-      fs.promises.readFile('./src/test-files/filename', 'utf8')
-        .then((data) => {
-          console.log('The contents of the file are printed last: ', data);
-        });
-      console.log('I execute second');
-   - Save the file and run the command:
-     - `*npm start*`
-6. Thus, JS follows run-to-completion semantics and promise handlers are only executed after the current context completes.
+## Implementing the code
 
-### Making things pseudo-synchronous with async/await.
-
-The async/await syntax allows us to use promises as if they were synchronous using async/await syntax within an async function.
-The above code can be written as below:
-
-- ```JS
-    async function asyncFileRead() {
-      console.log('I run second');
-      const data = await fs.promises.readFile('./src/test-files/filename', 'utf8');
-      console.log('The contents of the file are printed fourth: ', data);
-    }
-
-    console.log('I run first');
-    asyncFileRead()
-      .then(() => {
-        console.log('I run last');
-      });
-    console.log('I run third');
-
-## Nested Promises
-
-In certain cases, we may want to perform certain asynchronous actions one after the other. This can be achieved by nesting promises.
-For example, suppose we want to read a directory and then read the first file we find in that directory.
-
-1. We can read the directory as below:
-   - ```JS
-      fs.promises.readdir('/path/to/dir');
-   - This function returns a promise containing an array of files in the directory.
-2. Let us now write a promise to read the list of files returned.
-   - ```JS
-      fs.promises.readdir('./src/test-files')
-        .then((fileList) => {
-          console.log('Filelist: ', fileList);
-        });
-3. Now, we can read the file as we previously did, but inside the promise resolution for readdir:
-   - ```JS
-      fs.promises.readdir('./src/test-files')
-        .then((fileList) => {
-          console.log('Filelist: ', fileList);
-          fs.promises.readFile('./src/test-files/' + fileList[0], 'utf8')
-            .then((data) => {
-              console.log('The contents of the file are printed last: ', data);
-            });
-        });
-    - Although this works, the solution is not very readable and difficult to follow.
-    - Promises allow us to return another promise and chain them. This will enable us to flatten the above structure.
-4. Let us chain the promises to improve out solution:
-   - ```JS
-      fs.promises.readdir('./src/test-files')
-        .then((fileList) => {
-          console.log('Filelist: ', fileList);
-          return fs.promises.readFile('./src/test-files/' + fileList[0], 'utf8')
-        }).then((data) => {
-          console.log('The contents of the file are printed last: ', data);
-        });
-5. Save the file and run the command:
-   - `*npm start*`
-### Making things pseudo-synchronous with async/await.
-
-With async/await, the code would look as below:
-
-- ```JS
-    async function asyncFileRead() {
-      const fileList = await fs.promises.readdir('./src/test-files');
-      const data = fs.promises.readFile('./src/test-files/' + fileList[0], 'utf8');
-      console.log('The contents of the file are: ', data);
-    }
-
-    asyncFileRead()
-      .then(() => {
-        console.log(done);
-      });
-
-## Running Promises in Parallel
-
-In certain cases, we may want to execute multiple promises in parallel. This may be making various network requests or reading files, and can be achieved using the function Promise.all();
-The promise.all() function allows us to create an array of promises and perform some action when all the promises have resolved.
-
-Building on the above example, let us try to read all files from the directory in parallel.
-This can be done as below:
-- ```JS
-    async function asyncFileRead() {
-      const fileList = await fs.promises.readdir('./src/test-files');
-      const promises = [];
-      fileList.foreach(file => {
-        promises.push(fs.promises.readFile('./src/test-files/' + file, 'utf8')
-          .then((data) => {
-            console.log('Completed reading file: ', file);
-            return data;
-          });
-        );
-      });
-      return Promise.all(promises);
-    }
-
-    asyncFileRead()
-      .then((data) => {
-        // Data is an array of values returned by each promise in the promises array.
-        // data[0] contains the contents of file fileList[0].
-      });
-
-# Working with axios
-
-Let us try to make some network requests which also return promises. We will use the module "axios" for this.
-- Install the axios module by running the command:
-   - `*npm install --save axios*`
-- Import the axios module to index.ts as below:
-   - `import axios from 'axios`;
-- For these examples, we will use the youtube API.
-   - Follow the steps in the [Generating Your Own API Key](generate-api-key) to generate a key.
-
-We will make 2 get requests to the youtube API
-1. Get the video search results for a search term
-2. Get comments on a youtube video.
-
-## Fetching search results
-
-1. In order to get the search results from youtube, we need to do the following:
+1. Notice axios is already imported in the file on line 7.
+2. In order to get the search results from youtube, we need to do the following:
    - We need to make a GET request to "https://www.googleapis.com/youtube/v3/search".
    - Pass the search term as a query parameter called "q".
    - Pass 'snippet' as a query parameter called "part".
    - Pass '10' as a query parameter called "maxResults". (to fetch only 10 results at a time)
    - Pass the API key as a query parameter called "key".
-2. We can make a GET request using axios as below:
+3. We can make a GET request using axios as below:
    - ```JS
       axios.get('my url', { options });
    - This request will return a promise.
-3. Add the below code to make the desired request to youtube to the "searchYoutubeVideos" function:
+4. Add the below code to make the desired request to youtube to the "searchYoutubeVideos" function:
    - ```JS
       axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
           part: 'snippet',
           maxResults: 10,
           key: 'Your api key goes here', // Make sure you update this!
-          q: 'Javascript event loop explained'
+          q: searchTerm
         }
       });
-4. This will return a promise with a response containing the below schema:
+5. This will return a promise with a response containing the below schema:
    - ```JS
       {
         "kind": "youtube#searchListResponse",
@@ -292,7 +152,7 @@ We will make 2 get requests to the youtube API
           }
         ]
       }
-5. Next we need to print the returned search results (the items array) to console. Since this is a promise, we need to use the .then() function.
+6. Next we need to assign the returned search results (the items array) to videos. Since this is a promise, we need to use the .then() function.
    - ```JS
       axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
@@ -302,12 +162,40 @@ We will make 2 get requests to the youtube API
           q: searchTerm
         }
       }).then(response => {
-        console.log(response.data.items); // setState is React stuff and can be ignored for now.
+        this.setState({ videos: response.data.items }); // setState is React stuff and can be ignored for now.
       });
-6. Save the file.
-7. In the terminal, run `*npm start*`.
+7. Finally, let us set the selected video to the first item in the list if it is not already selected.
+   - ```JS
+      axios.get('https://www.googleapis.com/youtube/v3/search', {
+        params: {
+          part: 'snippet',
+          maxResults: 10,
+          key: 'Your api key goes here', // Make sure you update this!
+          q: searchTerm
+        }
+      }).then(response => {
+        this.setState({ videos: response.data.items }); // setState is React stuff and can be ignored for now.
+        if(!this.state.selectedVideo) {
+          this.setState({ selectedVideo: response.data.items[0] });
+        }
+      });
+8. Save the file.
+9. In the terminal, run `*yarn start*`.
+   - You should now see the video and search list populated!
+   - *Note:* Default search term is: "Javascript event loop explained".
+   - ![image](./assets/weekx-promises-with-react/video-search-implemented.PNG)
 
-## Fetching the Comments on a video
+Next, we will implement the comments section.
+
+# Implementing Comments Section
+
+Now we have a working video player and video search section. However, our Comments section is still empty.
+In this section, let us implement the comments section by fetching comments related to the video and displaying them.
+- Navigate to the src/components directory and open the file "Comments.tsx".
+- Notice a function on line 9 called "getAllComments".
+- We want to implement this function so that it will fetch all comments related to the video and display them.
+
+## Implementing the code
 
 1. Notice axios is already imported in the file on line 3.
 2. In order to get the comments related to a video, we need to do the following:
@@ -325,7 +213,7 @@ We will make 2 get requests to the youtube API
       axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
         params: {
           part: 'snippet',
-          videoId: '8aGhZQkoFbQ',
+          videoId: this.props.video.id.videoId,
           maxResults: 10,
           key: 'Your api key goes here', // Make sure you update this!
         }
@@ -361,29 +249,28 @@ We will make 2 get requests to the youtube API
             }
          ]
       }
-6. Next we need to extract the commments and print them to console. Let us use the async/await syntax as below: 
+6. Next we need to extract the commments and assign them to the comments variable. Let us use the async/await syntax as below: 
    - ```JS
-      async function getComments() {
-          const commentThreads = await axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
-          params: {
-            part: 'snippet',
-            videoId: this.props.video.id.videoId,
-            maxResults: 10,
-            key: 'Your api key goes here', // Make sure you update this!
-          }
-        });
-        const comments = commentThreads.data.items.map(comment => { return {
-            textDisplay: comment.snippet.topLevelComment.snippet.textDisplay, 
-            id: comment.snippet.topLevelComment.id,
-            img: comment.snippet.topLevelComment.snippet.authorProfileImageUrl,
-            author: comment.snippet.topLevelComment.snippet.authorDisplayName, 
-          };
-        });
-        console.log(JSON.stringify(comments, null, 2));
-      } 
-      getComments();
+      const commentThreads = await axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
+        params: {
+          part: 'snippet',
+          videoId: this.props.video.id.videoId,
+          maxResults: 10,
+          key: 'Your api key goes here', // Make sure you update this!
+        }
+      });
+      const comments = commentThreads.data.items.map(comment => { return {
+          textDisplay: comment.snippet.topLevelComment.snippet.textDisplay, 
+          id: comment.snippet.topLevelComment.id,
+          img: comment.snippet.topLevelComment.snippet.authorProfileImageUrl,
+          author: comment.snippet.topLevelComment.snippet.authorDisplayName, 
+        };
+      });
+      this.setState({ comments: comments });
 8. Save the file.
-9. In the terminal, run `*npm start*`.
+9. In the terminal, run `*yarn start*`.
+   - You should now see the Comments populated below the video!
+   - ![image](./assets/weekx-promises-with-react/comments-section-implemented.PNG)
 
 # Using Defaults in Axios
 
@@ -416,20 +303,26 @@ Comparing the two code snippets above, we can see a few parameters which are com
 
 We can configure axios to use a default base configuration for all requests. This helps to reduce code duplicity and organize the code better. In order to do this in our application, we need to follow the below steps:
 
-1. axios.create({}) function creates an axios object with the desired base configuration.
-2. Let us add an axios default called youtube as below:
+1. Navigate to the src/apis directory and open the file "youtube.ts".
+2. Notice the default export for axios.create().
+    - This function creates an axios object with the desired base configuration.
+3. Add your API key on line 4 as below:
+    - `const API_KEY = 'Your API Key goes here';`
+4. Replace the export default statement with the code below:
     - ```JS
-      const youtube = axios.create({
+      export default axios.create({
          baseURL: 'https://www.googleapis.com/youtube/v3',
          params: {
             part: 'snippet',
             maxResults: 10,
-            key: 'Your API key goes here' // Your API key goes here
+            key: API_KEY
          }
       });
    - Now we have an axios client with default parameters configured. Let us use this in our code.
-   - *Note:* This should be at the top of the file after the import statements.
-3. Replace the call to `axios.get('https://www.googleapis.com/youtube/v3/search')`:
+5. Navigate to the src directory and open the file "App.tsx".
+   - Notice the import statement for youtube on line 8. 
+   - The default configured client is already imported. Let us use this instead of axios.
+6. Replace the call to `axios.get('https://www.googleapis.com/youtube/v3/search')`:
     - From:
       ```JS
          axios.get('https://www.googleapis.com/youtube/v3/search', {
@@ -447,7 +340,7 @@ We can configure axios to use a default base configuration for all requests. Thi
                q: searchTerm
             }
          })
-7. Make a similar change for getting comments.
+7. Make a similar change in Comments.tsx.
 
 # Generating Your Own API Key
 
