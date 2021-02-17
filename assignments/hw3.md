@@ -77,8 +77,8 @@ The socket library will automatically generate the event `connected` on the clie
 * 2/19: Initial Release 
 
 ## General Requirements and Grading
-This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout. 
-You may add additional helper methods to these files, and you may add `beforeEach`, `beforeAll`, `afterEach`, or `afterAll` to these test suites.
+This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout.
+You may add additional helper methods to these files, and you may add `beforeEach`, `beforeAll`, `afterEach`, or `afterAll` to these test suites. You may also add helper methods to `TestUtils.ts`. Your tests must be fully contained within the test files and `TestUtils.ts` - when they run on GradeScope, we will copy only these files out of your submission to grade.
 You **must not** change the order of the tests or the names of the tests. To integrate with GradeScope, each test has a call to `ConfigureTest` and `StartTest` - these lines must not be changed. Your test may not use the value of `testConfiguration` other than in this call to `StartTest`.
 
 ### Rubric Specification 
@@ -328,9 +328,6 @@ describe('RoomServiceApiSocket', () => {
   it('Rejects invalid session tokens, even if otherwise valid room id', async () => {
   });
   it('Dispatches movement updates to all clients in the same room', async () => {
-  });
-  it('Does not dispatch movement updates from one room to another room', async () => {
-    // TODO: I think this test might be asking for too much, maybe we shouldn't ask them to write it. - JSB
   });
   it('Invalidates the user session after disconnection', async () => {
   });
