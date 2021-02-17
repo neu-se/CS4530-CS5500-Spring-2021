@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Promises
-permalink: /tutorials/weekx-promises-with-react
+permalink: /tutorials/week4-promises
 parent: Tutorials
 ---
 
@@ -18,17 +18,18 @@ Contents:
 
 # Promise Basics
 
-In Javascript, certain tasks can be performed asynchronously on background threads such as I/O operations, network requests, and timers. The different constructs available to handle such asynchronous events are callbacks, promises. Due to various problems associated with callbacks (such as callback hell), promises are the preferred construct for handling asynchronous behaviour. In simple terms, a promise is a function telling the caller, "I don't have what you need just yet, but I'm going to fetch that data and I *promise* to get back to you once I do; *then* can process the data as you see fit". There is also a reletively newer way of handling promises which processes them synchronously within the given closure called async/await.
+In JavaScript [and TypeScript], certain tasks can be performed asynchronously on background threads such as I/O operations, network requests, and timers. The different constructs available to handle such asynchronous events are callbacks, promises. Due to various problems associated with callbacks (such as callback hell), promises are the preferred construct for handling asynchronous behaviour. In simple terms, a promise is a function telling the caller, "I don't have what you need just yet, but I'm going to fetch that data and I *promise* to get back to you once I do; *then* can process the data as you see fit". There is also a reletively newer way of handling promises which processes them synchronously within the given closure called async/await.
 
 Looking at the code examples below should give a comparison between synchronous and asynchronous behaviour.
 
 - Example: Synchronous code:
-- ```JS
+- ```ts
    function doSomething() {
       console.log('I always execute first.');
       someSynchronousFunction(); // This will perform some tasks and the code stops here while it does so.
       console.log('I always execute after the syncchronous function.');
    }
+  ```
 
 - Example: Asynchronous function:
 - ```JS
@@ -455,7 +456,7 @@ We can configure axios to use a default base configuration for all requests. Thi
             maxResults: 10,
             key: 'Your API key goes here' // Your API key goes here
          }
-      });
+      });```
    - Now we have an axios client with default parameters configured. Let us use this in our code.
    - *Note:* This should be at the top of the file after the import statements.
 3. Replace the call to `axios.get('https://www.googleapis.com/youtube/v3/search')`:
@@ -490,15 +491,15 @@ In this tutorial, we are using the Youtube API v3, provided by google. In order 
 ### Creating a new Project
 
 1. Navigate to [Google developer console](https://console.developers.google.com/) and log in if required.
-   - ![image](./assets/weekx-promises-with-react/developer-console-home.PNG)
+   - ![image](./assets/week4-promises/developer-console-home.PNG)
 2. Click on "Create Project".
 3. Add in the necessary information as below.
-   - ![image](./assets/weekx-promises-with-react/create-project.PNG)
+   - ![image](./assets/week4-promises/create-project.PNG)
 4. Click on "Create".
    - This will create a new project for which we can create an API key.
 5. This will open the new project by default.
    - If not, select the recently created project
-   - ![image](./assets/weekx-promises-with-react/new-project-home.PNG)
+   - ![image](./assets/week4-promises/new-project-home.PNG)
 
 
 ### Enable API and generate key
@@ -506,18 +507,18 @@ In this tutorial, we are using the Youtube API v3, provided by google. In order 
 1. Select the new project created. (if not already open)
 2. Click on "Go to APIs Overview" in the API section.
 3. Click on "Enable APIs and Services" at the top.
-   - ![image](./assets/weekx-promises-with-react/apis-overview.PNG)
+   - ![image](./assets/week4-promises/apis-overview.PNG)
 4. Search youtube and select "Youtube Data API v3"
-   - ![image](./assets/weekx-promises-with-react/enable-youtube-api.PNG)
+   - ![image](./assets/week4-promises/enable-youtube-api.PNG)
 5. Click Enable. This will redirect you to the youtube api home page.
-   - ![image](./assets/weekx-promises-with-react/youtube-api-home.PNG)
+   - ![image](./assets/week4-promises/youtube-api-home.PNG)
 6. Click on "Create Credentials".
 7. Configure the details are required, or shown below.
    - youtube api v3
    - web browser (javascript)
    - public
-   - ![image](./assets/weekx-promises-with-react/configure-credentials.PNG)
+   - ![image](./assets/week4-promises/configure-credentials.PNG)
 8. Click on "what credentials do I need?" and your key is ready!
-   - ![image](./assets/weekx-promises-with-react/credentials-ready.PNG)
+   - ![image](./assets/week4-promises/credentials-ready.PNG)
 9. Copy this key for use in your applications.
 
