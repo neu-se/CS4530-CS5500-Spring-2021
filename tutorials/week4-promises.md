@@ -528,7 +528,7 @@ We can configure axios to use a default base configuration for all requests. Thi
             params: {
                part: 'snippet',
                maxResults: 10,
-               key: 'AIzaSyCghhuO7OwHrXOBlYd67CqGxmwswskvgL8',
+               key: 'Your API key goes here', // Your API key goes here
                q: searchTerm
             }
          })
