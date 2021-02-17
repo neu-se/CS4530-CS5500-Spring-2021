@@ -5,55 +5,56 @@ permalink: /tutorials/week4-promises
 parent: Tutorials
 ---
 
-This tutorial gives a basic introduction to promises and using axios to make http requests. 
+This tutorial gives a basic introduction to promises and using axios to make http requests. In this tutorial, we will cover examples using the file system module to understand asynchronous behaviour with promises, promise chaining, and parallel requests. Finally, we will use the axios module to make http requests to the YouTube API.
 
 Contents:
 * [Promise Basics](#promise-basics)
-* [Applicaion Setup](#app-overview)
+* [Application Setup](#app-overview)
 * [Promise Examples](#promise-examples)
-* [Youtube API Examples](#youtube-api-examples)
-* [Using Defaults in Axios](#axios-defaults)
-* [Generating Your Own API key](#generate-api-key)
-
+* [YouTube API Examples](#youtube-api-examples)
 
 # Promise Basics
 
-In JavaScript [and TypeScript], certain tasks can be performed asynchronously on background threads such as I/O operations, network requests, and timers. The different constructs available to handle such asynchronous events are callbacks, promises. Due to various problems associated with callbacks (such as callback hell), promises are the preferred construct for handling asynchronous behaviour. In simple terms, a promise is a function telling the caller, "I don't have what you need just yet, but I'm going to fetch that data and I *promise* to get back to you once I do; *then* can process the data as you see fit". There is also a reletively newer way of handling promises which processes them synchronously within the given closure called async/await.
+In JavaScript [and TypeScript], certain tasks can be performed asynchronously on background threads such as I/O operations, network requests, and timers. The different constructs available to handle such asynchronous events are callbacks, promises. Due to various problems associated with callbacks (such as callback hell), promises are the preferred construct for handling asynchronous behavior. In simple terms, a promise is a function telling the caller, "I don't have what you need just yet, but I'm going to fetch that data and I *promise* to get back to you once I do; *then* you can process the data". There is also a relatively newer way of handling promises which processes them synchronously within the given closure called async/await.
 
-Looking at the code examples below should give a comparison between synchronous and asynchronous behaviour.
+Looking at the code examples below should give a comparison between synchronous and asynchronous behavior.
 
 - Example: Synchronous code:
-- ```ts
-   function doSomething() {
-      console.log('I always execute first.');
-      someSynchronousFunction(); // This will perform some tasks and the code stops here while it does so.
-      console.log('I always execute after the syncchronous function.');
-   }
-  ```
+   - ```ts
+      function doSomething() {
+         console.log('I always execute first.');
+         someSynchronousFunction(); 
+         // The above line will perform some tasks and the code stops here while it does so.
+         console.log('I always execute after the synchronous function.');
+      }
+   ```
 
 - Example: Asynchronous function:
-- ```JS
-   function doSomething() {
-      console.log('I always execute first.');
-      someAsynchronousFunctionWhichReturnsAPromise()
-         .then((data) => {
-            // This function will execute one the async task has completed.
-            console.log('This is the data you wanted: ', data);
-            console.log('I will get printed last');
-         });
-      console.log('I execute right after the Async task starts executing');
-   }
+   - ```ts
+      function doSomething() {
+         console.log('I always execute first.');
+         someAsynchronousFunctionWhichReturnsAPromise()
+            .then((data) => {
+               // This function will execute one the async task has completed.
+               console.log('This is the data you wanted: ', data);
+               console.log('I will get printed last');
+            });
+         console.log('I execute right after the Async task starts executing');
+      }
+   ```
 
 - Example: Async/Await
-- ```JS
-   async function doSomething() { // This function now returs a promise because it is "async"
-      console.log('I always execute first.');
-      const data = await someAsynchronousFunctionWhichReturnsAPromise(); // This will perform some tasks and the code stops here while it does so.
-      console.log('This is the data you wanted: ', data);
-      console.log('I will get printed last');
-   }
+   - ```ts
+      async function doSomething() { // This function now returns a promise because it is "async"
+         console.log('I always execute first.');
+         const data = await someAsynchronousFunctionWhichReturnsAPromise(); 
+         // The above line will perform some tasks and the code stops here while it does so.
+         console.log('This is the data you wanted: ', data);
+         console.log('I will get printed last');
+      }
+   ```
 
-# Applicaion Setup
+# Application Setup
 
 Let us create a simple typescript application to work with promises. To do this, follow the below steps:
 
@@ -84,10 +85,13 @@ Let us implement some examples to understand how promises work and behave. As we
 ## Using fs functions
 
 - In order to use fs functions, we need to import the fs module in index.ts as below:
-   - ```JS
+   - ```ts
       import * as fs from 'fs';
+     ```
 - The syntax for reading a file is as below:
-   - fs.promises.readFile('/path/to/file', 'utf8');
+   - ```ts 
+      fs.promises.readFile('/path/to/file', 'utf8');
+     ```
    - This function returns a promise containing the contents of the file.
 
 ## Simple promise example
@@ -96,32 +100,34 @@ Let us start by Asynchronously reading a file.
 1. Import fs into index.ts as shown above.
 2. As we know, we can read a file using `fs.promises.readFile('/path/to/file', 'utf8');`, but in order to access the results of a promise, we need to call the .then() method.
 3. Thus, to read the contents of the file, let us add a promise handler as below:
-   - ```JS
+   - ```ts
       fs.promises.readFile('./src/test-files/filename', 'utf8')
         .then((data) => {
           console.log('The contents of the file are: ', data);
         });
+     ```
 4. Save the file and run the command:
    - `*npm start*`
    - The contents of the file should be printed out now.
-5. To better understand how asynchronous behaviour works, let us add a couple more console.log statements and observe how they behave:
-   - ```JS
+5. To better understand how asynchronous behavior works, let us add a couple more console.log statements and observe how they behave:
+   - ```ts
       console.log('I execute first');
       fs.promises.readFile('./src/test-files/filename', 'utf8')
         .then((data) => {
           console.log('The contents of the file are printed last: ', data);
         });
       console.log('I execute second');
-   - Save the file and run the command:
-     - `*npm start*`
-6. Thus, JS follows run-to-completion semantics and promise handlers are only executed after the current context completes.
+     ```
+6. Save the file and run the command:
+   - `*npm start*`
+7. Thus, JS follows run-to-completion semantics and promise handlers are only executed after the current context completes.
 
 ### Making things pseudo-synchronous with async/await.
 
 The async/await syntax allows us to use promises as if they were synchronous using async/await syntax within an async function.
 The above code can be written as below:
 
-- ```JS
+- ```ts
     async function asyncFileRead() {
       console.log('I run second');
       const data = await fs.promises.readFile('./src/test-files/filename', 'utf8');
@@ -134,23 +140,25 @@ The above code can be written as below:
         console.log('I run last');
       });
     console.log('I run third');
+  ```
 
 ### Error Handling with Promises
 
 In order to handle errors in promises, we need to use the .catch() function, which can be invoked similar to a .then().
 Assuming we used an incorrect file path, and the file cannot be found, the readFile function will throw an error. Let us catch this error with a .catch block.
 
-- ```JS
+- ```ts
    fs.promises.readFile('./src/test-files/file-that-doesnt-exist', 'utf8')
         .then((data) => {
           console.log('The contents of the file are: ', data);
         }).catch((error: Error) => {
            console.log('readFile failed because: ', error.message);
         });
+  ```
 
 For async/await we can use a try/catch block to catch the error
 
-- ```JS
+- ```ts
    async function asyncFileRead() {
       try {
          const data = await fs.promises.readFile('./src/test-files/filename', 'utf8');
@@ -158,24 +166,26 @@ For async/await we can use a try/catch block to catch the error
          console.log('readFile failed because: ', error.message);
       }
     }
-
+  ```
 ## Nested Promises
 
 In certain cases, we may want to perform certain asynchronous actions one after the other. This can be achieved by nesting promises.
 For example, suppose we want to read a directory and then read the first file we find in that directory.
 
 1. We can read the directory as below:
-   - ```JS
+   - ```ts
       fs.promises.readdir('/path/to/dir');
+     ```
    - This function returns a promise containing an array of files in the directory.
 2. Let us now write a promise to read the list of files returned.
-   - ```JS
+   - ```ts
       fs.promises.readdir('./src/test-files')
         .then((fileList) => {
           console.log('Filelist: ', fileList);
         });
+     ```
 3. Now, we can read the file as we previously did, but inside the promise resolution for readdir:
-   - ```JS
+   - ```ts
       fs.promises.readdir('./src/test-files')
         .then((fileList) => {
           console.log('Filelist: ', fileList);
@@ -184,10 +194,11 @@ For example, suppose we want to read a directory and then read the first file we
               console.log('The contents of the file are printed last: ', data);
             });
         });
+     ```
     - Although this works, the solution is not very readable and difficult to follow.
     - Promises allow us to return another promise and chain them. This will enable us to flatten the above structure.
 4. Let us chain the promises to improve out solution:
-   - ```JS
+   - ```ts
       fs.promises.readdir('./src/test-files')
         .then((fileList) => {
           console.log('Filelist: ', fileList);
@@ -197,13 +208,14 @@ For example, suppose we want to read a directory and then read the first file we
         }).catch((error) => {
            console.log('Error thrown by any promise above will be caught here: ', error.message);
         });
+     ```
 5. Save the file and run the command:
    - `*npm start*`
 ### Making things pseudo-synchronous with async/await.
 
 With async/await, the code would look as below:
 
-- ```JS
+- ```ts
     async function asyncFileRead() {
       const fileList = await fs.promises.readdir('./src/test-files');
       const data = fs.promises.readFile('./src/test-files/' + fileList[0], 'utf8');
@@ -214,6 +226,7 @@ With async/await, the code would look as below:
       .then(() => {
         console.log(done);
       });
+  ```
 
 ## Running Promises in Parallel
 
@@ -222,7 +235,7 @@ The promise.all() function allows us to create an array of promises and perform 
 
 Building on the above example, let us try to read all files from the directory in parallel.
 This can be done as below:
-- ```JS
+- ```ts
     async function asyncFileRead() {
       const fileList = await fs.promises.readdir('./src/test-files');
       const promises = [];
@@ -245,20 +258,60 @@ This can be done as below:
         // Data is an array of values returned by each promise in the promises array.
         // data[0] contains the contents of file fileList[0].
       });
+  ```
 
-# Working with axios
+# YouTube API Examples
 
-Let us try to make some network requests which also return promises. We will use the module "axios" for this.
+Let us make some network requests which also return promises. We will use the module "axios" for this and connect to the YouTube API.
 - Install the axios module by running the command:
    - `*npm install --save axios*`
 - Import the axios module to index.ts as below:
    - `import axios from 'axios`;
-- For these examples, we will use the youtube API.
-   - Follow the steps in the [Generating Your Own API Key](generate-api-key) to generate a key.
 
 We will make 2 get requests to the youtube API
 1. Get the video search results for a search term
 2. Get comments on a youtube video.
+
+## Generating Your Own API Key
+
+In this tutorial, we are using the Youtube API v3, provided by google. In order to use this, Google provides a free API key which can be used to make 10,000 requests per day. This tutorial also assumes you have a google account, if you do not have one, please create one before you proceed. This involves 2 steps:
+1. Create a Project
+2. Enable API and generate key
+
+### Creating a new Project
+
+1. Navigate to [Google developer console](https://console.developers.google.com/) and log in if required.
+   - ![image](./assets/week4-promises/developer-console-home.PNG)
+2. Click on "Create Project".
+3. Add in the necessary information as below.
+   - ![image](./assets/week4-promises/create-project.PNG)
+4. Click on "Create".
+   - This will create a new project for which we can create an API key.
+5. This will open the new project by default.
+   - If not, select the recently created project
+   - ![image](./assets/week4-promises/new-project-home.PNG)
+
+
+### Enable API and generate key
+
+1. Select the new project created. (if not already open)
+2. Click on "Go to APIs Overview" in the API section.
+3. Click on "Enable APIs and Services" at the top.
+   - ![image](./assets/week4-promises/apis-overview.PNG)
+4. Search youtube and select "Youtube Data API v3"
+   - ![image](./assets/week4-promises/enable-youtube-api.PNG)
+5. Click Enable. This will redirect you to the youtube api home page.
+   - ![image](./assets/week4-promises/youtube-api-home.PNG)
+6. Click on "Create Credentials".
+7. Configure the details as shown below.
+   - youtube api v3
+   - web browser (javascript)
+   - public
+   - ![image](./assets/week4-promises/configure-credentials.PNG)
+8. Click on "what credentials do I need?" and your key is ready!
+   - ![image](./assets/week4-promises/credentials-ready.PNG)
+9. Copy this key for use in your applications.
+
 
 ## Fetching search results
 
@@ -269,11 +322,12 @@ We will make 2 get requests to the youtube API
    - Pass '10' as a query parameter called "maxResults". (to fetch only 10 results at a time)
    - Pass the API key as a query parameter called "key".
 2. We can make a GET request using axios as below:
-   - ```JS
+   - ```ts
       axios.get('my url', { options });
+     ```
    - This request will return a promise.
 3. Add the below code to make the desired request to youtube to the "searchYoutubeVideos" function:
-   - ```JS
+   - ```ts
       axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
           part: 'snippet',
@@ -282,8 +336,9 @@ We will make 2 get requests to the youtube API
           q: 'Javascript event loop explained'
         }
       });
+     ```
 4. This will return a promise with a response containing the below schema:
-   - ```JS
+   - ```ts
       {
         "kind": "youtube#searchListResponse",
         "etag": etag,
@@ -322,8 +377,9 @@ We will make 2 get requests to the youtube API
           }
         ]
       }
+     ```
 5. Next we need to print the returned search results (the items array) to console. Since this is a promise, we need to use the .then() function.
-   - ```JS
+   - ```ts
       axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
           part: 'snippet',
@@ -334,6 +390,7 @@ We will make 2 get requests to the youtube API
       }).then(response => {
         console.log(response.data.items); // setState is React stuff and can be ignored for now.
       });
+     ```
 6. Save the file.
 7. In the terminal, run `*npm start*`.
 
@@ -347,11 +404,12 @@ We will make 2 get requests to the youtube API
    - Pass '10' as a query parameter called "maxResults". (to fetch only 10 results at a time)
    - Pass the API key as a query parameter called "key".
 3. We can make a GET request using axios as below:
-   - ```JS
+   - ```ts
       axios.get('my url', { options });
+     ```
    - This request will return a promise.
 4. Add the below code to make the desired request to youtube to the "getAllComments" function:
-   - ```JS
+   - ```ts
       axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
         params: {
           part: 'snippet',
@@ -360,8 +418,9 @@ We will make 2 get requests to the youtube API
           key: 'Your api key goes here', // Make sure you update this!
         }
       });
+     ```
 5. This will return a promise with a response containing the below schema:
-   - ```JS
+   - ```ts
       {
          "kind": "youtube#commentThreadListResponse",
          "etag": etag,
@@ -391,8 +450,9 @@ We will make 2 get requests to the youtube API
             }
          ]
       }
+     ```
 6. Next we need to extract the commments and print them to console. Let us use the async/await syntax as below: 
-   - ```JS
+   - ```ts
       async function getComments() {
           const commentThreads = await axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
           params: {
@@ -412,13 +472,14 @@ We will make 2 get requests to the youtube API
         console.log(JSON.stringify(comments, null, 2));
       } 
       getComments();
+     ```
 8. Save the file.
 9. In the terminal, run `*npm start*`.
 
-# Using Defaults in Axios
+## Using Defaults in Axios
 
 Let us take another look at the two requests we wrote in the previos section.
-- ```JS
+- ```ts
       axios.get('https://www.googleapis.com/youtube/v3/search', {
          params: {
             part: 'snippet',
@@ -436,7 +497,7 @@ Let us take another look at the two requests we wrote in the previos section.
             key: 'Your api key goes here', // Make sure you update this!
          }
       });
-
+  ```
 Comparing the two code snippets above, we can see a few parameters which are common to both requests.
 - The base URL is same for both requests: (https://www.googleapis.com/youtube/v3)
 - The following query parameters are common:
@@ -448,7 +509,7 @@ We can configure axios to use a default base configuration for all requests. Thi
 
 1. axios.create({}) function creates an axios object with the desired base configuration.
 2. Let us add an axios default called youtube as below:
-    - ```JS
+    - ```ts
       const youtube = axios.create({
          baseURL: 'https://www.googleapis.com/youtube/v3',
          params: {
@@ -456,12 +517,13 @@ We can configure axios to use a default base configuration for all requests. Thi
             maxResults: 10,
             key: 'Your API key goes here' // Your API key goes here
          }
-      });```
+      });
+     ```
    - Now we have an axios client with default parameters configured. Let us use this in our code.
    - *Note:* This should be at the top of the file after the import statements.
 3. Replace the call to `axios.get('https://www.googleapis.com/youtube/v3/search')`:
     - From:
-      ```JS
+      ```ts
          axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                part: 'snippet',
@@ -470,55 +532,14 @@ We can configure axios to use a default base configuration for all requests. Thi
                q: searchTerm
             }
          })
+      ```
     - To:
-      ```JS
+      ```ts
          youtube.get('/search', {
             params: {
                q: searchTerm
             }
          })
+      ```
 7. Make a similar change for getting comments.
-
-# Generating Your Own API Key
-
-In this tutorial, we are using the Youtube API v3, provided by google. In order to use this, Google provides a free API key which can be used to make 10,000 requests per day. This tutorial also assumes you have a google account, if you do not have one, please create one before you proceed.
-
-## Steps
-
-1. Create a Project
-2. Enable API and generate key
-
-### Creating a new Project
-
-1. Navigate to [Google developer console](https://console.developers.google.com/) and log in if required.
-   - ![image](./assets/week4-promises/developer-console-home.PNG)
-2. Click on "Create Project".
-3. Add in the necessary information as below.
-   - ![image](./assets/week4-promises/create-project.PNG)
-4. Click on "Create".
-   - This will create a new project for which we can create an API key.
-5. This will open the new project by default.
-   - If not, select the recently created project
-   - ![image](./assets/week4-promises/new-project-home.PNG)
-
-
-### Enable API and generate key
-
-1. Select the new project created. (if not already open)
-2. Click on "Go to APIs Overview" in the API section.
-3. Click on "Enable APIs and Services" at the top.
-   - ![image](./assets/week4-promises/apis-overview.PNG)
-4. Search youtube and select "Youtube Data API v3"
-   - ![image](./assets/week4-promises/enable-youtube-api.PNG)
-5. Click Enable. This will redirect you to the youtube api home page.
-   - ![image](./assets/week4-promises/youtube-api-home.PNG)
-6. Click on "Create Credentials".
-7. Configure the details are required, or shown below.
-   - youtube api v3
-   - web browser (javascript)
-   - public
-   - ![image](./assets/week4-promises/configure-credentials.PNG)
-8. Click on "what credentials do I need?" and your key is ready!
-   - ![image](./assets/week4-promises/credentials-ready.PNG)
-9. Copy this key for use in your applications.
 
