@@ -12,7 +12,7 @@ Given that you will be up-to-speed on the Covey.Town codebase (and have been int
 and that you will have a team of four, we expect that the feature that you propose will be more complex than the feature implemented in the individual
 homeworks.
 
-Feel free to look at existing systems like [Gather.Town](https://gather.town), [Sococo](https://www.sococo.com), [Reslash](https://reslash.co), [Screen](https://screen.so/home), and [Gatherly.IO](https://www.gatherly.io) for inspiration on new features to build for Covey.Town.
+Feel free to look at existing systems like [Gather.Town](https://gather.town), [Sococo](https://www.sococo.com), [Reslash](https://reslash.co), [Screen](https://screen.so/home), and [Gatherly.IO](https://www.gatherly.io) for inspiration on new features to build for Covey.Town. Also see the recent NYTimes Magazine article [The Race to Fix Fix Virtual Meetings](https://www.nytimes.com/2021/02/17/magazine/video-conference.html) ([click here to access through NEU libraries](https://link.ezproxy.neu.edu/login?url=https://www.proquest.com/blogs,-podcasts,- websites/meet-me-at-virtual-water-cooler/docview/2489980229/se-2?accountid=12826])). 
 Examples of features that students might propose include:
 * Modify the "Room" abstraction so that each room can have sub-maps, allowing players to walk from one map to another (for instance, to enter a building)
 * Create an interface for uploading and choosing between different maps and avatars
