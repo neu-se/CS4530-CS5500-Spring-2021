@@ -146,7 +146,7 @@ Ripley has analyzed the specification for the Covey.Town room service, and has d
   });
 ```
 
-Implement these tests in the file `client/CoveyRoomRest.test.ts`. Ripley has pre-configured these tests so that before they start, a server is deployed on a random port (so you can run the tests even if something else on your computer is using port 8081), and a client is automatically configured to connect to that testing server. In your tests, be sure to use the `apiClient` instance of the `RoomServiceClient` - this client will be automatically configured to connect to the server that the test starts up.
+Implement these tests in the file `client/CoveyRoomREST.test.ts`. Ripley has pre-configured these tests so that before they start, a server is deployed on a random port (so you can run the tests even if something else on your computer is using port 8081), and a client is automatically configured to connect to that testing server. In your tests, be sure to use the `apiClient` instance of the `RoomServiceClient` - this client will be automatically configured to connect to the server that the test starts up.
 
 Each of the tests is declared with an `async` modifier, which means that you may use `await` within your test, and Jest will `await` on your test.
 Ripley shared this example integration test for the TranscriptServer:
