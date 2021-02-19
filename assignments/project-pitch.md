@@ -41,6 +41,7 @@ You can find good examples of user stories [on this GSA website](https://tech.gs
 ## Submission 
 Your project pitch should be 1-2 pages in length, and submitted as a PDF in GradeScope to the assignment "Project Pitch."
 Each team submits a single document to GradeScope: when uploading the submission, GradeScope will ask you who your teammates are, and then will associate this submission with every member of your team.
+This assignment is due Feb 26. **In order to provide timely feedback on your project pitch, we can not allow any DRC accomodations for late submissions on this assignment.**
 
 
 ## Grading
