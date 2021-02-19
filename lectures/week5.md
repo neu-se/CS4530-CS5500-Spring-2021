@@ -45,6 +45,13 @@ In this week of the course, you will learn
 
 ### Resources
 
+* Materials from Prof. Wand's Section
+    * [In Class Slides]({{ site.baseurl }}{% link SynchronousSlides-Wand/Week 05 Synchronous Slides.pptx %})
+    * [Example 1: Behavioral tests with Jest]({{ site.baseurl }}{% link Activities/week5-wand-simple-tests-as-finished.zip %})
+    * [Example 2: Async tests with Jest]({{ site.baseurl }}{% link Activities/week5-wand-async-tests-as-finished.zip %})
+
+    
+
 
 ### Additional Readings:
 * Software Engineering at Google, [Chapter 11](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/ch11.html#testing_overview) and following chapters.
