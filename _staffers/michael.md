@@ -2,6 +2,6 @@
 name: Michael Davinroy
 role: Teaching Assistant
 photo: staff/michael.jpg
-office-hours: Tuesday 9-10am, Friday 9-10am
+office-hours: Tuesday 6-8pm
 ---
 

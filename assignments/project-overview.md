@@ -38,23 +38,7 @@ Given that you will be up-to-speed on the Covey.Town codebase (and have been int
 and that you will have a team of four, we expect that the feature that you propose will be more complex than the feature implemented in the individual
 homeworks.
 
-Feel free to look at existing systems like [Gather.Town](https://gather.town), [Sococo](https://www.sococo.com), and [Gatherly.IO](https://www.gatherly.io) for inspiration on new features to build for Covey.Town.
-Examples of features that students might propose include:
-* Modify the "Room" abstraction so that each room can have sub-maps, allowing players to walk from one map to another (for instance, to enter a building)
-* Create an interface for uploading and choosing between different maps and avatars
-* Create an abstraction to allow for interaction with objects, for instance: walking up to a whiteboard on the map allows players to draw on a shared whiteboard
-* Add screenreader support - generate a textual representation of the map and what players can do to interact with it
-* Support real persistence: store data in a database (e.g. Postgres + GraphQL), allow users to register and save a profile (e.g. using Auth0) 
-* Add text chat and direct messaging
-
-Please note that multiple teams might choose to propose the same feature, or a variation of that same feature - this is OK.
-
-The course staff will provide feedback on your project to help ensure that the scope of your project is appropriate.
-
-The project pitch will include:
-* User stories: high level description of how users will interact with your new feature. User stories are requirements specified in the format 
-"As a < type of user >, I want < some goal > so that < some reason >." You should include at least 3 different user stories to describe how users will interact with your feature.
-* Acceptance testing criteria: For each of the user stories, describe how you (and we) would determine that the functionality is correctly implemented.
+[Read more about this deliverable in the Project Pitch Assignment]({{ site.baseurl }}{% link assignments/project-pitch.md %})
 
 ### Project Plan
 Based on the feedback that you receive from the course staff, you will propose a detailed plan to implement your new feature.
