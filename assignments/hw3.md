@@ -51,7 +51,7 @@ Please post any questions about this assignment on Piazza.
 
 ### Overview of the socket protocol
 Your past coding assignments have focused on the REST side of the client and server, but you will now need to also interact with the socket server and client. Recall that the steps for a client to join a room are:
-1. Make a REST request to the `/members` service to fetch a session token
+1. Make a REST request to the `/sessions` service to fetch a session token
 2. Connect to the socket server using this session token as a credential
 
 Once the connection is established, the client and server communicate asynchronously: on either side, the code can call `emit('eventName', eventData)`, where `eventName` is one of the events listed below, and `eventData` is that event's corresponding payload. 
