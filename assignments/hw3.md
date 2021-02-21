@@ -81,9 +81,13 @@ This assignment is split into three parts: each part requires you to implement t
 You may add additional helper methods to these files, and you may add `beforeEach`, `beforeAll`, `afterEach`, or `afterAll` to these test suites. You may also add helper methods to `TestUtils.ts`. Your tests must be fully contained within the test files and `TestUtils.ts` - when they run on GradeScope, we will copy only these files out of your submission to grade.
 You **must not** change the order of the tests or the names of the tests. To integrate with GradeScope, each test has a call to `ConfigureTest` and `StartTest` - these lines must not be changed. Your test may not use the value of `testConfiguration` other than in this call to `StartTest`.
 
-When inspecting the results of your tests on GradeScope, you might initially be concerned to see tests failing - recall that we are running your tests on both bug-free code, and on buggy code. Your tests are *expected to fail* on the buggy code. In the output on GradeScope, you'll see each test is run more than once, sometimes with the suffix `[No fault]` (these ones should pass), and other times with `[Fault RM01I... - this configuration should FAIL]` - these test runs *should* fail.
+**Unusual Test Feedback:**{: .label .label-yellow } When inspecting the results of your tests on GradeScope, you might initially be concerned to see tests failing - recall that we are running your tests on both bug-free code, and on buggy code. Your tests are *expected to fail* on the buggy code. In the output on GradeScope, you'll see each test is run more than once, sometimes with the suffix `[No fault]` (these ones should pass), and other times with `[Fault RM01I... - this configuration should FAIL]` - these test runs *should* fail. To be clear, this means that the following output indicates that you've implemented your test correctly:
+```
+✕ Prohibits a blank friendlyName [Fault XErr2MZjsnN7 - this configuration should FAIL] (659 ms)
+✓ Prohibits a blank friendlyName [No fault] (4 ms)
+```
 
-Jest might report the following message after running some tests:
+Jest might also report the following message after running some tests:
 ```
  Jest did not exit one second after the test run has completed.
  
