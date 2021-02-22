@@ -1,7 +1,7 @@
 ---
 layout: lecture
 title: Activity 6.1 User Requirements for Covey Town
-permalink: /Activities/Activity6.1
+permalink: /Activities/activity6-1
 parent: Activities
 ---
 
