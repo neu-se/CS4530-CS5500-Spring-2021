@@ -38,6 +38,8 @@ In this week of the course, you will learn about
     * [ZIP]({{ site.baseurl }}{% link Examples/Example 6.3 todo-app.zip %})
     
 ### Resources
+* In-class slides from Prof Bell's Section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.key %})
+
 
 
 ### Additional Readings:
