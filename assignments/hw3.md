@@ -75,7 +75,7 @@ The socket library will automatically generate the event `connected` on the clie
 
 ### Change Log
 * 2/19: Initial Release 
-* 2/23: Update handout to include HW2 solution
+* 2/23: Update handout to include HW2 solution, add a hint to part 3 - JSB
 
 ## General Requirements and Grading
 This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout.
@@ -334,6 +334,8 @@ Ripley has also provided an example of how to use this API in one of the tests:
 ```
 
 The tricky part about writing these tests is that you will need to consider the order of operations that your test needs to perform, and the responses that you should be receiving from the server.
+
+**Hint (2/23):** In these integration tests, you will be testing the server-side logic that responds to client actions. For instance, to test that the server informs all new players when a player joins, you will be testing the server's behavior when a client joins a room. Unlike in part 2, where you directly manipulated the server, to implement these tests, you will interact with the server only using the REST + socket API, from the client side. Hence, the only way to test the server's behavior when a player joins the room is to actually use the apiClient to join the room, and observe what messages the server sends.
 
 Similar to the other parts, Ripley has outlined the tests that you need to implement:
 ```ts
