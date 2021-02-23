@@ -41,8 +41,8 @@ Based on past experiences, we project that this assignment could take you up to 
 We encourage you to start early so that you can post questions on Piazza, make the most use of our TAs' tutorials, and
  attend office hours as necessary in order to ensure that you can reach Satisfactory marks across the board.
  
-To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw3-handout.zip %}).
-From your HW2 solution, copy the files `src/client/RoomServiceClient.ts`, `src/requestHandlers/CoveyRoomRequestHandlers.ts`, `src/lib/CoveyRoomsStore.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout. We will release the official solution for these files on 2/23 (some students have DRC accommodations to turn in HW2 as late as 2/22), after which point you may also use those official implementations.
+To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw3-handout.zip %}). (Update 2/23: handout now contains the HW2 reference solution, there is no need to copy your HW2 solution into the handout)
+~~From your HW2 solution, copy the files `src/client/RoomServiceClient.ts`, `src/requestHandlers/CoveyRoomRequestHandlers.ts`, `src/lib/CoveyRoomsStore.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout.~~
  
 **This is an individual assignment.** 
  
@@ -75,6 +75,7 @@ The socket library will automatically generate the event `connected` on the clie
 
 ### Change Log
 * 2/19: Initial Release 
+* 2/23: Update handout to include HW2 solution
 
 ## General Requirements and Grading
 This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout.
