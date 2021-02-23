@@ -39,7 +39,7 @@ In this week of the course, you will learn about
     
 ### Resources
 * In-class slides from Prof Bell's Section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.key %})
-
+* [Activity 6.1]({{ site.baseurl }}{%link Activities/Activity6.1_Requirements.md %})
 
 
 ### Additional Readings:

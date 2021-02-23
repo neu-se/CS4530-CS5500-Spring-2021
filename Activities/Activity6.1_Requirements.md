@@ -1,6 +1,6 @@
 ---
-layout: lecture
-title: Activity 6.1 User Requirements for Covey Town
+layout: page
+title: Activity 6.1
 permalink: /Activities/activity6-1
 parent: Activities
 ---
@@ -62,4 +62,3 @@ The group should create a single zip file with all elements and drop in the slac
 
 
 [comment]: # (LocalWords:  permalink UX Calin CoveyRoomID UI
-)
