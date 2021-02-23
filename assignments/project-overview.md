@@ -44,11 +44,13 @@ homeworks.
 Based on the feedback that you receive from the course staff, you will propose a detailed plan to implement your new feature.
 The project plan will include:
 * Revised user stories (based on feedback on the project pitch)
-* Revised acceptance testing criteria (based on feedback on the project pitch)
 * High level architecture: Describe the key components in your feature (or how your feature relates to the existing components of Covey.Town)
 * Work breakdown: Define engineering tasks that will be necessary to implement your new feature. Provide a weekly schedule for completion of these tasks.
 
 We will use the work breakdown and schedule as the basis for weekly check-ins with your team's TA.
+
+[Read more about this deliverable in the Project Plan Assignment]({{ site.baseurl }}{% link assignments/project-plan.md %})
+
 
 ### Project Implementation and Documentation
 Your final team deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo.
