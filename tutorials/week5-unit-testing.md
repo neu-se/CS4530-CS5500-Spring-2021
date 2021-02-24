@@ -3,7 +3,7 @@ layout: page
 title: Unit Testing with Jest
 permalink: /tutorials/week5-unit-testing
 parent: Tutorials
-nav_order: 1
+nav_order: 5
 ---
 This tutorial covers the basics on unit testing with Jest. By the end of this tutorial, you will have an introduction to unit testing with jest, best practices, and some handy tricks and tips to use in your tests. Starter code is available [here](./assets/week5-unit-tests/week5-tutorial-starter-code.zip), and finished code with tests covered in this tutorial can be found [here](./assets/week5-unit-tests/week5-unit-tests.zip). We strongly recommend using the completed solution only for reference and implementing the tutorial step by step from the starter code.
 
@@ -764,6 +764,8 @@ We can test the above functionality as follows:
   ```
 
 # General Guidelines For Writing Tests
+
+*Note:* This will not be used as a reference when grading assignments.
 
 1. Write tests based on the expected behavior, not based on the interpretation/implementation of it.
 2. Test assertion (expect) should match the test description.
