@@ -11,8 +11,7 @@ The goal of this assignment is to finalize the intended scope of your project ba
  
 The project plan will include:
 * *Revised* Introductory problem statement: what problem in Covey.Town does your (proposed) feature solve? Provide a paragraph (or two) that describes why you are interested in building this feature.
-* *Revised* User stories and acceptance criteria: high level description of how users will interact with your new feature. 
-* Revised acceptance testing criteria (based on feedback on the project pitch)
+* *Revised* User stories and acceptance criteria: high level description of how users will interact with your new feature (based on feedback on the project pitch)
 * High level architecture: Describe the key components in your feature (or how your feature relates to the existing components of Covey.Town)
 * Work breakdown: Define engineering tasks that will be necessary to implement your new feature. 
 * Schedule: Provide a weekly schedule for completion of these tasks. 

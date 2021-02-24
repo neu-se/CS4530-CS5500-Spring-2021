@@ -43,7 +43,7 @@ homeworks.
 ### Project Plan
 Based on the feedback that you receive from the course staff, you will propose a detailed plan to implement your new feature.
 The project plan will include:
-* Revised user stories (based on feedback on the project pitch)
+* Revised user stories and acceptance criteria (based on feedback on the project pitch)
 * High level architecture: Describe the key components in your feature (or how your feature relates to the existing components of Covey.Town)
 * Work breakdown: Define engineering tasks that will be necessary to implement your new feature. Provide a weekly schedule for completion of these tasks.
 
