@@ -49,6 +49,7 @@ In this week of the course, you will learn
     * [In Class Slides]({{ site.baseurl }}{% link SynchronousSlides-Wand/Week 05 Synchronous Slides.pptx %})
     * [Example 1: Behavioral tests with Jest]({{ site.baseurl }}{% link Activities/week5-wand-simple-tests-as-finished.zip %})
     * [Example 2: Async tests with Jest]({{ site.baseurl }}{% link Activities/week5-wand-async-tests-as-finished.zip %})
+* In-class slides from Prof Bell's Section: [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-18 - Testing.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-18 - Testing.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-18 - Testing.key %})
 
     
 

@@ -41,8 +41,8 @@ Based on past experiences, we project that this assignment could take you up to 
 We encourage you to start early so that you can post questions on Piazza, make the most use of our TAs' tutorials, and
  attend office hours as necessary in order to ensure that you can reach Satisfactory marks across the board.
  
-To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw3-handout.zip %}).
-From your HW2 solution, copy the files `src/client/RoomServiceClient.ts`, `src/requestHandlers/CoveyRoomRequestHandlers.ts`, `src/lib/CoveyRoomsStore.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout. We will release the official solution for these files on 2/23 (some students have DRC accommodations to turn in HW2 as late as 2/22), after which point you may also use those official implementations.
+To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw3-handout.zip %}). (Update 2/23: handout now contains the HW2 reference solution, there is no need to copy your HW2 solution into the handout)
+~~From your HW2 solution, copy the files `src/client/RoomServiceClient.ts`, `src/requestHandlers/CoveyRoomRequestHandlers.ts`, `src/lib/CoveyRoomsStore.ts` and `src/router/room.ts` into the corresponding location in the HW3 handout.~~
  
 **This is an individual assignment.** 
  
@@ -51,7 +51,7 @@ Please post any questions about this assignment on Piazza.
 
 ### Overview of the socket protocol
 Your past coding assignments have focused on the REST side of the client and server, but you will now need to also interact with the socket server and client. Recall that the steps for a client to join a room are:
-1. Make a REST request to the `/members` service to fetch a session token
+1. Make a REST request to the `/sessions` service to fetch a session token
 2. Connect to the socket server using this session token as a credential
 
 Once the connection is established, the client and server communicate asynchronously: on either side, the code can call `emit('eventName', eventData)`, where `eventName` is one of the events listed below, and `eventData` is that event's corresponding payload. 
@@ -75,15 +75,20 @@ The socket library will automatically generate the event `connected` on the clie
 
 ### Change Log
 * 2/19: Initial Release 
+* 2/23: Update handout to include HW2 solution, add a hint to part 3 - JSB
 
 ## General Requirements and Grading
 This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout.
 You may add additional helper methods to these files, and you may add `beforeEach`, `beforeAll`, `afterEach`, or `afterAll` to these test suites. You may also add helper methods to `TestUtils.ts`. Your tests must be fully contained within the test files and `TestUtils.ts` - when they run on GradeScope, we will copy only these files out of your submission to grade.
 You **must not** change the order of the tests or the names of the tests. To integrate with GradeScope, each test has a call to `ConfigureTest` and `StartTest` - these lines must not be changed. Your test may not use the value of `testConfiguration` other than in this call to `StartTest`.
 
-When inspecting the results of your tests on GradeScope, you might initially be concerned to see tests failing - recall that we are running your tests on both bug-free code, and on buggy code. Your tests are *expected to fail* on the buggy code. In the output on GradeScope, you'll see each test is run more than once, sometimes with the suffix `[No fault]` (these ones should pass), and other times with `[Fault RM01I... - this configuration should FAIL]` - these test runs *should* fail.
+**Unusual Test Feedback:**{: .label .label-yellow } When inspecting the results of your tests on GradeScope, you might initially be concerned to see tests failing - recall that we are running your tests on both bug-free code, and on buggy code. Your tests are *expected to fail* on the buggy code. In the output on GradeScope, you'll see each test is run more than once, sometimes with the suffix `[No fault]` (these ones should pass), and other times with `[Fault RM01I... - this configuration should FAIL]` - these test runs *should* fail. To be clear, this means that the following output indicates that you've implemented your test correctly:
+```
+✕ Prohibits a blank friendlyName [Fault XErr2MZjsnN7 - this configuration should FAIL] (659 ms)
+✓ Prohibits a blank friendlyName [No fault] (4 ms)
+```
 
-Jest might report the following message after running some tests:
+Jest might also report the following message after running some tests:
 ```
  Jest did not exit one second after the test run has completed.
  
@@ -329,6 +334,8 @@ Ripley has also provided an example of how to use this API in one of the tests:
 ```
 
 The tricky part about writing these tests is that you will need to consider the order of operations that your test needs to perform, and the responses that you should be receiving from the server.
+
+**Hint (2/23):** In these integration tests, you will be testing the server-side logic that responds to client actions. For instance, to test that the server informs all new players when a player joins, you will be testing the server's behavior when a client joins a room. Unlike in part 2, where you directly manipulated the server, to implement these tests, you will interact with the server only using the REST + socket API, from the client side. Hence, the only way to test the server's behavior when a player joins the room is to actually use the apiClient to join the room, and observe what messages the server sends.
 
 Similar to the other parts, Ripley has outlined the tests that you need to implement:
 ```ts

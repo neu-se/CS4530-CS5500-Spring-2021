@@ -13,8 +13,9 @@ In this week of the course, you will learn about
 
 
 ### Important Dates:
-* [HW2]({{ site.baseurl }}{% link assignments/hw2.md %}) **Due Feb 19 by 10pm**{: .label .label-red }
+* [Project Pitch]({{ site.baseurl }}{% link assignments/project-pitch.md %}) **Due Feb 26 by 10pm**{: .label .label-red }
 * [HW3]({{ site.baseurl }}{% link assignments/hw3.md %}) **Due Mar 5 by 10pm**{: .label .label-red }
+
 
 
 ### Lessons:
@@ -37,6 +38,8 @@ In this week of the course, you will learn about
     * [ZIP]({{ site.baseurl }}{% link Examples/Example 6.3 todo-app.zip %})
     
 ### Resources
+* In-class slides from Prof Bell's Section (Monday): [PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pdf %}), [PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.pptx %}), [Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-02-22 - Requirements and UCD.key %})
+* [Activity 6.1]({{ site.baseurl }}{%link Activities/Activity6.1_Requirements.md %})
 
 
 ### Additional Readings:
