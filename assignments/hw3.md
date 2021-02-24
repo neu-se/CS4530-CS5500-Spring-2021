@@ -76,6 +76,7 @@ The socket library will automatically generate the event `connected` on the clie
 ### Change Log
 * 2/19: Initial Release 
 * 2/23: Update handout to include HW2 solution, add a hint to part 3 - JSB
+* 2/24: Added hint regarding multiple calls to `TestUtils.createSocketClient` in part 3 - JSB
 
 ## General Requirements and Grading
 This assignment is split into three parts: each part requires you to implement test cases that are stubbed out in the handout.
@@ -331,6 +332,21 @@ Ripley has also provided an example of how to use this API in one of the tests:
     await socketDisconnected; // If the server rejects our CoveyRoomID, it will disconnect our socket, and this promise will shortly resolve
     // This test will fail by timing out (in the event that the socket doesn't disconnect)
   });
+```
+
+(2/24): You likely will need to create multiple testing sockets for at least some of the tests. You can call `TestUtils.createSocketClient` as many times as you need to return a new socket. Here is some help with understanding the syntax:
+```ts
+const {socketDisconnected, socketConnected} = TestUtils.createSocketClient(server, validSessionToken, nanoid());
+// this is actually just shorthand for 
+const {socketDisconnected: socketDisconnected, socketConnected: socketConnected} = TestUtils.createSocketClient(server, validSessionToken, nanoid());
+// which in turn is also shorthand for 
+const tmp = TestUtils.createSocketClient(server, validSessionToken, nanoid());
+const socketDisconnected = tmp.socketDisconnected;
+const socketConnected = tmp.socketConnected;
+
+// so, if you make multiple calls to createSocketClient and want to retrieve the properties and store them in different variable names, you can do:
+const {socketDisconnected: socket2Disconnected, socketConnected: socket2Connected} = TestUtils.createSocketClient(server, validSessionToken, nanoid());
+
 ```
 
 The tricky part about writing these tests is that you will need to consider the order of operations that your test needs to perform, and the responses that you should be receiving from the server.
