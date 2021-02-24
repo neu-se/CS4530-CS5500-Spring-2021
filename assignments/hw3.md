@@ -281,6 +281,7 @@ describe('Party Tests', () => {
 
 In this example test, the test checks to make sure that the method `start` was called with the particular value `disco party`. 
 For further reading on mocks and the different kinds of `expect` matchers that you can use, see:
+* [Jest Mock Reference](https://jestjs.io/docs/en/mock-functions) describes the basics of mocks in Jest, including how to access the `mock.calls` array to manually extract the parameters that were passed to a mock.
 * [Jest Matchers Reference](https://jestjs.io/docs/en/expect) describes all of the different `expect` calls that you can make use of, including those for mocks!
 * [Jest Mock-Extended Reference](https://github.com/marchaos/jest-mock-extended) provides more examples on mocking with Jest (Ripley installed this package in the handout code and used it to set up most of the mocks for you)
 
