@@ -3,6 +3,7 @@ layout: page
 title: Promises
 permalink: /tutorials/week4-promises
 parent: Tutorials
+nav_order: 4
 ---
 
 This tutorial gives a basic introduction to promises and using axios to make http requests. In this tutorial, we will cover examples using the file system module to understand asynchronous behaviour with promises, promise chaining, and parallel requests. Finally, we will use the axios module to make http requests to the YouTube API.
