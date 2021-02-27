@@ -15,7 +15,7 @@ In this week of the course, you will learn about
 ### Important Dates:
 * [Project Pitch]({{ site.baseurl }}{% link assignments/project-pitch.md %}) **Due Feb 26 by 10pm**{: .label .label-red }
 * [HW3]({{ site.baseurl }}{% link assignments/hw3.md %}) **Due Mar 5 by 10pm**{: .label .label-red }
-* Project Plan **Due Mar 12 by 10pm**{: .label .label-red }
+* [Project Plan]({{ site.baseurl }}{% link assignments/project-plan.md %}) **Due Mar 12 by 10pm**{: .label .label-red }
 
 
 ### Lessons:
