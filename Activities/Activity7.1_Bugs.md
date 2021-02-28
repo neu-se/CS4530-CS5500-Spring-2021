@@ -10,7 +10,7 @@ parent: Activities
 For this activity, you will perform bug report handling for covey.town.
 
 
-## The Story So far
+## A Rushed Release
 
 After looking at the complicated structure Ripley set up for tests, Avery wasn't too happy with the structure of their code, so they rewrote it with new abstractions, but kept the same REST interface.  The new code passed the REST tests that Avery and Ripley put together, and because the managers were getting nervous about not having updated their code, so it was installed o the server.
 
