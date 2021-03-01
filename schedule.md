@@ -19,5 +19,5 @@ nav_order: 1
 | #11: Mar 29-Apr 2 | Engineering Equitable Software<br />Acceptance + Usability Testing   		  |          |    |
 | #12: Apr 5-9      | SE Metrics <br />Team Dynamics											  |          |    |
 | #13: Apr 12-16    | Demos                                   							          |          |    **Final Project Due** |
-| #14: Apr 19-23    | Exam                                                                        |          |    |
+| #14: Apr 19-23    | Final Exam <br/>Wand: 4/22 6:00-8:00pm<br/>Boyland: 4/23 1:20-3:20pm<br/>Bell: 4/28 8:00-10:00am |          |    |
 {: class="schedule-table"}
