@@ -33,7 +33,7 @@ One member of each team should use the PollEverywhere link posted in Slack to po
 
 For each bug report, determine if it can be reproduced as a bug in the REST service. Once you have made this determination, one member of your team should click "Yes" or "No" on PollEverywhere. If "Yes", a failing test should be created.  The test should be clear that the result is incorrect. Create an automated test (in CoveyRoomREST.test.ts), or test it manually using Postman. Post this test on PollEverywhere.
 
-If the problem is not a valid bug report for the back end, then this will need to get tossed over the wall to the frontend team: maybe the bug that was reported is not a bugy in the backend, but instead a bug in the frontend. If you think it's a bug in the frontend, then be prepared to defend your point of view to the frontend team! Once you have made this determination, post this explanation on PollEverywhere.
+If the problem is not a valid bug report for the back end, then this will need to get tossed over the wall to the frontend team: maybe the bug that was reported is not a bug in the backend, but instead a bug in the frontend. If you think it's a bug in the frontend, then be prepared to defend your point of view to the frontend team! Once you have made this determination, post this explanation on PollEverywhere.
 
 ### Stage 2
 
