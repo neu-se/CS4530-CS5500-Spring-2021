@@ -48,7 +48,7 @@ When you have done this initial sorting, come back to the main session and answe
 Next, for the bugs that are valid for the back-end, we do this stage in which we have three new tasks:
 
 1. You need to create a test case that fails because of the bug (but should succeed if the bug is fixed).
-This test should be placed in `src/test/CoveyRoomREST.test.ts` so it can run easily on a locally started server (not on an external server, which can cause the test to be flaky).
+This test should be placed in `src/client/CoveyRoomREST.test.ts` so it can run easily on a locally started server (not on an external server, which can cause the test to be flaky).
 
 2. You need to locate the fault.  Here you need to show your work: did you work back from the failure?  Or did you "fence the wolf" ?
 
