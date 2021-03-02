@@ -17,7 +17,7 @@ It seemed to work OK, but then some bug reports floated in.  In particular three
 
 1. User pat555le@aol.com reports that they created a public room called 'birthday party', and then when they tried to make it a private (not publicly listed) room, the system wouldn't do it, and uninvited people wandered into their room.  When asked to explain what happened, they said that when the system asked for a password, they used the covey room ID that they got for the room, and then it gave an error without any information.
 
-2. User tayloRULESok@unott.ac.uk complained that the number of people listed in the room on the entry page looks bugs sometimes. Sometimes it says there's just one, when there are in fact many people, and it looks like it jumps around sometimes. When asked to give more details, they said that it doesn't happen all the time, but especially when there's lots of people coming and going, the number gets very low, sometimes saying there are only two people when there are actually ten.
+2. User tayloRULESok@unott.ac.uk complained that the number of people listed in the room on the entry page looks wrong sometimes. Sometimes it says there's just one, when there are in fact many people, and it looks like it jumps around sometimes. When asked to give more details, they said that it doesn't happen all the time, but especially when there's lots of people coming and going, the number gets very low, sometimes saying there are only two people when there are actually ten.
 
 3. User xqz618@qq.888.ok.cn complained that the system advertised that no more than 5 people could enter a room, but they had a public room and it quickly filled up with so many people no one could do anything.  The service slowed to a crawl and it became completely useless.
 

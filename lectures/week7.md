@@ -39,6 +39,8 @@ In this week of the course, you will learn about
     
 ### Resources
 
+* [Activity 7.1]({{ site.baseurl }}{% link Activities/Activity7.1_Bugs_Boyland.md %}) for Boyland's lecture
+
 ### Additional Readings:
 
 #### Podcasts
