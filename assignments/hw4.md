@@ -18,6 +18,7 @@ public towns, the interface shows the capacity of the town, and how many users a
 to change its visibility, or to delete it.
 
 To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw4-handout.zip %}). 
+You will need to run `npm install` both at the root of the project *and* in the `frontend` folder.
 
 Your end product will look and behave just like what is currently deployed at [app.covey.town](https://app.covey.town/).
 You will be able to test your code locally by interacting with it in your browser, and also by running our provided test suite.
@@ -38,7 +39,7 @@ Please post any questions about this assignment on Piazza.
 * 3/5: Initial Release 
 
 ## General Requirements 
-All of the code that you write must be in the two files `frontend/src/components/Login/TownSettings.tsx` (Parts 1-3) and `frontend/src/components/Login/TownSettings.tsx` (Part 4). These are the only two files that you will submit.
+All of the code that you write must be in the two files `frontend/src/components/Login/TownSelection.tsx` (Parts 1-3) and `frontend/src/components/Login/TownSettings.tsx` (Part 4). These are the only two files that you will submit.
 
 The handout contains a pre-designed implementation of your user interface, and your task is to make it functional, *not* to change the design. *Do not* change the layout of the pages --- some of the tests may depend on the exact format (e.g. order of columns and specific error message text). Similarly, do not change the `name`, or `data-testid` of existing components.
 
@@ -79,7 +80,7 @@ Using the `apiClient`, retrieve the public listing of towns from the server and 
 the component should refresh the list of rooms from the server, updating the displayed component as needed. When the component unmounts (e.g. when the user navigates off of the page), be sure to cancel any timers that you set up to update the page. You do not yet need to make the "Connect" button work: the goal with part 1 is simply to get a grasp of the notion of *state* and *effects* in React. 
 
 To get started with this task, refresh your understanding of the [useState hook](https://reactjs.org/docs/hooks-state.html)  
-and the [useEffect hook](https://reactjs.org/docs/hooks-effect.html). To successfully complete this task, you'll need to create an *effect* that loads the town listing into *state* when the component is mounted, refreshes that listing every 2 seconds, and cancels that timer when the component is unmounted.
+and the [useEffect hook](https://reactjs.org/docs/hooks-effect.html). To successfully complete this task, you'll need to create an *effect* that loads the town listing into *state* when the component is mounted, refreshes that listing every 2 seconds, and cancels that timer when the component is unmounted.  **Hint**: The web page on effects explains how to use a single call to `useEffect` to set up one handler to be called once when a component is first rendered, and a second handler when it is unmounted.  Also remember `setTimeout` from earlier this semester.
 
 The capacity of the town should be displayed as `town.currentOccupancy/town.maximumOccupancy`. Be sure to include the `role='cell'` attribute in each `Td`, and note the distinction between `Td` and `td`.
 
