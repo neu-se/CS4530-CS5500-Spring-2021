@@ -71,8 +71,11 @@ Your first task will be to implement the table that lists the public rooms on th
     <TableCaption placement="bottom">Publicly Listed Towns</TableCaption>
     <Thead><Tr><Th>Room Name</Th><Th>Room ID</Th><Th>Activity</Th></Tr></Thead>
     <Tbody>
-    <Tr key='demoTownID'><Td role='cell'>DEMO_TOWN_NAME</Td><Td role='cell'>Unknown/Unknown 
-        <Button onClick={handleJoin}>Connect</Button></Td></Tr>
+    <Tr key='demoTownID'>
+        <Td role='cell'>DEMO_TOWN_NAME</Td>
+        <Td role='cell'>demoTownID</Td>
+        <Td role='cell'>Unknown/Unknown 
+            <Button onClick={handleJoin}>Connect</Button></Td></Tr>
     </Tbody>
 </Table>
 ```
