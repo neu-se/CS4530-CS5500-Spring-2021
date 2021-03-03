@@ -124,6 +124,8 @@ When the user clicks on "update", your code should call `apiClient.updateTown` w
 
 When the user clicks on "delete", your code should call `apiClient.deleteTown` with the appropriate values. Upon success, display a toast "Town deleted", and in case of error, display a toast "Unable to delete town", and include the error's string representation (`err.toString()`) as the description. 
 
+In either case, if the action was successful, the popup should be closed.
+
 Again, you can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser.  To run *just* the Part 3 tests, run the command `npm test TownSettings.test.tsx`, or install the "vscode-jest-runner" extension for VSCode, which will easily let you run individual tests/test suites from the VSCode GUI.
 
 ## Submission Instructions
