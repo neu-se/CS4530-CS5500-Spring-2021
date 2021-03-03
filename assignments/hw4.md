@@ -107,7 +107,7 @@ With your newfound grasp of state, implement the functionality for the create ne
 When the user clicks on the "Create" button in the "Create new town" section, your component should create the town as requested by the user and then directly enter that town. Specifically, the handler should:
 1. Check to make sure that a username and town name are entered
 2. Call `apiClient.createTown` with the `friendlyName` and `isPubliclyListed` values entered by the user (where the checkbox should be true by default)
-3. If successful, display a success toast with the title "Town {newTownName} is ready to go!" and descriptive new town information, then use your existing `handleJoin` code to connect to that town
+3. If successful, display a success toast (that won't disappear until explicitly closed) with the title "Town {newTownName} is ready to go!" and descriptive new town information, then use your existing `handleJoin` code to connect to that town
 4. If unsuccessful, display an error toast
 
 We would like you to use the following (exact) status toasts for errors:
