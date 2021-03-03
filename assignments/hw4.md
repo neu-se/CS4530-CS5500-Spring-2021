@@ -18,7 +18,7 @@ public towns, the interface shows the capacity of the town, and how many users a
 to change its visibility, or to delete it.
 
 To get started, [download the handout zip]({{site.baseurl}}{% link assignments/hw4-handout.zip %}). 
-You will need to run `npm install` both at the root of the project *and* in the `frontend` folder.
+You will need to run `npm install` in the `frontend` folder (it is not necessary to run `npm install` in the top-level directory).
 
 Your end product will look and behave just like what is currently deployed at [app.covey.town](https://app.covey.town/).
 You will be able to test your code locally by interacting with it in your browser, and also by running our provided test suite.
@@ -87,7 +87,9 @@ and the [useEffect hook](https://reactjs.org/docs/hooks-effect.html). To success
 
 The capacity of the town should be displayed as `town.currentOccupancy/town.maximumOccupancy`. Be sure to include the `role='cell'` attribute in each `Td`, and note the distinction between `Td` and `td`.
 
-You can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser. To test it in your browser, you can either use our backend (which will show towns that are created on [app.covey.town](https://app.covey.town/)), or use a local backend (and create towns programatically for it using the API Client directly, or Postman).
+You can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser.
+ To run *just* the Part 1 tests, run the command `npm test TownSelectionPart1.test.tsx`, or install the "vscode-jest-runner" extension for VSCode, which will easily let you run individual tests/test suites from the VSCode GUI. To test it in your browser, you can either use our backend (which will show towns that are created on [app.covey.town](https://app.covey.town/)), or use a local backend (and create towns programatically for it using the API Client directly, or Postman).
+
 
 ## Part 2 - Joining existing towns
 The next step will be to allow a user to manually input a coveyTownID to join a town. There is an existing form field on the `TownSelection` component to allow the user to enter this, and a button labeled "Connect" adjacent to it.
@@ -96,7 +98,9 @@ Using the example of the `userName` field, update the component so that the valu
 
 Use the same `handleJoin` code (although, likely with some modifications) to *also* handle clicks to each public room's "Connect" button that you created in Part 1. If a room is at capacity, disable the corresponding button by setting its `disabled` property.
 
-You can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser. To test it in your browser, you can either use our backend (which will show towns that are created on [app.covey.town](https://app.covey.town/)), or use a local backend (and create towns programatically for it using the API Client directly, or Postman).
+You can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser. 
+ To run *just* the Part 2 tests, run the command `npm test TownSelectionPart2.test.tsx`, or install the "vscode-jest-runner" extension for VSCode, which will easily let you run individual tests/test suites from the VSCode GUI.
+To test it in your browser, you can either use our backend (which will show towns that are created on [app.covey.town](https://app.covey.town/)), or use a local backend (and create towns programatically for it using the API Client directly, or Postman).
 
 ## Part 3 - Creating new towns
 With your newfound grasp of state, implement the functionality for the create new town section of the app.
@@ -111,7 +115,7 @@ We would like you to use the following (exact) status toasts for errors:
 * Empty town name: 'Unable to create town', message: 'Please enter a town name'
 * An error in `createTown`: please display the same toast format that `handleJoin` uses
 
-Again, you can test this component with our automated tests (that replace the actual server with a mock), or by runnign the app locally in your browser.
+Again, you can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser.  To run *just* the Part 3 tests, run the command `npm test TownSelectionPart3.test.tsx`, or install the "vscode-jest-runner" extension for VSCode, which will easily let you run individual tests/test suites from the VSCode GUI.
 
 ## Part 4 - Updating and deleting towns
 Your last task is to implement the functionality in the "Town Settings" popup that appears when a user is inside of a town. This component is called `TownSettings`, and is in the file "TownSettings.tsx". Use your newfound knowledge of React, *state*, and form inputs to implement the "Update Town" and "Delete Town" functionality. When the user opens the component, the "Friendly name" field should be pre-populated with the current friendly name of the room, and the "is public" checkbox should be checked if the room is currently public.
@@ -119,6 +123,8 @@ Your last task is to implement the functionality in the "Town Settings" popup th
 When the user clicks on "update", your code should call `apiClient.updateTown` with the appropriate values. Upon success, display a toast "Town updated" with message "To see the updated town, please exit and re-join this town". In the event of a failure, display a toast "Unable to update town", and include the error's string representation (`err.toString()`) as the description.
 
 When the user clicks on "delete", your code should call `apiClient.deleteTown` with the appropriate values. Upon success, display a toast "Town deleted", and in case of error, display a toast "Unable to delete town", and include the error's string representation (`err.toString()`) as the description. 
+
+Again, you can test this component with our automated tests (that replace the actual server with a mock), or by running the app locally in your browser.  To run *just* the Part 3 tests, run the command `npm test TownSettings.test.tsx`, or install the "vscode-jest-runner" extension for VSCode, which will easily let you run individual tests/test suites from the VSCode GUI.
 
 ## Submission Instructions
 Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first
