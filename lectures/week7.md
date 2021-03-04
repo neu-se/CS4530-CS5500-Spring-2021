@@ -1,7 +1,7 @@
 ---
 layout: lecture
 title: Week 7 - Maintenance
-permalink: /modules/week6-maintenance
+permalink: /modules/week7-maintenance
 parent: Modules
 ---
 ### Learning Objectives:
