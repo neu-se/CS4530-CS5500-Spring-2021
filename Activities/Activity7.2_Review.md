@@ -11,7 +11,7 @@ For this activity, you will perform *branches* or *forks*, *pull requests* and *
 
 ## Updated Transcript Front-End
 
-Last week, some of us worked on adding a React front-end on the transcript system. Avery also work on it and got it to the point of being barely functional.  There are no security checks because that involves getting campus administration involved and FERPA, so we continue to work with fictional courses and grades.
+Last week, some of us worked on adding a React front-end on the transcript system. Avery also worked on it and got it to the point of being barely functional.  There are no security checks because that involves getting campus administration involved and FERPA, so we continue to work with fictional courses and grades.
 
 In this activity, we will consider what's involved in adding some of the enhancements we considered last week, and practice using version control and pull requests on `github`.
 
@@ -30,21 +30,21 @@ The enhancements we will consider for this activity are the following, identifie
 
 3. Use letter grades
 
-   In this extension, we change the format for grades form numbers to strings and accept only grades from the following list: "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "I", "P", "NP", "S", "U", "NR".  It should also be possible for the grade to be undefined.  The front-end shouldn't accept anything other than this list (which should be defined once) and the REST server should make the same checks.
+   In this extension, we change the format for grades from numbers to strings and accept only grades from the following list: "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "I", "P", "NP", "S", "U", "NR".  It should also be possible for the grade to be undefined.  The front-end shouldn't accept anything other than this list (which should be defined once) and the REST server should make the same checks.
 
 4. Grade change
 
-   The current system doesn't permit a grade to be changed.  The REST protocol should be updated with a PATCH protocol on `/transcripts/:studentID/:course` that accepts a body with three fields: all of which are required: `former` a number, `grade` a number, and `reason` a string.  The reason must not be empty.  If the current grade matches the new grade, success is returns without any change, otherwise, if the current grade matches the former grade, then the grade is changed and the message is added to the course grade structure (which should be updated to permit an optional message).
+   The current system doesn't permit a grade to be changed.  The REST protocol should be updated with a PATCH protocol on `/transcripts/:studentID/:course` that accepts a body with three fields: all of which are required: `former` a number, `grade` a number, and `reason` a string.  The reason must not be empty.  If the current grade matches the new grade, success is returned without any change, otherwise, if the current grade matches the former grade, then the grade is changed and the message is added to the course grade structure (which should be updated to permit an optional message).
 
    The React front-end should permit the grade to be changed with a modal overlay.
 
 5. Term
 
-   The course grade type should be updated to include a required `term` (a string of the form *season*-*year*, e.g. (Spring-2021).  All the routes that handle grades should add `:term` between `:studentID` and `:course`.  The front-end needs a new column to give the term is displays and dialogs.
+   The course grade type should be updated to include a required `term` (a string of the form *season*-*year*, e.g. (Spring-2021).  All the routes that handle grades should add `:term` between `:studentID` and `:course`.  The front-end needs a new column to give the term in displays and dialogs.
 
 6. Course Descriptions
 
-     The REST protocol should be updated with the following routes: `GET /courses`, `POST /courses`, and `GET /courses/:course`.  The data sent with the post request will have `name` (what we are using already) and `description` (a long string description).  The GET request on `/courses` should return a list of such structures and the GET request request on an individual course should return the description as a text response (not JSON).
+     The REST protocol should be updated with the following routes: `GET /courses`, `POST /courses`, and `GET /courses/:course`.  The data sent with the post request will have `name` (what we are using already) and `description` (a long string description).  The GET request on `/courses` should return a list of such structures and the GET request on an individual course should return the description as a text response (not JSON).
      
      The front end should be updated to give an "open" button (e.g. a down arrow) to show the description for any course in the transcript of any student.  It should remember which descriptions are being viewed when the system updates.
 
