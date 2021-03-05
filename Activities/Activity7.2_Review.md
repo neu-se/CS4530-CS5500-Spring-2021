@@ -60,7 +60,7 @@ We will do this activity in stages.  After each stage, come back to the main roo
 
 Each group will be assigned one of the extensions to work on.
 When the activity starts:
-1. One of the group members should *fork* the repository `https://github.com/neu-se/transcript-app`
+1. One of the group members should *fork* the repository [https://github.com/neu-se/transcript-app](https://github.com/neu-se/transcript-app)
 2. Then they should give write access to all other members of the group.
 3. Then the group as a whole should plan what changes to work on in the given time.
 
