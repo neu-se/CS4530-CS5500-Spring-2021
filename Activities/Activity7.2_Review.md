@@ -68,7 +68,6 @@ The goal in this phase to make partial but useful progress on the extension.  Th
 * A small test suite for the new capabilities.
   These tests should fail in the unchanged system (except for extension 1).
 * A change toward the result that leaves the system self-consistent.
-  It should enable at least one of the tests to pass.
   The modified system should work with itself.
 
 Finally make a *pull request* on the main repository pointing to your forked repository which should have your changes.  The name of the pull request should include your group number.  The pull request itself should name the group members and should summarize what you did overall.  Reviewers will be able to see the changes, so there's no need to repeat the low-level information.
@@ -78,9 +77,9 @@ Finally make a *pull request* on the main repository pointing to your forked rep
 
 In stage 2, your group will be assigned another group's pull request to review.
 Navigate to the pull request on `github` and each group member should examine the files and do their own review.  This activity can be done individually, but it's also acceptable to confer among the group members.  The reviewer should indicate whether
-- They cannot comment on whether the pull request is acceptable or not ("Comment")
-- The pull request needs changes before being acceptable ("Request changes"), or
 - The pull request is acceptable as is ("Accept").
+- The pull request needs changes before being acceptable ("Request changes"), or
+- They cannot comment on whether the pull request is acceptable or not ("Comment")
 Remember that the pull request doesn't need to implement the entire extension, and neither does it need to work with other extensions.  Acceptable simple means that the change would make forward progress and leave the system in a good state.  By choosing "Accept", you are not merging in the changes, in any case.
 
 On the other hand, it is appropriate to request changes to correct errors, gross inefficiencies or style problems.
