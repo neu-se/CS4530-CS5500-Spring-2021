@@ -175,7 +175,7 @@ Assertion is a statement that validates the behavior of our code by comparing th
 - `expect(spy/stub/mock).toHaveBeenCalledWith([arguments])` // Expects a function being spied/stubbed/mocked to be invoked with specified arguments.
 - `expect(actual).toBeDefined()` // Expects the entity to be defined.
 - `expect(actual).not.` // Negates the assertion. Can be chained with any matchers above
-- `await expect(error causing code returning a promise).rejects.toThrow('error message')` // Waits for the error throwing code that returns promise (e.g. an API call) to throw the error and asserts the error was thrown.
+- `await expect(error causing code returning a promise).rejects.toThrowError()` // Waits for the error throwing code that returns promise (e.g. an API call) to throw the error and asserts the error was thrown.
 
 A full list of matchers can be found [here](https://jestjs.io/docs/en/expect).
 

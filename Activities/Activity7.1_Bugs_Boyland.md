@@ -15,9 +15,9 @@ After looking at the complicated structure Ripley set up for tests, Avery wasn't
 
 It seemed to work OK, but then some bug reports floated in.  In particular three reports came in that were assigned to Avery:
 
-1. User pat555le@aol.com reports that they created a public town called 'Pat Birthday Party', but then they realized they wanted to make it private, they pressed the [Update Town] button, unchecked the "public" box and gave the room ID, but the system simply said "Error: undefined" and the room stayed public.  Then some sketchy people showed up during the party, which freaked everyone out.
+1. User pat555le@aol.com reports that they created a public town called 'Pat Birthday Party', but then they realized they wanted to make it private, they pressed the [Town Settings] button, unchecked the "public" box and gave the town ID, but the system simply said "Error: undefined" and the town stayed public.  Then some sketchy people showed up during the party, which freaked everyone out.
 
-2. User tayloRULESok@unott.ac.uk complained that the number of people listed in the room on the entry page isn't consistent with how many people you see when you enter.  Sometimes it says there are lots of people, but then when you go in, there's one one or two, although it seems eventually more people seem to appear out of thin air.  The bug is intermittent, mainly showing up in active rooms where people are coming and going a lot.
+2. User tayloRULESok@unott.ac.uk complained that the number of people listed in the town on the entry page isn't consistent with how many people you see when you enter.  Sometimes it says there are lots of people, but then when you go in, there's one one or two, although it seems eventually more people seem to appear out of thin air.  The bug is intermittent, mainly showing up in active towns where people are coming and going a lot.
 
 3. User xqz618@qq.888.ok.cn complained that the arrow keys work strange: sometimes they move a minuscule amount, at other times, they make big steps.  Sometimes they don't turn off and the avatar just goes in a straight line until it hits a wall or something.
 
@@ -48,7 +48,7 @@ When you have done this initial sorting, come back to the main session and answe
 Next, for the bugs that are valid for the back-end, we do this stage in which we have three new tasks:
 
 1. You need to create a test case that fails because of the bug (but should succeed if the bug is fixed).
-This test should be placed in `src/test/CoveyRoomREST.test.ts` so it can run easily on a locally started server (not on an external server, which can cause the test to be flaky).
+This test should be placed in `src/client/CoveyRoomREST.test.ts` so it can run easily on a locally started server (not on an external server, which can cause the test to be flaky).
 
 2. You need to locate the fault.  Here you need to show your work: did you work back from the failure?  Or did you "fence the wolf" ?
 
