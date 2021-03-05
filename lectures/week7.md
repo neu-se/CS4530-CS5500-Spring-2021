@@ -41,7 +41,7 @@ In this week of the course, you will learn about
 
 * [Activity 7.1]({{ site.baseurl }}{% link Activities/Activity7.1_Bugs_Boyland.md %}) for Boyland's lecture
 * In-class slides and notes from Prof Bell's Section (Thursday): [Debugging walkthrough notes]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-04 debugging-notes.md %}), [Slides PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-04 Debugging II + Code Review.pdf %}), [Slides PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-04 Debugging II + Code Review.pptx %}), [Slides Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-04 Debugging II + Code Review.key %})
-
+* [Activity 7.2]({{ site.baseurl }}{% link Activities/Activity7.2_Review.md %}) for Boyland's lecture
 
 ### Additional Readings:
 
