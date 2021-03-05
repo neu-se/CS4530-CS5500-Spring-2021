@@ -6,7 +6,7 @@ parent: Assignments
 ---
 
 # Assignment 4: UI Implementation **Due Friday March 19, 10:00pm EST**{: .label .label-red }
-Based on the feedback from [Activity 6.1 - User requirements and UI design for Covey.Town]({{site.baseurl}}{%Activities/activity6-1%}),
+Based on the feedback from [Activity 6.1 - User requirements and UI design for Covey.Town]({{site.baseurl}}{% link Activities/Activity6.1_Requirements.md %}),
 our UX designer Calin has created a revised prototype for Covey.Town. In particular, the following changes have been made:
 * The concept of a "room" (an isolated map that users can interact in) is now referred to as a "town."
 The "rooms" REST API has been refactored into the "towns" API. Calin believes that this will be a much less confusing metaphor 
