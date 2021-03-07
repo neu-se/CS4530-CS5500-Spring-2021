@@ -7,7 +7,7 @@ parent: Activities
 
 # Activity 8.1: Experimenting with ES-Lint
 
-For this activity, we will run `eslint` on the transcript app project used in previous activities and will race to list different lint rules.
+For this activity, we will run `eslint` on the transcript app project used in previous activities and will investigate some of the less common errors.
 
 This is an individual activity.
 
