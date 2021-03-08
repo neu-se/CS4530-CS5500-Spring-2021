@@ -1,0 +1,58 @@
+Open todo list app, point out
+* npm install takes a long time. Talk a bit about create react app, and why we are happy for it.
+* Talk about file/app structure. Point out index.html, we don’t touch that stuff
+* npm start
+* Demo basic functionality
+* Look in code, briefly explain components
+    * Point out the lazy syntax for useState() hook array return, you’ll need it in HW3, and later in this lesson
+
+Cut to chakra UI website https://chakra-ui.com
+* Components?
+    *  Look at a few - table, stat, icon, skeleton, toast. We’ll need toast and icon later.
+* Styling ideas
+    * look at theming
+
+Point out other UI toolkits - materialUI, ant https://material-ui.com https://ant.design
+* lots of flashy components there. Creative discussions. We like sleek + more importantly: accessible. example of an ant design tree - super cool, hard to navigate w screen reader. Cut to https://darekkay.com/blog/accessible-ui-frameworks/
+* Sidebar: http://www.adasoutheast.org/ada/publications/legal/Robles_v_Dominos-Pizza.php (we’ll talk more about this with SE+Ethics, but this is just business: why not sell more pizza to the vision impaired?)
+
+Back to todo app - let’s figure out this render loop thing
+* new component: Toast from chakra
+* Let’s add a toast to the todo app function. Demo, show that it toasts on state change
+    * Shows MANY times because reset() form calls setState too!
+* Cut to react dev tools, show state change
+
+* OK, let’s add a toast that only appears once -> useEffect *with empty dependencies* point out that with no deps, you get every render, but with [] you get just once. This will be revealed later.
+    * Sidebar: important to have useEffect for *async operations* we want to have fire! Do console.logs to show order of operations with useEffect
+* After showing off the one that appears only once, comment out the fone that shows every time, you’ll need it later.
+* Toast is cool. Let’s look at parameters in docs. You will spend a lot of time looking at params in docs and examples. It Is The Way.
+    * Make sure to get an onClose handler into your example, we’ll need it later
+
+OK, so what is state?
+* State is the dynamic data that changes in our app
+* You might even say, state is what our browser’s UI reacts to...
+* Demo: add new state variable, track if toast has been closed, display on page true/false
+    * MAYBE? Demo: remember, it’s JS but it’s also HTML, we can do fancy stuff, cut to ChakraUI icons on website, add a green/red icon to show if toast was closed
+* Demo: add a <3 button on each todo item, show how simple state is. Composed components. Just like lecture.
+    * Q: Why does it work to add new items and the <3 stays in the right place?
+    * A: Reconciliation. React keeps existing components
+    * Q: How does reconciliation work?
+        * A: by Key
+        * Q: What is our key?
+        * A: index into list. This is bad because a single item’s key might change over time. Change to show the key along with the todo item, then show that key for item changes. Then show that which item is liked changes when deleting!!
+        * Q: What is the fix?
+        * A: add a unique id. Nanoid would be great, but can use Date.now() as a hack (2msec precision).
+
+Q: what triggers a render?
+* A: setState!
+* Demo: put back the toast so that it shows up every time the component re-renders
+    * You can now make infinite loop of toasts (toast sets a state var when closed, which re-renders, show a “component re-rendered” toast
+    * Comment that on-render toast out again
+
+* What else about hooks?
+    * OK, let’s add a toast that shows up when a new todo list item is added -> useEffect has dependencies!
+        * This was confusing at the start, but maybe makes more sense now: useEffect is called every render, but with a dep array, only if those things have changed
+        * Demo: useEffect uses object equality to decide to fire or not (GOTCHA)
+    * Rules of hooks - https://reactjs.org/docs/hooks-rules.html
+
+If time remaining, implement a "delete all" function, and/or edit
