@@ -65,7 +65,7 @@ To receive a mark of "Meets minimum expectations" for Part 2, your code submissi
 * Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 ## Part 1 - Listing the existing rooms
-Your first task will be to implement the table that lists the public rooms on the landing page of the app. This table is located in the `TownSelection` component in `TownSettings.tsx`. The handout includes the following table with demonstration row:
+Your first task will be to implement the table that lists the public rooms on the landing page of the app. This table is located in the `TownSelection` component in `TownSelection.tsx`. The handout includes the following table with demonstration row:
 ```jsx
 <Table>
     <TableCaption placement="bottom">Publicly Listed Towns</TableCaption>
