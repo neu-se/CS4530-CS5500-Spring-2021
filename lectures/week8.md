@@ -35,6 +35,9 @@ In this week of the course, you will learn about
     
 ### Resources
 
+* [Activity 8.1]({{ site.baseurl }}{% link Activities/Activity8.1_Lint.md %}) (Boyland)
+
+
 ### Additional Readings:
 
 #### Articles
