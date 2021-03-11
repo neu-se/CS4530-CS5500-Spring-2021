@@ -88,7 +88,7 @@ this assignment.  Please put your group number in the PR title.
 
 ## Regroup in Full Class
 
-In the full class, the instructor may call on several students to discuss experiences.
+In the full class, the instructor may call on several students to discuss experiences.  This step may be skipped if we run out of time, or need the extra time for the project plan.
 
 [comment]: # (LocalWords:  permalink UX Calin CoveyTownID UI src JSON
 [comment]: # (LocalWords:  github FERPA studentID eslint npm dev len
