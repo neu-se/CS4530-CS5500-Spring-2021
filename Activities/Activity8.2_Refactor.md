@@ -16,7 +16,7 @@ This is a group activity.  When the TA comes by, please pause work on this activ
 
 We will be continuing work with the "room service" portion of the Covey.Town project. Please get a copy of code by having one of your group members fork the repository: [https://github.com/neu-se/covey-town-roomservice](https://github.com/neu-se/covey-town-roomservice).  Then clone your fork locally, and run `npm ci` to get it ready to run (`ci` works faster than `install` because it uses `package-lock.json` rather than looking everything up from scratch).
 
-Avery's manager insisted that the code be refactored to use "town" instead of "room" and after a few false starts, the code has been refactored, as you have seen if you have started Homework #4.  The poor structure that Ripley criticized when writing unit tests live on however.  Our task will be to fix that part, at least part where the subscription handler includes code that rightly is town controller code.
+Avery's manager insisted that the code be refactored to use "town" instead of "room" and after a few false starts, the code has been refactored, as you have seen if you have started Homework #4.  The poor structure that Ripley criticized when writing unit tests lives on however.  Our task will be to fix that part, at least part where the subscription handler includes code that rightly is town controller code.
 
 If you look in the request handlers code in `src/requestHandlers/coveyTownRequestHandlers.ts`, you will see that all the handlers take the requests from the client and call into the `CoveyTownStore` or `CoveyTownController` classes and then construct the response to be sent back to the client. None has substantial logic otherwise, *except* `townSubscriptionHandler`.
 
@@ -41,7 +41,9 @@ For this exercise, the way in which we meet the goal is as important as the goal
 ## The steps
 
 You should refactor the code with at least the following refactorings:
-1. We need to get the `townController` local variable to be defined before we get the session using the token because we want that code to be done in the `TownController` class.  Therefore, we first take the `if` statement with its compound condition and duplicate it so that we test each condition separately in their own `if` block.
+1. We need to get the `townController` local variable to be defined before we get the session using the token because we want that code to be done in the `TownController` class.  Therefore, we first take the `if` statement with its compound condition and duplicate it so that we test each condition separately in their own `if` block.  So instead of `if (A || B) { BLOCK }` we should have
+   > `if (A) { BLOCK }`<br/>
+   > `if (B) { BLOCK }`
 
    After each step, run the tests, correcting any errors that show up and then committing the change.
    
