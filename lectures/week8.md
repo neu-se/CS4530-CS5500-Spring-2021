@@ -35,6 +35,12 @@ In this week of the course, you will learn about
     
 ### Resources
 
+* [Activity 8.1]({{ site.baseurl }}{% link Activities/Activity8.1_Lint.md %}) (Boyland)
+* [Activity 8.2]({{ site.baseurl }}{% link Activities/Activity8.2_Refactor.md %}) (Boyland)
+* In-class slides and notes from Prof Bell's Section (Thursday): [Slides PDF]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-11 Covey.Town Internals.pdf %}), [Slides PPT]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-11 Covey.Town Internals.pptx %}), [Slides Keynote]({{ site.baseurl }}{% link SynchronousSlides-Bell/2021-03-11 Covey.Town Internals.key %}). There's a recording of Prof Bell walking through Covey.Town codebase in Canvas/Zoom on March 11 (can't post link here).
+* Project resources: [Refactored Covey.Town code to support WASD, HJKL](https://github.com/neu-se/covey.town/commit/203e9a647d50f8547b7b51a530d3b87055f0e4a7), [Phaser Game Engine Tutorial](https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6), [Twilio React App Starter Code](https://github.com/twilio/twilio-video-app-react)
+
+
 ### Additional Readings:
 
 #### Articles
