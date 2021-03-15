@@ -6,7 +6,7 @@ parent: Tutorials
 nav_order: 6
 ---
 
-This tutorial covers the basic concepts of react. By the end of this tutorial, you will be able to create a new react app, understand the basic concepts of react such as states and props, understand React hooks, using Chakra-ui with React, and connect a react frontend to a backend using axios.
+This tutorial covers the basic concepts of react. By the end of this tutorial, you will be able to create a new react app, understand the basic concepts of react, such as states and props, understand React hooks, use Chakra-ui with React, and connect a react frontend to a backend using axios.
 
 Contents:
 * [Creating a new React App](#create-react-app)
@@ -35,9 +35,9 @@ Let us use [npx](https://www.npmjs.com/package/npx) and [create-react-app](https
 
 ## Components
 
-React follows a Component based architecture, which consists of various components and interactions between. A component can be considered a repeatable html element with built-in state, business logic, and a lifecycle. A component may be something as simple as a single html element such as an input box, or a button, or a complex entity made up of other components such as the Root (App) component.
+React follows a Component based architecture, which consists of various components and interactions between them. A component can be considered a repeatable html element with built-in state, business logic, and a lifecycle. A component may be something as simple as a single html element, such as an input box, or a button, or a complex entity made up of other components, such as the Root (App) component.
 
-From an implementation perspective, a component is a module (tsx/jsx file) which exports a function that returns a JSX element. The root component (generally called the App component) is located in App.tsx under the src directory and the contents are as shown below:
+From an implementation perspective, a component is a module (tsx/jsx file) which exports a function that returns a JSX element. The root component (generally called the App component) is located in App.tsx under the src directory, and the contents are as shown below:
 - ```tsx
   function App() {
     return (
@@ -51,7 +51,7 @@ From an implementation perspective, a component is a module (tsx/jsx file) which
 A few things to note about React components:
 - The root (App) component is the entry point for the React App and all other components are nested in it.
 - A function can return a single top level element.
-    - `div` is the top level element in this case and other elements can be nested in it.
+    - `div` is the top level element in this case, and other elements can be nested in it.
 - The round brackets (`()`) after return are used to span a JSX/TSX element across multiple lines.
     - Elements on one line can be returned directly.
 - Each instance of a component creates a new element independent of other instances on the component.
@@ -93,7 +93,7 @@ Now that we have a basic idea of how a react component works, let us change the 
   }
   ```
 
-Run `*$ npm start*` and "Hello, World!!" will not be displayed in the browser!
+Run `*$ npm start*` and "Hello, World!!" will now be displayed in the browser!
 
 ## Props
 
@@ -134,16 +134,16 @@ React components are similar to JavaScript functions and can accept arbitrary ar
 
 A few things to note from the above example:
 - Component.defaultProps can be used to specify default values for props.
-- Curly braces ({}) in JSX/TSX are used for one-way data binding. 
+- Curly braces ({}) in JSX/TSX are used for one-way data binding.
    - In our example, `{props.name}` will display the value of `name` in the html.
 
 # React Hooks
 
-React hooks are built-in functions which you can hook into. The basic hooks are useState() to manage the state of the component, and useEffect() which is a lifecycle hook.
+React hooks are built-in functions which you can hook into. The basic hooks are useState() to manage the state of the component, and useEffect(), which is a lifecycle hook.
 
 ## State and Event binding
 
-The state of a component can be considered as the data associated with the component. The component is updated/rerendered every time the state gets updated. React provides the hook `useState()`, to create a state variable. Let us understand the concept of state with a simple counter component which displays how many times a button was clicked.
+The state of a component can be considered as the data associated with the component. The component is updated/rerendered every time the state gets updated. React provides the hook `useState()`, to create a state variable. Let us begin to understand the concept of state with a simple counter component that displays how many times a button was clicked.
 
 - Create a new file in `src/` directory called `Counter.tsx`.
 - We need to create a component with the following requirements:
@@ -154,7 +154,7 @@ The state of a component can be considered as the data associated with the compo
 - Let us create a simple component with a display and button in Counter.tsx as below:
    - ```tsx
     function Counter() {
-    
+
       return (
         <div>
           <h1>Count: </h1>
@@ -194,7 +194,7 @@ The state of a component can be considered as the data associated with the compo
      - ```tsx
       <button onClick={incrementCount}>Click me!</button>
       ```
-- Run the code and tru clicking on the button. The count should be incremented.
+- Run the code and try clicking on the button. The count should be incremented.
 
 ## Lifecycle Hooks
 
@@ -381,7 +381,7 @@ Let us try to implement Redux in our counter example.
     const stateSelector = createSelector(makeSelectCount, (count) => ({count}));
 
     function Counter() {
-      
+
       const { count } = useSelector(stateSelector);
 
       useEffect(() => {
@@ -419,7 +419,7 @@ Let us try to implement Redux in our counter example.
     });
 
     function Counter() {
-      
+
       const { count } = useSelector(stateSelector);
       const { incrementCount } = actionDispatch(useDispatch());
 
