@@ -139,7 +139,7 @@ A few things to note from the above example:
 
 # React Hooks
 
-React hooks are built-in functions which you can hook into. The basic hooks are useState() to manage the state of the component, and useEffect(), which is a lifecycle hook.
+React hooks are built-in functions which you can hook into. The basic hooks are useState() to manage the state of the component, and useEffect(), which is a lifecycle hook. To get a better idea of what hooks are and how they fit into the react framework, take a look at https://reactjs.org/docs/hooks-intro.html.
 
 ## State and Event binding
 
@@ -219,7 +219,7 @@ Optionally, a second argument can be passed to the useEffect() function to obser
 
 # Chakra UI
 
-Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications. Chakra UI provides a set of customizable components which can be easily integrated into a React App. A full list of available component can be found [here](https://chakra-ui.com/docs/getting-started). Let us add Chakra UI to our project and use the Button component in out Counter component.
+Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications. Chakra UI provides a set of customizable components which can be easily integrated into a React App. A full list of available component can be found [here](https://chakra-ui.com/docs/getting-started). Let us add Chakra UI to our project using the Button component in out Counter component.
 
 - Install chakra UI using npm with the below command:
    - `*$ npm i --save @chakra-ui/react @emotion/react @emotion/styled framer-motion*`
@@ -249,17 +249,17 @@ Chakra UI is a simple, modular and accessible component library that gives you t
    - ```tsx
     import { Button } from "@chakra-ui/react"
     ```
-- Replace the existing button with the imported button and add a color teal as below:
+- Replace the existing button with the imported button, and add a color teal as below:
   - ```tsx
     <Button colorScheme="teal" onClick={incrementCount}>Click me!</Button>
     ```
-- Save and run the code, and you should now see a pretty team button in the UI.
+- Save and run the code, and you should now see a pretty teal button in the UI.
 
 # Redux
 
-Redux is an open-source JavaScript library for managing application state. This is very useful for managing state in large applications or complex states. Redux is made up of a store, reducers, actions, effects, and selectors.
+Redux is an open-source JavaScript library for managing application state. This library is immensely useful for managing state in large applications or complex states. Redux is made up of a store, reducers, actions, effects, and selectors.
 - *Store*: A store is a container which holds the state of the applications. It provides methods such as subscribe, dispatch, and getState.
-- *Reducer*: A reducer is a pure function which returns an updated state based on "what happened" in the application.
+- *Reducer*: A reducer is a pure function that returns an updated state based on "what happened" in the application.
 - *Action*: An action describes "what happened" in the application and optionally sends the new state to the reducer.
 - *Effects*: Effects are used to manage asynchronous actions such as network requests as part of state updates.
 - *Selectors*: Selectors are accessors to different states in the store.
@@ -274,8 +274,8 @@ Let us try to implement Redux in our counter example.
 - Create a file called `reducers.ts` under `src/store/count/`.
 - Let us implement a basic reducer for count as below:
    - The reducer will have state as the first argument and take a default value of 0.
-   - The reducer will take an action as the second argument which contains 2 properties:
-     - type: Specifying the action being performed (reason for state update)
+   - The reducer will take an action as the second argument that contains 2 properties:
+     - type: Specifying the action being performed (reason for state update).
      - payload: Specifying the updates to be performed on the state.
    - ```ts
     const defaultState = 0;
@@ -442,11 +442,11 @@ Let us try to implement Redux in our counter example.
 
     export default Counter;
     ```
-- Thus, we have implemented the counter using Redux.
+- We have now implemented the counter using Redux!
 
 # React Router
 
-React Router lets us implement client side routing in React applications. Let us implement 2 routes in our application, 1 for header, and another for counter. We can implement this as below:
+React Router lets us implement client side routing in React applications. Let us implement 2 routes in our application, one for the header, and another for counter. We can implement this as below:
 - Install react router dom as below:
    - `*$ npm install --save react-router-dom*`
    - `*$ npm install --save-dev @types/react-router-dom*`
@@ -497,7 +497,7 @@ React Router lets us implement client side routing in React applications. Let us
       );
     }
     ```
-- Save and run the code and now we have 2 working routes!
+- Save and run the code, and we now have 2 working routes!
    - Note: The count will persist when navigating client side routes.
 
 The completed app can be found [here](./assets/week6-react/my-app.zip).
