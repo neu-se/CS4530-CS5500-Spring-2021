@@ -21,8 +21,7 @@ If you run into any difficulties following any of these steps, please post
 
 # Accessing Khoury Github
 
-We recommend using the Khoury Github for this class, as it will be the site
-you use for your final project. You can login with your Khoury account here:
+We recommend using the Khoury Github for this class, as it will simplify the process of creating private repositories. If you would like for your class project to be publicly available, then you should feel free to simply use [github.com](https://www.github.com/). You can login with your Khoury account here:
 [https://github.ccs.neu.edu/login](https://github.ccs.neu.edu/login). If you do not already have a Khoury account,
 you can request one at [https://my.khoury.northeastern.edu/account/apply](https://my.khoury.northeastern.edu/account/apply). Once you do
 this, you will be emailed your account information when it is approved by the
