@@ -37,6 +37,7 @@ Please post any questions about this assignment on Piazza.
 
 ### Change Log
 * 3/5: Initial Release 
+* 3/9: Update handout with fixes to run tests + backend server on Windows. If you have the old handout and are struggling to run on Windows, [you can apply this patch](https://github.com/neu-se/covey.town/commit/a16f5659d73b5f25cc5fdffb710b8a756faf171f) - JSB
 
 ## General Requirements 
 All of the code that you write must be in the two files `frontend/src/components/Login/TownSelection.tsx` (Parts 1-3) and `frontend/src/components/Login/TownSettings.tsx` (Part 4). These are the only two files that you will submit.
@@ -65,7 +66,7 @@ To receive a mark of "Meets minimum expectations" for Part 2, your code submissi
 * Have no `@ts-ignore` or `eslint-disable` annotations in the code that you write
 
 ## Part 1 - Listing the existing rooms
-Your first task will be to implement the table that lists the public rooms on the landing page of the app. This table is located in the `TownSelection` component in `TownSettings.tsx`. The handout includes the following table with demonstration row:
+Your first task will be to implement the table that lists the public rooms on the landing page of the app. This table is located in the `TownSelection` component in `TownSelection.tsx`. The handout includes the following table with demonstration row:
 ```jsx
 <Table>
     <TableCaption placement="bottom">Publicly Listed Towns</TableCaption>
