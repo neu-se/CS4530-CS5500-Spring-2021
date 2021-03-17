@@ -134,7 +134,7 @@ React components are similar to JavaScript functions and can accept arbitrary ar
 
 A few things to note from the above example:
 - Component.defaultProps can be used to specify default values for props.
-- Curly braces ({}) in JSX/TSX are used for one-way data binding. 
+- Curly braces ({}) in JSX/TSX are used for one-way data binding.
    - In our example, `{props.name}` will display the value of `name` in the html.
 
 # React Hooks
@@ -154,7 +154,7 @@ The state of a component can be considered as the data associated with the compo
 - Let us create a simple component with a display and button in Counter.tsx as below:
    - ```tsx
       function Counter() {
-      
+
         return (
           <div>
             <h1>Count: </h1>
@@ -380,7 +380,7 @@ Let us try to implement Redux in our counter example.
       const stateSelector = createSelector(makeSelectCount, (count) => ({count}));
 
       function Counter() {
-        
+
         const { count } = useSelector(stateSelector);
 
         useEffect(() => {
@@ -418,7 +418,7 @@ Let us try to implement Redux in our counter example.
       });
 
       function Counter() {
-        
+
         const { count } = useSelector(stateSelector);
         const { incrementCount } = actionDispatch(useDispatch());
 
@@ -445,12 +445,8 @@ Let us try to implement Redux in our counter example.
 
 # React Router
 
-<<<<<<< HEAD
 "React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL" - https://www.geeksforgeeks.org/reactjs-router/.
 To demonstrate some basic usage of this library, let us implement 2 routes in our application, one for the header and another for counter. We can implement this as below:
-=======
-React Router lets us implement client side routing in React applications. Let us implement 2 routes in our application, 1 for header, and another for counter. We can implement this as below:
->>>>>>> 4fa4eb04adc3b8753ce5568d0d00a22c6300596d
 - Install react router dom as below:
    - `*$ npm install --save react-router-dom*`
    - `*$ npm install --save-dev @types/react-router-dom*`
