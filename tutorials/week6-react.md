@@ -446,7 +446,8 @@ Let us try to implement Redux in our counter example.
 
 # React Router
 
-React Router lets us implement client side routing in React applications. Let us implement 2 routes in our application, one for the header, and another for counter. We can implement this as below:
+"React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL" - https://www.geeksforgeeks.org/reactjs-router/.
+To demonstrate some basic usage of this library, let us implement 2 routes in our application, one for the header and another for counter. We can implement this as below:
 - Install react router dom as below:
    - `*$ npm install --save react-router-dom*`
    - `*$ npm install --save-dev @types/react-router-dom*`
