@@ -25,6 +25,8 @@ In this week of the course, you will learn to:
 
 ### Resources
 * Prof Bell's [in-class notes reviewing Distributed Systems]({{site.baseurl}}{%link SynchronousSlides-Bell/2021-03-15-Distributed Systems Review Notes.pdf %})
+* [Juice Shop Activity]({{site.baseurl}}{%link 
+Activities/Activity9.2_JuiceShop.md %})
 
 ### For further reading:
 * ["Distributed Systems for Fun and Profit"](http://book.mixu.net/distsys/index.html) by Mikito Takada
