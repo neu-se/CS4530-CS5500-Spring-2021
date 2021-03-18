@@ -504,4 +504,7 @@ The completed app can be found [here](./assets/week6-react/my-app.zip).
 
 # Demo App
 
-This a demo application which implements a video streaming app using the Youtube API. It uses most of the features discussed above and can be used as a reference for implementing React code. You can download the code here (soon).
+This a demo application which implements a video streaming app using the Youtube API. It uses most of the features discussed above and can be used as a reference for implementing React code. This app demonstrates that integration of hooks, redux, axios, and Chakra UI along with the Youtube API in a single application.  You can download the code [here](./assets/week6-react/video-streaming-app.zip).
+
+- *Note 1:* Make sure you update the API key in src/apis/youtube.ts before running the application. For instructions on generating your own API key, refer to week 4 tutorial (Promises).
+- *Note 2:* This app uses Semantic UI for some of the styling. 
