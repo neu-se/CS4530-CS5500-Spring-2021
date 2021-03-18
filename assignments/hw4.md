@@ -38,6 +38,8 @@ Please post any questions about this assignment on Piazza.
 ### Change Log
 * 3/5: Initial Release 
 * 3/9: Update handout with fixes to run tests + backend server on Windows. If you have the old handout and are struggling to run on Windows, [you can apply this patch](https://github.com/neu-se/covey.town/commit/a16f5659d73b5f25cc5fdffb710b8a756faf171f) - JSB
+* 3/17: Update handout with fix to test 'Part 1 - Public room listing is called when rendering (hopefully by a useeffect, this will be checked manually)'. GradeScope has been re-run on all submissions with this updated test, and you can also [apply the patch directly](https://github.com/neu-se/covey.town/commit/3b9996b393b4ae271f3a570ba4f3a942357ec6c4) - JSB
+
 
 ## General Requirements 
 All of the code that you write must be in the two files `frontend/src/components/Login/TownSelection.tsx` (Parts 1-3) and `frontend/src/components/Login/TownSettings.tsx` (Part 4). These are the only two files that you will submit.
@@ -83,8 +85,7 @@ Your first task will be to implement the table that lists the public rooms on th
 Using the `apiClient`, retrieve the public listing of towns from the server and render each town as a row in this table, sorted by current occupancy descending. Every 2 seconds,
 the component should refresh the list of rooms from the server, updating the displayed component as needed. When the component unmounts (e.g. when the user navigates off of the page), be sure to cancel any timers that you set up to update the page. You do not yet need to make the "Connect" button work: the goal with part 1 is simply to get a grasp of the notion of *state* and *effects* in React. 
 
-To get started with this task, refresh your understanding of the [useState hook](https://reactjs.org/docs/hooks-state.html)  
-and the [useEffect hook](https://reactjs.org/docs/hooks-effect.html). To successfully complete this task, you'll need to create an *effect* that loads the town listing into *state* when the component is mounted, refreshes that listing every 2 seconds, and cancels that timer when the component is unmounted.  **Hint**: The web page on effects explains how to use a single call to `useEffect` to set up one handler to be called once when a component is first rendered, and a second handler when it is unmounted.  Also remember `setTimeout` from earlier this semester.
+To get started with this task, refresh your understanding of the [useState hook](https://reactjs.org/docs/hooks-state.html) and the [useEffect hook](https://reactjs.org/docs/hooks-effect.html). To successfully complete this task, you'll need to create an *effect* that loads the town listing into *state* when the component is mounted, refreshes that listing every 2 seconds, and cancels that timer when the component is unmounted.  **Hint**: The web page on effects explains how to use a single call to `useEffect` to set up one handler to be called once when a component is first rendered, and a second handler when it is unmounted.  Also, consider checking the documentation of `setTimeout` and `setInterval`, both of which we looked at in code examples earlier this semester.
 
 The capacity of the town should be displayed as `town.currentOccupancy/town.maximumOccupancy`. Be sure to include the `role='cell'` attribute in each `Td`, and note the distinction between `Td` and `td`.
 
