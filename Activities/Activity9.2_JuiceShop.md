@@ -9,7 +9,7 @@ parent: Activities
 
 For this activity, we will ask you to demonstrate some common vulnerabilities found in web applications, so you can try to avoid them in your own code.  We will do this using the Juice Shop, a NodeJS app with vulnerabilities seeded throughout. This app also includes a list of increasingly difficult challenges.
 
-Our deployment of juice shop is at the [multi-juicer](http://juice.covey.town).  This deployment allows multiple users to share the same instance of the juice shop so they can work on the challenges together. 
+Our deployment of Juice Shop is at the [multi-juicer](https://se-juice-shop.herokuapp.com/).  This deployment allows multiple users to share the same instance of the juice shop so they can work on the challenges together. 
 
 You can find the challenges directly though experimentation, or for a guided experience, jump straight to the [score board](https://se-juice-shop.herokuapp.com/#/score-board) There, you can select "Show tutorials only", or see the entire list, broken down by difficulty level (1-star = easy, 2-star = harder, and so on.)
 
