@@ -24,7 +24,7 @@ In this week of the course, you will learn to:
 * 9.4: Engineering Secure Software [Video](https://northeastern.instructure.com/courses/60188/modules/items/5614749), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 9.4 - Engineering Secure Software.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 9.4 - Engineering Secure Software.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 9.4 - Engineering Secure Software.key %})
 
 ### Resources
-* Prof Bell's [in-class notes reviewing Distributed Systems]({{site.baseurl}}{%link SynchronousSlides-Bell/2021-03-15-Distributed Systems Review Notes.pdf %})
+* Prof Bell's [in-class notes reviewing Distributed Systems]({{site.baseurl}}{%link SynchronousSlides-Bell/2021-03-15-Distributed Systems Review Notes.pdf %}), [in-class notes reviewing Security]({{site.baseurl}}{% link SynchronousSlides-Bell/2021-03-18 Security Review Notes.pdf %}), [vulnerable transcript app](https://github.com/neu-se/vulnerable-transcript-app)
 
 ### For further reading:
 * ["Distributed Systems for Fun and Profit"](http://book.mixu.net/distsys/index.html) by Mikito Takada
