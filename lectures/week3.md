@@ -3,6 +3,7 @@ layout: lecture
 title: Week 3 - Software Architecture, HTTP, and REST
 permalink: /modules/week3-architecture-http-rest
 parent: Modules
+nav_order: 3
 ---
 ### Learning Objectives:
 

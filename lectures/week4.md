@@ -3,6 +3,7 @@ layout: lecture
 title: Week 4 - Async functions
 permalink: /modules/week4-async
 parent: Modules
+nav_order: 4
 ---
 ### Learning Objectives:
 

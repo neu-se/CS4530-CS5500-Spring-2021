@@ -3,6 +3,7 @@ layout: lecture
 title: Week 9 - Distributed Systems & Security
 permalink: /modules/week9-distributed-security
 parent: Modules
+nav_order: 9
 ---
 ### Learning Objectives:
 
