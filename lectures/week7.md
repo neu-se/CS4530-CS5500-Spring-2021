@@ -3,6 +3,7 @@ layout: lecture
 title: Week 7 - Maintenance
 permalink: /modules/week7-maintenance
 parent: Modules
+nav_order: 7
 ---
 ### Learning Objectives:
 

@@ -15,7 +15,7 @@ nav_order: 1
 | [#7: Mar 1-5]({{ site.baseurl }}{% link lectures/week7.md %})       | Debugging<br />Pull Requests + Code Review                                  |          |**[HW3 Due]({{ site.baseurl }}{% link assignments/hw3.md %})**<br />[HW4 Out]({{ site.baseurl }}{% link assignments/hw4.md %})  |
 | [#8: Mar 8-12]({{ site.baseurl }}{% link lectures/week8.md %})      | Static Analysis + Bug-Finders<br />Technical Debt, Code Smells + Refactoring  |          |  [**Project Plan Due**]({{ site.baseurl }}{% link assignments/project-plan.md %})  |
 | [#9: Mar 15-19]({{ site.baseurl }}{% link lectures/week9.md %})     | SE for Distributed Systems<br />SE for Security 	                          |          |    [**HW4 Due**](({{ site.baseurl }}{% link assignments/hw3.md %})) |
-| #10: Mar 22-26    | Deployment Infrastructure<br />Continuous Development + DevOps              |          |    |
+| [#10: Mar 22-26]({{ site.baseurl }}{% link lectures/week10.md %})    | Continuous Development, Integration<br />and Delivery |          |    |
 | #11: Mar 29-Apr 2 | Engineering Equitable Software<br />Acceptance + Usability Testing   		  |          |    |
 | #12: Apr 5-9      | SE Metrics <br />Team Dynamics											  |          |    |
 | #13: Apr 12-16    | Demos                                   							          |          |    **Final Project Due** |

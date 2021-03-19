@@ -3,6 +3,7 @@ layout: lecture
 title: Week 8 - Code Improvement
 permalink: /modules/week8-improvement
 parent: Modules
+nav_order: 8
 ---
 ### Learning Objectives:
 

@@ -3,6 +3,7 @@ layout: lecture
 title: Week 6 - User Interfaces
 permalink: /modules/week6-user-interface
 parent: Modules
+nav_order: 6
 ---
 ### Learning Objectives:
 

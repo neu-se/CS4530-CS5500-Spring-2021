@@ -3,6 +3,7 @@ layout: lecture
 title: Week 5 - Testing
 permalink: /modules/week5-testing
 parent: Modules
+nav_order: 5
 ---
 ### Learning Objectives:
 
