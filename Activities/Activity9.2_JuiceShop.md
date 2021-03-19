@@ -18,9 +18,9 @@ This is a group activity.  When you first access the site, it will ask for a tea
 
 If you are curious, you can also open [the juice shop in LGTM](https://lgtm.com/projects/g/bkimminich/juice-shop/?mode=list).
 
-We will demonstrate one or two exploits and then turn it over to you.   We will open the breakout rooms for 20 minutes, and then reconvene.
+We will demonstrate one or two exploits and then turn it over to you.   We will open the breakout rooms for 20-30 minutes, and then reconvene.
 
-Report your results at the following [Google Poll](https://docs.google.com/forms/d/17l6WqF1X4K_9WPLUkfJkGnVM-Jo0H-ZXkA4c8YZZnuU/edit#responses).  Each team should fill out the form exactly once.
+Report your results at the following [Google Poll](https://docs.google.com/forms/d/e/1FAIpQLSdeMKTKdxg_pGm9hVrtQEgqFFxlynhpGRvNtT4ve6PrwFTRjw/viewform?usp=sf_link).  Each team should fill out the form exactly once.
 
 Once we reconvene, I will call on a few students and ask them to demonstrate their exploit.  As usual, all members of the team should be prepared to respond.
 

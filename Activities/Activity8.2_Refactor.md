@@ -14,7 +14,8 @@ This is a group activity.  When the TA comes by, please pause work on this activ
 
 ## The Initial Situation
 
-We will be continuing work with the "room service" portion of the Covey.Town project. Please get a copy of code by having one of your group members fork the repository: [https://github.com/neu-se/covey-town-roomservice](https://github.com/neu-se/covey-town-roomservice).  Then clone your fork locally, and run `npm ci` to get it ready to run (`ci` works faster than `install` because it uses `package-lock.json` rather than looking everything up from scratch).
+We will be continuing work with the "room service" portion of the Covey.Town project. Please get a copy of code by having one of your group members fork the repository: [https://github.com/neu-se/covey-town-roomservice](https://github.com/neu-se/covey-town-roomservice).  Then clone your fork locally, and run `npm ci` to get it ready to run (`ci` works faster than `install` because it uses `package-lock.json` rather than looking everything up from scratch).  If there is no `.env` file in the project, please copy in the fake Twilio tokens from `.env.example`:
+> `cp .env.example .env`
 
 Avery's manager insisted that the code be refactored to use "town" instead of "room" and after a few false starts, the code has been refactored, as you have seen if you have started Homework #4.  The poor structure that Ripley criticized when writing unit tests lives on however.  Our task will be to fix that part, at least the part where the subscription handler includes code that rightly is town controller code.
 
