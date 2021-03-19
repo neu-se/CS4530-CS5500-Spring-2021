@@ -2,7 +2,6 @@
 layout: lecture
 title: Week 4 - Prof Bell's Async Examples with solutions
 permalink: /examples/example-4-0-solved
-parent: Modules
 nav_exclude: true
 
 ---
