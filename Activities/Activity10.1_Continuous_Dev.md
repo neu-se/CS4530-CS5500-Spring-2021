@@ -88,7 +88,7 @@ Note that it is possible to set up Heroku to automatically deploy every new chan
 6. Retrieve your personal Heroku API key. From Heroku go to "Manage Account" (click on the profile menu on  the top right of the page and then click "Account Settings". 
 ![Heroku Profile Menu]({{site.baseurl}}{% link Activities/Assets/week10-cd/heroku-account-settings-menu.png %})
 Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the next step.
-7. Return to the GitHub Settings -> Secrets pane, and add a new secret: `HEROKU_API_KEY`, setting the value to the exact string that you copied from "API Key" in the last step.
+7. Return to the GitHub Settings -> Secrets pane, and add a new secret: `HEROKU_API_KEY`, setting the value to the exact string that you copied from "API Key" in the last step. Add the secret `HEROKU_APP_NAME`, set to the name that you choose for your Heroku app in step 2. Add the secret `HEROKU_EMAIL`, set to the email address that you used when you created your Heroku account. Even though these last two values aren't *secret* per-say, configuring them in this way keeps them out of the config files, so you won't run into merge conflicts with our upstream branch (which would have a `main.yml` file with our own settings in it).
 8. Edit your GitHub Actions configuration to include a new job for deploying to Heroku. Using the editor directly on GitHub.com or on your local machine, edit your GitHub Actions configuration file (`.github/workflows/main.yml`). Add the following (being careful to not add additional indentation - the indentation for "deploy" should match the indentation for "build-and-test" - do NOT add "deploy" nested under "build-and-test"):
 	```
 	  deploy:
@@ -99,11 +99,11 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
 		  - uses: actions/checkout@v2
 		  - uses: akhileshns/heroku-deploy@v3.12.12 # Deploy to Heroku action
 			with:
-			  heroku_api_key: {% raw %} ${{secrets.HEROKU_API_KEY}} {% endraw %}
-			  heroku_app_name: "put your heroku app name here"
-			  heroku_email: "put your heroku email here"
+ 			  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+ 			  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+ 			  heroku_email: ${{secrets.HEROKU_EMAIL}}
 	```
- Set `heroku_app_name` to the name that you choose for your Heroku app in step 2. Set `heroku_email` to the email address that you used when you created your Heroku account.
+
  9. Commit your changes to `main.yml`. This should trigger a new build on GitHub Actions. If you need to troubleshoot this (e.g. incorrect API key, app name, or other configuration errors), you can get results from the deploy faster by commenting out (with a `#`) the line `needs: build-and-test`, which will allow the deploy to run in parallel to the tests.
  10. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
 
@@ -129,8 +129,8 @@ The last step to our continuous development pipeline will be to automatically de
 		  - uses: akhileshns/heroku-deploy@v3.12.12 # Deploy to Heroku action
 			with:
 			  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-			  heroku_app_name: "put your heroku app name here"
-			  heroku_email: "put your heroku email here"
+			  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+			  heroku_email: ${{secrets.HEROKU_EMAIL}}
           - uses: muinmomin/webhook-action@v1.0.0
             with:
               url: ${{ secrets.NETLIFY_BUILD_WEBHOOK }}
