@@ -26,6 +26,8 @@ $ git merge upstream/master
 ```
 You may need to resolve merge conflicts, particularly if you have made changes to `TownSettings.tsx` or `TownSelection.tsx`. Resolve these conflicts by editing the files until they are correct, and then run `git add` on the conflicted files ([see this guide for examples + detailed steps](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)).
 
+**Important:** Our recent changes have included an update to the version of Phaser in the project dependencies. You'll need to run `npm install` after merging in these updates to install the update version. 
+
 ### Creating a Twilio account and recording the credentials
 If you have not configured a Twilio account yet, [follow the instructions in the Covey.Town README](https://github.com/neu-se/covey.town#setting-up-the-backend) to set one up. You'll need this for your local development environment. You can share a single Twilio account with all of the members in your team (sharing the `.env` file), but please be careful to avoid posting the contents of your `.env` file publicly anywhere - someone else might find your credentials and run out all of the free minutes on your account. To set up GitHub Actions and Heroku, we'll need the values from your `.env` file - so be sure to get them working before proceeding.
 
