@@ -20,6 +20,9 @@ In this week of the course, you will learn to:
 * 10.3: Deployment Infrastructure [Video](https://northeastern.instructure.com/courses/60188/modules/items/5636904), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 10.3 - Deployment Infrastructure.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 10.3 - Deployment Infrastructure.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 10.3 - Deployment Infrastructure.key %})
 * 10.4: Continuous Delivery [Video](https://northeastern.instructure.com/courses/60188/modules/items/5636923), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 10.4 - Continuous Delivery.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 10.4 - Continuous Delivery.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 10.4 - Continuous Delivery.key %})
 
+### Resources:
+* [Activity 10.1: Configuring CI/CD for Covey.Town]({{site.baseurl}}/Activities/continuous-development)
+
 ### For further reading:
 * [Software Engineering @ Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/), Chapters 23 (Continuous Integration), 24 (Continuous Delivery), 25 (Compute as a Service)
 * Podcast: [Jafar Soltani on Continuous Delivery for Multiplayer Games, with Nate Black, 2018](https://www.se-radio.net/2018/09/se-radio-episode-339-jafar-soltani-on-continuous-delivery-for-multiplayer-games/)

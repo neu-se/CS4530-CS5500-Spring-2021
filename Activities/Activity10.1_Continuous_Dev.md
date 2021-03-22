@@ -34,7 +34,7 @@ If you have not configured a Twilio account yet, [follow the instructions in the
 Once your git repository is up-to-date, you can configure GitHub Actions by following these steps:
 1. Log in to GitHub, and navigate to your project. Go to the "Settings" tab, and then select "Secrets." Enter each of your Twilio secrets (from your `services/roomService/.env` file) as new variables here, as shown in this screenshot:
 ![GitHub Actions Secrets]({{site.baseurl}}{% link Activities/Assets/week10-cd/gha-secrets-twilio.png %})
-2. Enable GitHub Actions: From the GitHub interface select the "Actions" tab, and then select  "Skip this and set up a workflow yourself". Copy and paste the following into the GitHub Actions `main.yml` file in your browser, and then commit it immediately to master:
+2. Assuming that you have already merged the most recent version of the covey.town codebase into your own (following the steps above), you should now have a GitHub Actions configuration in your project (hooray!). Navigate to the "Actions" tab in GitHub. You should see that the most recent build has *failed*. GitHub Actions tried to build your project immediately (when you merged in our changes), and did not have the Twilio secrets needed to run the tests. You can now re-trigger the build (click "Re-run jobs" from the job overview page). While it's running, let's take a brief look at the workflow configuration that will run the tests, by looking at the `.github/workflows/main.yml` file. You won't need to make any changes here, but should take a quick look to see what's going on:
 
 	```yaml
 	name: Covey.Town CI
@@ -70,7 +70,7 @@ Once your git repository is up-to-date, you can configure GitHub Actions by foll
 			run: cd frontend; npm install && npm test
 	```
 
-3. Navigate back to the "Actions" tab. You should see an entry for your most recent commit (that created the main.yml file), which by defualt is called "Create main.yml". The build should have passed. If it did not pass, here are some common troubleshooting steps:
+3. Navigate back to the "Actions" tab. You should still see the the entire build failed (with a red X), but can now drill-down and see that of the two jobs ("build-and-test" and "deploy"), "build-and-test" passed. The deploy job is expected to fail because we haven't yet configured the deployment! If the "build-and-test" job failed, consider the following troubleshooting tips:
     * If the build failed with `No tests found, exiting with code 1`, then your repository does not have any tests. Double-check that you have synced your repository with ours, and that the tests are present. GitHub Actions will automatically try to build future commits that you make as you try to fix it.
     * If the build failed due to undefined Twilio secrets, double check that you have correctly entered the Twilio secrets from your `.env` file into the GitHub Settings -> Secrets for your repository. Make sure that you have put the secrets on the same repository that you are setting up the GitHub Actions for.
 
@@ -89,8 +89,9 @@ Note that it is possible to set up Heroku to automatically deploy every new chan
 ![Heroku Profile Menu]({{site.baseurl}}{% link Activities/Assets/week10-cd/heroku-account-settings-menu.png %})
 Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the next step.
 7. Return to the GitHub Settings -> Secrets pane, and add a new secret: `HEROKU_API_KEY`, setting the value to the exact string that you copied from "API Key" in the last step. Add the secret `HEROKU_APP_NAME`, set to the name that you choose for your Heroku app in step 2. Add the secret `HEROKU_EMAIL`, set to the email address that you used when you created your Heroku account. Even though these last two values aren't *secret* per-say, configuring them in this way keeps them out of the config files, so you won't run into merge conflicts with our upstream branch (which would have a `main.yml` file with our own settings in it).
-8. Edit your GitHub Actions configuration to include a new job for deploying to Heroku. Using the editor directly on GitHub.com or on your local machine, edit your GitHub Actions configuration file (`.github/workflows/main.yml`). Add the following (being careful to not add additional indentation - the indentation for "deploy" should match the indentation for "build-and-test" - do NOT add "deploy" nested under "build-and-test"):
-	```
+8. Return to your GitHub Actions page, and the detail view for the most recent build - retrigger it, so that it runs again. Now that we have the Heroku secrets installed, we expect the "Deploy to Heroku" aspect of the deployment job to pass, although the "deploy to netlify" task will still fail. Here is the segment of the GitHub Actions configuration file that deploys our app to Heroku:
+
+	```yaml
 	  deploy:
 		if: github.ref == 'refs/heads/master'
 	    needs: build-and-test
@@ -104,8 +105,7 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
  			  heroku_email: ${{secrets.HEROKU_EMAIL}}
 	```
 
- 9. Commit your changes to `main.yml`. This should trigger a new build on GitHub Actions. If you need to troubleshoot this (e.g. incorrect API key, app name, or other configuration errors), you can get results from the deploy faster by commenting out (with a `#`) the line `needs: build-and-test`, which will allow the deploy to run in parallel to the tests.
- 10. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
+ 9. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
 
 ## Set up Netlify
 The last step to our continuous development pipeline will be to automatically deploy our frontend to Netlify. Netlify will create an optimized production build of your frontend (by running `npm run build`) and host it in their globally-distributed content delivery network.
@@ -118,8 +118,9 @@ The last step to our continuous development pipeline will be to automatically de
 4. Scroll down on this same settings page to "Environment". This is where we define the `.env` variables that Netlify should use (without needing to put `.env` in a publicly viewable place). Click "Edit variables" and add a single variable: `REACT_APP_TOWNS_SERVICE_URL` should be set to your heroku server name (https://yourapp-name.herokuapp.com, find in heroku "settings" page for your app).
 5. Now scroll back up on Netlify's build & deploy settings page to "Build hooks" and click "Add build hook". Choose a name like "gh-action-trigger". This will produce a new "web hook" URL: whenever we make a POST request to this address, it will trigger a build on Netlify. We'll use this in the next step to connect GitHub Actions to Netlify.
 6. Return one last time to the GitHub Settings -> Secrets page. Create a new secret called `NETLIFY_BUILD_WEBHOOK`, and set its value to the web hook URL created in step 5 (should be something like `https://api.netlify.com/build_hooks/asd89348923dfah`). This will keep the web hook URL a secret, so that only our scripts can trigger a build on Netlify (if we put this hook URL in our GitHub Actions configuration directly, others would be able to trigger a build too!)
-7. Edit your GitHub Actions `main.yml` file one more time. We'll add one last step to the `deploy` job, which will call this webhook, triggering a deploy on Netlify. Update your `deploy` job to look like this:
-	```
+7. Return to your GitHub Actions page, and the detail view for the most recent build - retrigger it, so that it runs again. Now that we have the Netlify configuration installed, we expect the entire build to pass. Here is the segment of the GitHub Actions configuration file that deploys our app to Netlify:
+
+	```yaml
 	  deploy:
 		if: github.ref == 'refs/heads/master'
 	    needs: build-and-test
@@ -137,5 +138,7 @@ The last step to our continuous development pipeline will be to automatically de
               data: "{}"
 {% endraw %}
 	```
-5. Netlify will take several minutes to build your site. From the "Deploys" view of Netlify's control panel, you can see the status of each build. Once you have a successful build, it will show a URL where your site is published (https://mystifying-beaver-b51dd2.netlify.app in the example below). Click the "Stop auto publishing" button to prevent Netlify from automatically publishing updates from GitHub to your deployed site (we want it to do this only from the GitHub Action).
+	
+8. Netlify will take several minutes to build your site. From the "Deploys" view of Netlify's control panel, you can see the status of each build. Once you have a successful build, it will show a URL where your site is published (https://mystifying-beaver-b51dd2.netlify.app in the example below). Click the "Stop auto publishing" button to prevent Netlify from automatically publishing updates from GitHub to your deployed site (we want it to do this only from the GitHub Action).
 ![Netlify deploy view]({{site.baseurl}}{% link Activities/Assets/week10-cd/netlify-done.png %})
+
