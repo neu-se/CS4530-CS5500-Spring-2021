@@ -100,9 +100,10 @@ Scroll down to "API Key" and click "Reveal". Copy this key, you'll use it in the
 		  - uses: actions/checkout@v2
 		  - uses: akhileshns/heroku-deploy@v3.12.12 # Deploy to Heroku action
 			with:
- 			  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
- 			  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
- 			  heroku_email: ${{secrets.HEROKU_EMAIL}}
+              heroku_api_key: {% raw %}${{secrets.HEROKU_API_KEY}}
+              heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+              heroku_email: ${{secrets.HEROKU_EMAIL}}
+ {% endraw %}
 	```
 
  9. To confirm that your service is successfully deployed, try to visit it in your browser. Use the URL that you noted in step 5 ("Your app can be found at https://covey-deployment-example.herokuapp.com/"). Append `towns` to the URl, and visit it in your browser (e.g. `https://covey-deployment-example.herokuapp.com/towns`). After a short delay, you should see the response `{"isOK":true,"response":{"towns":[]}}`.
