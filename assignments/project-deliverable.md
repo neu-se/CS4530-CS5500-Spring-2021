@@ -16,7 +16,7 @@ codebase is independent of the grade you receive, but provides a platform for mo
 ## Contents
 
 Your final team deliverable will include:
-* The implementation of your new feature
+* The implementation of your new feature, deployed to Netlify + Heroku
 * Automated tests for your new feature
 * A README.md document that includes instructions to deploy Covey.Town with your new feature
 * A FEATURE.md document that describes the final version of your use cases
@@ -35,11 +35,13 @@ The final project deliverable will be graded on the following rubric:
 ### 50% Implementation
 
 #### Satisfactory:
-*  Implemented feature satisfies the acceptance criteria as proposed by the team and as interpreted by the course staff
+* Implemented feature satisfies the acceptance criteria as proposed by the team and as interpreted by the course staff
+* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting as outlined in Activity 10.1
 * Implemented feature contains no ESLint warnings or errors; does not include any eslint-disable or ts-ignore flags
 
 #### Meets minimum requirements:
 * Implemented feature largely satisfies acceptance criteria as proposed by the team, but may not meet the course staff’s interpretation of those criteria.
+* Implemented feature is deployed to a publicly-accessible URL, using Netlify and Heroku for hosting as outlined in Activity 10.1
 * The implementation may have some obvious flaws, but largely works without crashing.
 * Implemented feature does not include any eslint-disable or ts-ignore flag
 
