@@ -80,6 +80,7 @@ Includes automated tests for any new or modified backend features:
 #### Satisfactory:
 * `DESIGN.md` file contains a description of any substantive changes to the existing Covey.Town codebase, and the architecture of your new code.
 * It uses CRC cards, or state diagrams or any of the other techniques that help describe the structure.
+
 #### Meets minimum requirements:
 * `DESIGN.md` includes a description of all major changes to the code compared to our existing Covey.Town codebase.
 
