@@ -3,6 +3,7 @@ layout: page
 title: Assignment 1
 permalink: /assignments/hw1
 parent: Assignments
+nav_order: 1
 ---
 
 # Assignment 1: Onboarding **Due Friday Feb 5, 10:00pm EST**{: .label .label-red }

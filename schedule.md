@@ -16,8 +16,8 @@ nav_order: 1
 | [#8: Mar 8-12]({{ site.baseurl }}{% link lectures/week8.md %})      | Static Analysis + Bug-Finders<br />Technical Debt, Code Smells + Refactoring  |          |  [**Project Plan Due**]({{ site.baseurl }}{% link assignments/project-plan.md %})  |
 | [#9: Mar 15-19]({{ site.baseurl }}{% link lectures/week9.md %})     | SE for Distributed Systems<br />SE for Security 	                          |          |    [**HW4 Due**](({{ site.baseurl }}{% link assignments/hw3.md %})) |
 | [#10: Mar 22-26]({{ site.baseurl }}{% link lectures/week10.md %})    | Continuous Development, Integration<br />and Delivery |          |    |
-| #11: Mar 29-Apr 2 | Engineering Equitable Software<br />Acceptance + Usability Testing   		  |          |    |
+| [#11: Mar 29-Apr 2]({{ site.baseurl }}{% link lectures/week11.md %}) | Engineering Equitable Software<br />Acceptance + Inclusivity Testing   		  |          |    |
 | #12: Apr 5-9      | SE Metrics <br />Team Dynamics											  |          |    |
-| #13: Apr 12-16    | Demos                                   							          |          |    **Final Project Due** |
+| #13: Apr 12-16    | Demos                                   							          |          |    [**Final Project Due**]({{ site.baseurl }}{% link assignments/project-deliverable.md %}) |
 | #14: Apr 19-23    | Final Exam <br/>Wand: 4/22 6:00-8:00pm<br/>Boyland: 4/23 1:20-3:20pm<br/>Bell: 4/28 8:00-10:00am |          |    |
 {: class="schedule-table"}

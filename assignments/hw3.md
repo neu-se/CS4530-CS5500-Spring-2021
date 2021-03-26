@@ -3,6 +3,7 @@ layout: page
 title: Assignment 3
 permalink: /assignments/hw3
 parent: Assignments
+nav_order: 3
 ---
 
 # Assignment 3: Test Design and Implementation **Due Friday March 5, 10:00pm EST**{: .label .label-red }

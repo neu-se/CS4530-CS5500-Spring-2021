@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Project---Final Deliverable
+title: Project Final Deliverable
 permalink: /assignments/project-deliverable
 parent: Assignments
+nav_order: 8
 ---
 # Project: Final Deliverable **Due Friday April 16, 10:00pm EST**{: .label .label-red }
 The final project deliverable is the implementation, available in github and (front-end) deployed on Netlify, and the documentation turned in to gradescope.

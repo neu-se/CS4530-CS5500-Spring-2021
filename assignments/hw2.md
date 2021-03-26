@@ -3,6 +3,7 @@ layout: page
 title: Assignment 2
 permalink: /assignments/hw2
 parent: Assignments
+nav_order: 2
 ---
 
 # Assignment 2: API Implementation **Due Friday Feb 19, 10:00pm EST**{: .label .label-red }

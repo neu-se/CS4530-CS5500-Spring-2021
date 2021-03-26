@@ -3,6 +3,7 @@ layout: page
 title: Assignment 4
 permalink: /assignments/hw4
 parent: Assignments
+nav_order: 4
 ---
 
 # Assignment 4: UI Implementation **Due Friday March 19, 10:00pm EST**{: .label .label-red }

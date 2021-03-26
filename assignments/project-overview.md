@@ -3,6 +3,7 @@ layout: page
 title: Project Overview
 permalink: /assignments/project-overview
 parent: Assignments
+nav_order: 5
 ---
 
 # Project Overview

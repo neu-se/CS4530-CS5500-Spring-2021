@@ -3,6 +3,7 @@ layout: page
 title: Project Plan
 permalink: /assignments/project-plan
 parent: Assignments
+nav_order: 7
 ---
 # Project Plan **Due Friday March 12, 10:00pm EST**{: .label .label-red }
 The teaching staff will review your project pitch, provide you feedback on the scope of your project, and assign a specific TA as your project mentor.

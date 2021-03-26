@@ -3,6 +3,7 @@ layout: page
 title: Project Pitch
 permalink: /assignments/project-pitch
 parent: Assignments
+nav_order: 6
 ---
 # Project Pitch **Due Friday Feb 26, 10:00pm EST**{: .label .label-red }
 All projects will involve frontend and backend development of a new feature for Covey.Town.
