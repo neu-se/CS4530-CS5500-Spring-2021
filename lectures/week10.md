@@ -22,6 +22,7 @@ In this week of the course, you will learn to:
 
 ### Resources:
 * [Activity 10.1: Configuring CI/CD for Covey.Town]({{site.baseurl}}/Activities/continuous-development)
+* [Prof Bell's in-class review notes]({{site.baseurl}}{% link SynchronousSlides-Bell/3-22-25 Continuous Development.pdf %})
 
 ### For further reading:
 * [Software Engineering @ Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/), Chapters 23 (Continuous Integration), 24 (Continuous Delivery), 25 (Compute as a Service)
