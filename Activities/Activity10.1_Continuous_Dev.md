@@ -121,29 +121,7 @@ The last step to our continuous development pipeline will be to automatically de
 3. Click on "Site Settings" and then select "Build & deploy" from the left-hand sidebar. Click on "Edit settings" in the first section ("Build settings"). Change base directory to `frontend`. Your settings shoudl now look like this:
 ![Netlify settings]({{site.baseurl}}{% link Activities/Assets/week10-cd/netlify-build-settings.png %})
 4. Scroll down on this same settings page to "Environment". This is where we define the `.env` variables that Netlify should use (without needing to put `.env` in a publicly viewable place). Click "Edit variables" and add a single variable: `REACT_APP_TOWNS_SERVICE_URL` should be set to your heroku server name (https://yourapp-name.herokuapp.com, find in heroku "settings" page for your app).
-5. Now scroll back up on Netlify's build & deploy settings page to "Build hooks" and click "Add build hook". Choose a name like "gh-action-trigger". This will produce a new "web hook" URL: whenever we make a POST request to this address, it will trigger a build on Netlify. We'll use this in the next step to connect GitHub Actions to Netlify.
-6. Return one last time to the GitHub Settings -> Secrets page. Create a new secret called `NETLIFY_BUILD_WEBHOOK`, and set its value to the web hook URL created in step 5 (should be something like `https://api.netlify.com/build_hooks/asd89348923dfah`). This will keep the web hook URL a secret, so that only our scripts can trigger a build on Netlify (if we put this hook URL in our GitHub Actions configuration directly, others would be able to trigger a build too!)
-7. Return to your GitHub Actions page, and the detail view for the most recent build - retrigger it, so that it runs again. Now that we have the Netlify configuration installed, we expect the entire build to pass. Here is the segment of the GitHub Actions configuration file that deploys our app to Netlify:
+5. Netlify will take several minutes to build your site. From the "Deploys" view of Netlify's control panel, you can see the status of each build. Once you have a successful build, it will show a URL where your site is published (something like https://mystifying-beaver-b51dd2.netlify.app). 
 
-	```yaml
-	  deploy:
-		if: github.ref == 'refs/heads/master'
-	    needs: build-and-test
-		runs-on: ubuntu-latest
-		steps:{% raw %}
-		  - uses: actions/checkout@v2
-		  - uses: akhileshns/heroku-deploy@v3.12.12 # Deploy to Heroku action
-			with:
-			  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-			  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-			  heroku_email: ${{secrets.HEROKU_EMAIL}}
-          - uses: muinmomin/webhook-action@v1.0.0
-            with:
-              url: ${{ secrets.NETLIFY_BUILD_WEBHOOK }}
-              data: "{}"
-{% endraw %}
-	```
-	
-8. Netlify will take several minutes to build your site. From the "Deploys" view of Netlify's control panel, you can see the status of each build. Once you have a successful build, it will show a URL where your site is published (https://mystifying-beaver-b51dd2.netlify.app in the example below). Click the "Stop auto publishing" button to prevent Netlify from automatically publishing updates from GitHub to your deployed site (we want it to do this only from the GitHub Action).
-![Netlify deploy view]({{site.baseurl}}{% link Activities/Assets/week10-cd/netlify-done.png %})
+Note: the original version of this tutorial configured disabled the "Auto publish" feature of Netlify, in favor of triggering that publication from GitHub Actions only after a successful test suite execution. Unfortunately, that approach did not actually publish the build. If your site is not automatically deploying, login to the Netlify "Deploys" administrator panel, and click 'Start auto publishing.'
 
