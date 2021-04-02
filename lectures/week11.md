@@ -21,6 +21,9 @@ In this week of the course, you will learn to:
 * 11.2: Ethics in Software Engineering [Video](https://northeastern.instructure.com/courses/60188/modules/items/5672458), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 11.2 - Ethics in Software Engineering.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 11.2 - Ethics in Software Engineering.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 11.2 - Ethics in Software Engineering.key %})
 * 11.3: Acceptance and Inclusivity Testing [Video](https://northeastern.instructure.com/courses/60188/modules/items/5672459), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 11.3 - Acceptance and Inclusivity Testing.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 11.3 - Acceptance and Inclusivity Testing.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 11.3 - Acceptance and Inclusivity Testing.key %})
 
+### Resources:
+* [Prof Bell's in-class review notes]({{site.baseurl}}{% link SynchronousSlides-Bell/2021-04-01 Ethics Notes.pdf %})
+
 
 ### For further reading:
 * [Software Engineering @ Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/), Chapter 4 (Engineering for Equity)
