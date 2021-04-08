@@ -14,6 +14,10 @@ Your final team deliverable will be a "release" of your new feature on GitHub (w
 *Optionally,* you may also open a pull request to merge your feature into our main repository (submitting a pull request, or the pull request being merged into our
 codebase is independent of the grade you receive, but provides a platform for more visibility of your project). 
 
+### Change Log
+* 3/23: Initial Release 
+* 4/8: Add page limits, add requirement to submit a link to GitHub repo
+
 ## Contents
 
 Your final team deliverable will include:
@@ -62,28 +66,41 @@ Includes automated tests for any new or modified backend features:
 #### Satisfactory:
 * `README.md` file contains detailed instructions to deploy the application with your new feature - modified from our initial installation instructions to include any new setup necessary for your feature.
 * The course staff is able to follow these instructions to deploy your application.
+* The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+* The document includes a link to your git repository if public, or instructions to access it if it is private **Added 4/8**
 
 #### Meets minimum requirements:
 * `README.md` file contains instructions to deploy the application with your new feature, perhaps missing key steps for installing/deploying the application
 * The course course staff were able to stumble through configuring it without contacting you.
+* The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+* The document includes a link to your git repository if public, or instructions to access it if it is private **Added 4/8**
+
 
 ### 10% Documentation - FEATURES
 #### Satisfactory:
 * `FEATURES.md` file contains sufficient documentation for a user to interact with your updated version of Covey.Town.
 * The documentation covers all steps that the user would need to take to exercise all of your user stories.
 * Course staff were able to follow these instructions to successfully interact with your project implementation.
+* The document is at most 4 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+
 
 #### Meets minimum requirements:
 * `FEATURES.md` contains documentation for a user to interact with your updated version of Covey.Town, but perhaps does not fully describe how.
 * The course staff were able to figure out how to use it through trial and error.
+* The document is at most 4 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+
 
 ### 10% Documentation - DESIGN
 #### Satisfactory:
 * `DESIGN.md` file contains a description of any substantive changes to the existing Covey.Town codebase, and the architecture of your new code.
 * It uses CRC cards, or state diagrams or any of the other techniques that help describe the structure.
+* The document is at most 4 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+
 
 #### Meets minimum requirements:
 * `DESIGN.md` includes a description of all major changes to the code compared to our existing Covey.Town codebase.
+* The document is at most 4 pages (fewer pages are absolutely acceptable, consider this a rough limit) **Added 4/8**
+
 
 ### 10% Demonstration video
 #### Satisfactory:
