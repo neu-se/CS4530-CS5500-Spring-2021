@@ -20,6 +20,9 @@ In this week of the course, you will learn to:
 * 12.3: Strategies for Successful Software Teams [Video](https://northeastern.instructure.com/courses/60188/modules/items/5706179), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 12.3 - Strategies for successful software teams.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 12.3 - Strategies for successful software teams.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 12.3 - Strategies for successful software teams.key %})
 * 12.4: Measuring Engineering Productivity [Video](https://northeastern.instructure.com/courses/60188/modules/items/5706180), Slides: [PDF]({{ site.baseurl }}{% link /Pdfs/Lesson 12.4 - Measuring Engineering Productivity.pdf %}), [PPT]({{site.baseurl}}{% link /Slides/Lesson 12.4 - Measuring Engineering Productivity.pptx %}), [Keynote]({{site.baseurl}}{% link /Slides/Lesson 12.4 - Measuring Engineering Productivity.key %})
 
+### Resources:
+* [Prof Bell's in-class review notes]({{site.baseurl}}{% link SynchronousSlides-Bell/2021-04-05-and-8 Planning and teams Notes.pdf %})
+
 
 ### For further reading:
 * [Software Engineering @ Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/), Chapters 3, 7 
