@@ -17,6 +17,7 @@ codebase is independent of the grade you receive, but provides a platform for mo
 ### Change Log
 * 3/23: Initial Release 
 * 4/8: Add page limits, add requirement to submit a link to GitHub repo
+* 4/12: Add submission info for video, clarify how to submit code and documentation
 
 ## Contents
 
@@ -33,6 +34,17 @@ Accompanying the final team deliverable will be an *individual reflection*, whic
 * The evolution of your project concept: How does the project that you delivered compare to what you originally planned to deliver? What caused these deviations?
 * The software engineering processes that you feel could have been improved in your project: were there any processes that in hindsight, you wish that you followed, or wish that you followed better?
 * Your team dynamic: Provide a frank (and ideally, blameless) postmortem of your and your teammates collaborative performance and participation. If you had to do this same project over with the same teammates, what would *you* have done differently (or not) to improve your team's overall performance?
+
+### Submission Instructions
+(This section added 4/12)
+#### Code and documentation
+Place your `README.md`, `FEATURE.md` and `DESIGN.md` files in the root of your project git repository. After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Submit this zip file to GradeScope** under the assignment "Project - Final Code and Documentation Deliverable".
+
+#### Demo video
+Record your demo video and upload it to [Canvas](https://northeastern.instructure.com/courses/60188/assignments/870889), under the assignment "Demo Video for Final Project".
+
+#### Individual Reflection
+Create a PDF of your reflection, and submit it to GradeScope, under the assignment "Project - Individual Reflection".
 
 ## Grading
 The final project deliverable will be graded on the following rubric:
