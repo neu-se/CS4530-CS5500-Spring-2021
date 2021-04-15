@@ -18,6 +18,7 @@ codebase is independent of the grade you receive, but provides a platform for mo
 * 3/23: Initial Release 
 * 4/8: Add page limits, add requirement to submit a link to GitHub repo
 * 4/12: Add submission info for video, clarify how to submit code and documentation
+* 4/15 Update: Lots of students had trouble submitting their code/documentation archive on GradeScope, so we're doing it on Canvas now. However, if you already submitted on GradeScope successfully then you're all set!
 
 ## Contents
 
@@ -38,7 +39,7 @@ Accompanying the final team deliverable will be an *individual reflection*, whic
 ### Submission Instructions
 (This section added 4/12)
 #### Code and documentation
-Place your `README.md`, `FEATURE.md` and `DESIGN.md` files in the root of your project git repository. After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Submit this zip file to GradeScope** under the assignment "Project - Final Code and Documentation Deliverable".
+Place your `README.md`, `FEATURE.md` and `DESIGN.md` files in the root of your project git repository. After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Submit this zip file to Canvas** under the assignment "Final Project - Code and Documentation Submission". (4/15 Update: Lots of students had trouble submitting this on GradeScope, so we're doing it on Canvas now. However, if you already submitted on GradeScope successfully then you're all set!)
 
 #### Demo video
 Record your demo video and upload it to [Canvas](https://northeastern.instructure.com/courses/60188/assignments/870889), under the assignment "Demo Video for Final Project".
