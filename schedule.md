@@ -19,5 +19,5 @@ nav_order: 1
 | [#11: Mar 29-Apr 2]({{ site.baseurl }}{% link lectures/week11.md %}) | Engineering Equitable Software<br />Acceptance + Inclusivity Testing   		  |          |    |
 | [#12: Apr 5-9]({{ site.baseurl }}{% link lectures/week12.md %})       | SE Metrics <br />Team Productivity |          |    |
 | #13: Apr 12-16    | Work on Projects                                   							          |          |    [**Final Project Due**]({{ site.baseurl }}{% link assignments/project-deliverable.md %}) |
-| #14: Apr 19-23    | Final Exam <br/>Wand: 4/22 6:00-8:00pm<br/>Boyland: 4/23 1:20-3:20pm<br/>Bell: 4/28 8:00-10:00am |          |    |
+| #14: Apr 19-23    | Final Exam <br/>Wand: 4/22 6:00-8:00pm<br/>Boyland: 4/23 1:20-3:20pm<br/>Bell: 4/28 8:00-10:00am |          | [Prof Bell's Review Section]({{site.baseurl}}{% link SynchronousSlides-Bell/2021-04-19-Review.pdf %})   |
 {: class="schedule-table"}
