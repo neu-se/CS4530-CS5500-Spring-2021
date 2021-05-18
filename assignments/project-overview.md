@@ -15,6 +15,10 @@ Covey.Town is inspired by existing products like [Gather.Town](https://gather.to
 All implementation will take place in the TypeScript programming language, using React for the user interface.
 
 
+
+Select projects from Spring 2021 are hosted [in our project showcase]({{ site.baseurl}}{% link assignments/project-showcase.md %}).
+
+
 ### Overview of Project Deliverables
 
 | Date | Deliverable | Description | 

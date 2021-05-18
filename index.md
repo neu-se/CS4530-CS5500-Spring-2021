@@ -51,7 +51,7 @@ Each week, you will be expected to:
 * Attend the synchronous sessions and participate in discussions. You may be asked to conduct reviews of other students' designs, documents, or code. Your participation and contributions are important.
 * Complete and submit all assignments by the due dates. There will be a combination of individual assignments and assignments given to teams.
 
-It is also your responsibility to be familiar with our [academic integrity and other course policies](/policies).
+It is also your responsibility to be familiar with our [academic integrity and other course policies]({{ site.baseurl}}{% link policies.md %}).
 
 PLEASE DO NOT COME TO CLASS IF YOU ARE ILL. While we want you to share your knowledge and experiences, there are some things you shouldn't share.
 
@@ -83,6 +83,8 @@ The project will provide hands-on experience to complement the skills taught in 
      - Mocha and Jest
      - Twilio's Programmable Video API
      - Postman
+
+Select projects from Spring 2021 are hosted [in our project showcase]({{ site.baseurl}}{% link assignments/project-showcase.md %}).
 
 ### Acknowledgements
 This class and its contents were inspired by Software Engineering courses at various institutions, including:
